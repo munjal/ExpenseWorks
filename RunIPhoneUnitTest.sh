@@ -85,7 +85,7 @@ if [ "$PLATFORM_NAME" == "iphonesimulator" ]; then
 
   # Turn on the mostly undocumented OBJC_DEBUG stuff.
   export OBJC_DEBUG_FRAGILE_SUPERCLASSES=YES
-  export OBJC_DEBUG_UNLOAD=YES
+  export OBJC_DEBUG_UNLOAD=YESa
   # Turned off due to the amount of false positives from NS classes.
   # export OBJC_DEBUG_FINALIZERS=YES  
   export OBJC_DEBUG_NIL_SYNC=YES

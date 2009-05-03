@@ -318,6 +318,7 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>8416A7CD0FAE303400683EA9</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>8416A8140FAE398300683EA9</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -328,9 +329,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>29</integer>
-									<integer>24</integer>
+									<integer>17</integer>
+									<integer>16</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -371,7 +372,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RunIPhoneUnitTest.sh</string>
+								<string>ExpenseWorksAppDelegateTest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -379,21 +380,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RunIPhoneUnitTest.sh</string>
+										<string>ExpenseWorksAppDelegateTest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8416A8120FAE33DB00683EA9</string>
+										<string>8416A84E0FAE491300683EA9</string>
 										<key>history</key>
 										<array>
-											<string>846C0C100FACE2D8004F91E5</string>
 											<string>846C0C130FACE2D8004F91E5</string>
 											<string>844191C40FAD011B00CDED9F</string>
-											<string>844192970FAD0C6B00CDED9F</string>
 											<string>844192A60FAD0E9C00CDED9F</string>
-											<string>8416A7CE0FAE303E00683EA9</string>
 											<string>8416A80D0FAE33CB00683EA9</string>
-											<string>8416A8050FAE33BD00683EA9</string>
+											<string>8416A8150FAE39A000683EA9</string>
+											<string>8416A8160FAE39A000683EA9</string>
+											<string>8416A8360FAE43AB00683EA9</string>
+											<string>8416A8370FAE43AB00683EA9</string>
+											<string>8416A83E0FAE44A900683EA9</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -405,6 +407,11 @@
 											<string>84C798410FA7ED3A00736383</string>
 											<string>8416A7D00FAE303E00683EA9</string>
 											<string>8416A80E0FAE33CB00683EA9</string>
+											<string>8416A8170FAE39A000683EA9</string>
+											<string>8416A8180FAE39A000683EA9</string>
+											<string>8416A8390FAE43AB00683EA9</string>
+											<string>8416A83A0FAE43AB00683EA9</string>
+											<string>8416A83B0FAE43AB00683EA9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -583,7 +590,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>263074779.07630801</real>
+	<real>263080211.026584</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -602,7 +609,7 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>84C798030FA7DFEF00736383</string>
 		<string>/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks.xcodeproj</string>
-		<string>8416A8100FAE33CB00683EA9</string>
+		<string>8416A84F0FAE491300683EA9</string>
 	</array>
 	<key>WindowString</key>
 	<string>-3 55 1436 823 0 0 1440 878 </string>
@@ -621,34 +628,34 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RunIPhoneUnitTest.sh</string>
+								<string>ExpenseWorksAppDelegateTest.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {819, 305}}</string>
+								<string>{{0, 0}, {1436, 540}}</string>
 								<key>RubberWindowFrame</key>
-								<string>31 268 819 587 0 0 1440 878 </string>
+								<string>0 56 1436 822 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>305pt</string>
+							<string>540pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>
-								<string>{{0, 93}, {819, 143}}</string>
+								<string>{{0, 93}, {1436, 143}}</string>
 								<key>PBXProjectModuleGUID</key>
 								<string>XCMainBuildResultsModuleGUID</string>
 								<key>PBXProjectModuleLabel</key>
@@ -661,9 +668,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 310}, {819, 236}}</string>
+								<string>{{0, 545}, {1436, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>31 268 819 587 0 0 1440 878 </string>
+								<string>0 56 1436 822 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -672,7 +679,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>546pt</string>
+					<string>781pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -693,7 +700,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>31 268 819 587 0 0 1440 878 </string>
+			<string>0 56 1436 822 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>84C798030FA7DFEF00736383</string>
 			<key>WindowToolIsVisible</key>
