@@ -11,7 +11,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1135, 1190}}";
 			sepNavSelRange = "{3106, 0}";
-			sepNavVisRange = "{1270, 2042}";
+			sepNavVisRange = "{1351, 1953}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* ExpenseWorks */ = {
@@ -25,9 +25,13 @@
 		activeExecutable = 84C797F30FA7DF7900736383 /* ExpenseWorks */;
 		activeSDKPreference = iphonesimulator2.2.1;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ExpenseWorks */;
+		addToTargets = (
+			8416A7E00FAE315500683EA9 /* UnitTest */,
+		);
 		codeSenseManager = 84C797F70FA7DF9D00736383 /* Code sense */;
 		executables = (
 			84C797F30FA7DF7900736383 /* ExpenseWorks */,
+			8416A7E20FAE315500683EA9 /* UnitTest */,
 		);
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -52,10 +56,47 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 262999714;
-			PBXWorkspaceStateSaveDate = 262999714;
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					917,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 263073786;
+			PBXWorkspaceStateSaveDate = 263073786;
 		};
 		perUserProjectItems = {
+			8416A7C40FAE300000683EA9 /* PBXTextBookmark */ = 8416A7C40FAE300000683EA9 /* PBXTextBookmark */;
+			8416A7C50FAE300000683EA9 /* PBXTextBookmark */ = 8416A7C50FAE300000683EA9 /* PBXTextBookmark */;
+			8416A7CE0FAE303E00683EA9 /* PBXTextBookmark */ = 8416A7CE0FAE303E00683EA9 /* PBXTextBookmark */;
+			8416A7CF0FAE303E00683EA9 /* PBXBookmark */ = 8416A7CF0FAE303E00683EA9 /* PBXBookmark */;
+			8416A7D00FAE303E00683EA9 /* PBXTextBookmark */ = 8416A7D00FAE303E00683EA9 /* PBXTextBookmark */;
+			8416A7D10FAE303E00683EA9 /* PlistBookmark */ = 8416A7D10FAE303E00683EA9 /* PlistBookmark */;
+			8416A7F40FAE324C00683EA9 /* PlistBookmark */ = 8416A7F40FAE324C00683EA9 /* PlistBookmark */;
+			8416A7F50FAE32A000683EA9 /* PlistBookmark */ = 8416A7F50FAE32A000683EA9 /* PlistBookmark */;
+			8416A7F60FAE32AC00683EA9 /* PlistBookmark */ = 8416A7F60FAE32AC00683EA9 /* PlistBookmark */;
+			8416A8050FAE33BD00683EA9 /* PBXTextBookmark */ = 8416A8050FAE33BD00683EA9 /* PBXTextBookmark */;
+			8416A8070FAE33BD00683EA9 /* PBXTextBookmark */ = 8416A8070FAE33BD00683EA9 /* PBXTextBookmark */;
+			8416A80D0FAE33CB00683EA9 /* PlistBookmark */ = 8416A80D0FAE33CB00683EA9 /* PlistBookmark */;
+			8416A80E0FAE33CB00683EA9 /* PlistBookmark */ = 8416A80E0FAE33CB00683EA9 /* PlistBookmark */;
+			8416A80F0FAE33CB00683EA9 /* PBXTextBookmark */ = 8416A80F0FAE33CB00683EA9 /* PBXTextBookmark */;
+			8416A8120FAE33DB00683EA9 /* PBXTextBookmark */ = 8416A8120FAE33DB00683EA9 /* PBXTextBookmark */;
 			844191C40FAD011B00CDED9F = 844191C40FAD011B00CDED9F /* PBXTextBookmark */;
 			844192970FAD0C6B00CDED9F = 844192970FAD0C6B00CDED9F /* PBXTextBookmark */;
 			844192990FAD0C6B00CDED9F = 844192990FAD0C6B00CDED9F /* PBXTextBookmark */;
@@ -77,6 +118,202 @@
 		sourceControlManager = 84C797F60FA7DF9D00736383 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	8416A7C40FAE300000683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ExpenseWorksAppDelegate.m */;
+		name = "ExpenseWorksAppDelegate.m: 52";
+		rLen = 0;
+		rLoc = 3106;
+		rType = 0;
+		vrLen = 1953;
+		vrLoc = 1351;
+	};
+	8416A7C50FAE300000683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ExpenseWorksAppDelegate.m */;
+		name = "ExpenseWorksAppDelegate.m: 52";
+		rLen = 0;
+		rLoc = 3106;
+		rType = 0;
+		vrLen = 1953;
+		vrLoc = 1351;
+	};
+	8416A7CE0FAE303E00683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ExpenseWorksAppDelegate.m */;
+		name = "ExpenseWorksAppDelegate.m: 52";
+		rLen = 0;
+		rLoc = 3106;
+		rType = 0;
+		vrLen = 1953;
+		vrLoc = 1351;
+	};
+	8416A7CF0FAE303E00683EA9 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */;
+	};
+	8416A7D00FAE303E00683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ExpenseWorksAppDelegate.m */;
+		name = "ExpenseWorksAppDelegate.m: 52";
+		rLen = 0;
+		rLoc = 3106;
+		rType = 0;
+		vrLen = 1953;
+		vrLoc = 1351;
+	};
+	8416A7D10FAE303E00683EA9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8416A7E00FAE315500683EA9 /* UnitTest */ = {
+		activeExec = 0;
+		executables = (
+			8416A7E20FAE315500683EA9 /* UnitTest */,
+		);
+	};
+	8416A7E20FAE315500683EA9 /* UnitTest */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = UnitTest;
+		sourceDirectories = (
+		);
+	};
+	8416A7F40FAE324C00683EA9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8416A7F50FAE32A000683EA9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8416A7F60FAE32AC00683EA9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8416A8050FAE33BD00683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "note: GTM Enabling zombies";
+		fRef = 8416A8060FAE33BD00683EA9 /* RunIPhoneUnitTest.sh */;
+		rLen = 1;
+		rLoc = 93;
+		rType = 1;
+	};
+	8416A8060FAE33BD00683EA9 /* RunIPhoneUnitTest.sh */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.script.sh;
+		name = RunIPhoneUnitTest.sh;
+		path = /Users/admin/projects/CocoApps/ExpenseWorks/RunIPhoneUnitTest.sh;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1135, 1955}}";
+			sepNavSelRange = "{3489, 0}";
+			sepNavVisRange = "{3001, 974}";
+		};
+	};
+	8416A8070FAE33BD00683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8416A8080FAE33BD00683EA9 /* RunIPhoneUnitTest.sh */;
+		name = "RunIPhoneUnitTest.sh: 92";
+		rLen = 0;
+		rLoc = 3567;
+		rType = 0;
+		vrLen = 505;
+		vrLoc = 3296;
+	};
+	8416A8080FAE33BD00683EA9 /* RunIPhoneUnitTest.sh */ = {
+		isa = PBXFileReference;
+		name = RunIPhoneUnitTest.sh;
+		path = /Users/admin/projects/CocoApps/ExpenseWorks/RunIPhoneUnitTest.sh;
+		sourceTree = "<absolute>";
+	};
+	8416A80D0FAE33CB00683EA9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8416A80E0FAE33CB00683EA9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	8416A80F0FAE33CB00683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8416A8060FAE33BD00683EA9 /* RunIPhoneUnitTest.sh */;
+		name = "RunIPhoneUnitTest.sh: 93";
+		rLen = 0;
+		rLoc = 3605;
+		rType = 0;
+		vrLen = 905;
+		vrLoc = 3001;
+	};
+	8416A8120FAE33DB00683EA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8416A8060FAE33BD00683EA9 /* RunIPhoneUnitTest.sh */;
+		name = "RunIPhoneUnitTest.sh: 89";
+		rLen = 0;
+		rLoc = 3489;
+		rType = 0;
+		vrLen = 974;
+		vrLoc = 3001;
 	};
 	844191C40FAD011B00CDED9F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -145,7 +382,7 @@
 		rLen = 0;
 		rLoc = 3106;
 		rType = 0;
-		vrLen = 1962;
+		vrLen = 1958;
 		vrLoc = 1351;
 	};
 	844192A80FAD0E9C00CDED9F /* PBXTextBookmark */ = {
@@ -165,7 +402,7 @@
 		rLen = 0;
 		rLoc = 3106;
 		rType = 0;
-		vrLen = 1962;
+		vrLen = 1958;
 		vrLoc = 1351;
 	};
 	846C0C100FACE2D8004F91E5 /* PBXTextBookmark */ = {

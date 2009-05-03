@@ -13,6 +13,9 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		8416A7EC0FAE31EC00683EA9 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7E70FAE31EC00683EA9 /* GTMSenTestCase.m */; };
+		8416A7ED0FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7E90FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m */; };
+		8416A7EE0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7EA0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m */; };
 		A6613CB40F7676290090624B /* ToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6613CB30F7676290090624B /* ToolbarController.m */; };
 		A6613CBA0F767C0A0090624B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6613CB90F767C0A0090624B /* RootViewController.m */; };
 /* End PBXBuildFile section */
@@ -27,6 +30,14 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ExpenseWorks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseWorks_Prefix.pch; sourceTree = "<group>"; };
+		8416A7E10FAE315500683EA9 /* UnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = UnitTest.app; path = "build/Debug Configuration-iphonesimulator/UnitTest.app"; sourceTree = "<group>"; };
+		8416A7E30FAE315500683EA9 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
+		8416A7E70FAE31EC00683EA9 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
+		8416A7E80FAE31EC00683EA9 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSenTestCase.h; sourceTree = "<group>"; };
+		8416A7E90FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestMain.m; sourceTree = "<group>"; };
+		8416A7EA0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMIPhoneUnitTestDelegate.m; sourceTree = "<group>"; };
+		8416A7EB0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMIPhoneUnitTestDelegate.h; sourceTree = "<group>"; };
+		8416A7EF0FAE322D00683EA9 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ExpenseWorks-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A6613CB20F7676290090624B /* ToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarController.h; sourceTree = "<group>"; };
 		A6613CB30F7676290090624B /* ToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarController.m; sourceTree = "<group>"; };
@@ -42,6 +53,13 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8416A7DF0FAE315500683EA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* ExpenseWorks.app */,
+				8416A7E10FAE315500683EA9 /* UnitTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,11 +91,13 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8416A7CD0FAE303400683EA9 /* GoogleToolbox */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				8416A7E30FAE315500683EA9 /* UnitTest-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -109,6 +130,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8416A7CD0FAE303400683EA9 /* GoogleToolbox */ = {
+			isa = PBXGroup;
+			children = (
+				8416A7EF0FAE322D00683EA9 /* GTMDefines.h */,
+				8416A7E70FAE31EC00683EA9 /* GTMSenTestCase.m */,
+				8416A7E80FAE31EC00683EA9 /* GTMSenTestCase.h */,
+				8416A7E90FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m */,
+				8416A7EA0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m */,
+				8416A7EB0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.h */,
+			);
+			name = GoogleToolbox;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +163,24 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* ExpenseWorks.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8416A7E00FAE315500683EA9 /* UnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8416A7E60FAE315600683EA9 /* Build configuration list for PBXNativeTarget "UnitTest" */;
+			buildPhases = (
+				8416A7DD0FAE315500683EA9 /* Resources */,
+				8416A7DE0FAE315500683EA9 /* Sources */,
+				8416A7DF0FAE315500683EA9 /* Frameworks */,
+				8416A7FE0FAE331200683EA9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTest;
+			productName = UnitTest;
+			productReference = 8416A7E10FAE315500683EA9 /* UnitTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* ExpenseWorks */,
+				8416A7E00FAE315500683EA9 /* UnitTest */,
 			);
 		};
 /* End PBXProject section */
@@ -155,7 +208,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8416A7DD0FAE315500683EA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8416A7FE0FAE331200683EA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /Users/admin/projects/CocoApps/ExpenseWorks/RunIPhoneUnitTest.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -166,6 +242,16 @@
 				1D3623260D0F684500981E51 /* ExpenseWorksAppDelegate.m in Sources */,
 				A6613CB40F7676290090624B /* ToolbarController.m in Sources */,
 				A6613CBA0F767C0A0090624B /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8416A7DE0FAE315500683EA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8416A7EC0FAE31EC00683EA9 /* GTMSenTestCase.m in Sources */,
+				8416A7ED0FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m in Sources */,
+				8416A7EE0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +281,48 @@
 				GCC_PREFIX_HEADER = ExpenseWorks_Prefix.pch;
 				INFOPLIST_FILE = "ExpenseWorks-Info.plist";
 				PRODUCT_NAME = ExpenseWorks;
+			};
+			name = "Release Configuration";
+		};
+		8416A7E40FAE315600683EA9 /* Debug Configuration */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "UnitTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTest;
+				SDKROOT = iphoneos3.0;
+			};
+			name = "Debug Configuration";
+		};
+		8416A7E50FAE315600683EA9 /* Release Configuration */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "UnitTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTest;
+				SDKROOT = iphoneos3.0;
 			};
 			name = "Release Configuration";
 		};
@@ -233,6 +361,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug Configuration */,
 				1D6058950D05DD3E006BFB54 /* Release Configuration */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release Configuration";
+		};
+		8416A7E60FAE315600683EA9 /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8416A7E40FAE315600683EA9 /* Debug Configuration */,
+				8416A7E50FAE315600683EA9 /* Release Configuration */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release Configuration";
