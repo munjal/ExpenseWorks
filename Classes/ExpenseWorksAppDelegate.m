@@ -1,6 +1,7 @@
 #import "ExpenseWorksAppDelegate.h"
 #import "RootViewController.h"
 #import "ToolbarController.h"
+#import "ExpenseReportItem.h"
 
 @implementation ExpenseWorksAppDelegate
 
@@ -8,6 +9,7 @@
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
+	NSLog(@"The name is: %@", [ExpenseReportItem tableName]);
 	NSArray* toolbarItems = [NSArray arrayWithObjects:
 			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:@selector(doStuff)],				 
 			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(doStuff)],

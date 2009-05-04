@@ -19,6 +19,44 @@
 		8416A8330FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A8320FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m */; };
 		8416A8790FAE532F00683EA9 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416A8780FAE532F00683EA9 /* OCMock.framework */; };
 		8416A8840FAE556A00683EA9 /* OCMock.framework in Copy OCMock */ = {isa = PBXBuildFile; fileRef = 8416A8780FAE532F00683EA9 /* OCMock.framework */; };
+		8498AAE30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */; };
+		8498AAE40FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC50FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m */; };
+		8498AAE50FAE7E8D00DCD37B /* SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC70FAE7E8D00DCD37B /* SQLitePersistentObject.m */; };
+		8498AAE60FAE7E8D00DCD37B /* SQLiteInstanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC90FAE7E8D00DCD37B /* SQLiteInstanceManager.m */; };
+		8498AAE70FAE7E8D00DCD37B /* NSString-UppercaseFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AACB0FAE7E8D00DCD37B /* NSString-UppercaseFirst.m */; };
+		8498AAE80FAE7E8D00DCD37B /* NSString-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AACD0FAE7E8D00DCD37B /* NSString-SQLitePersistence.m */; };
+		8498AAE90FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AACF0FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m */; };
+		8498AAEA0FAE7E8D00DCD37B /* NSString-NumberStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD10FAE7E8D00DCD37B /* NSString-NumberStuff.m */; };
+		8498AAEB0FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD30FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m */; };
+		8498AAEC0FAE7E8D00DCD37B /* NSObject-MissingKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD50FAE7E8D00DCD37B /* NSObject-MissingKV.m */; };
+		8498AAED0FAE7E8D00DCD37B /* NSObject-ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD70FAE7E8D00DCD37B /* NSObject-ClassName.m */; };
+		8498AAEE0FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD90FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m */; };
+		8498AAEF0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AADB0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m */; };
+		8498AAF00FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AADD0FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m */; };
+		8498AAF10FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AADF0FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m */; };
+		8498AAF20FAE7E8D00DCD37B /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAE10FAE7E8D00DCD37B /* NSData-SQLitePersistence.m */; };
+		8498AAF30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */; };
+		8498AAF40FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC50FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m */; };
+		8498AAF50FAE7E8D00DCD37B /* SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC70FAE7E8D00DCD37B /* SQLitePersistentObject.m */; };
+		8498AAF60FAE7E8D00DCD37B /* SQLiteInstanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC90FAE7E8D00DCD37B /* SQLiteInstanceManager.m */; };
+		8498AAF70FAE7E8D00DCD37B /* NSString-UppercaseFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AACB0FAE7E8D00DCD37B /* NSString-UppercaseFirst.m */; };
+		8498AAF80FAE7E8D00DCD37B /* NSString-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AACD0FAE7E8D00DCD37B /* NSString-SQLitePersistence.m */; };
+		8498AAF90FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AACF0FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m */; };
+		8498AAFA0FAE7E8D00DCD37B /* NSString-NumberStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD10FAE7E8D00DCD37B /* NSString-NumberStuff.m */; };
+		8498AAFB0FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD30FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m */; };
+		8498AAFC0FAE7E8D00DCD37B /* NSObject-MissingKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD50FAE7E8D00DCD37B /* NSObject-MissingKV.m */; };
+		8498AAFD0FAE7E8D00DCD37B /* NSObject-ClassName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD70FAE7E8D00DCD37B /* NSObject-ClassName.m */; };
+		8498AAFE0FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAD90FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m */; };
+		8498AAFF0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AADB0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m */; };
+		8498AB000FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AADD0FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m */; };
+		8498AB010FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AADF0FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m */; };
+		8498AB020FAE7E8D00DCD37B /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAE10FAE7E8D00DCD37B /* NSData-SQLitePersistence.m */; };
+		8498AB050FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */; };
+		8498AB060FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */; };
+		84AF32EF0FAEBBFC0074174A /* ExpenseReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */; };
+		84AF32F00FAEBBFC0074174A /* ExpenseReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */; };
+		84AF333C0FAEC1F10074174A /* ExpenseReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF333B0FAEC1F10074174A /* ExpenseReport.m */; };
+		84AF333D0FAEC1F10074174A /* ExpenseReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF333B0FAEC1F10074174A /* ExpenseReport.m */; };
 		A6613CB40F7676290090624B /* ToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6613CB30F7676290090624B /* ToolbarController.m */; };
 		A6613CBA0F767C0A0090624B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6613CB90F767C0A0090624B /* RootViewController.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +95,44 @@
 		8416A7EF0FAE322D00683EA9 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		8416A8320FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseWorksAppDelegateTest.m; sourceTree = "<group>"; };
 		8416A8780FAE532F00683EA9 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Frameworks/OCMock.framework; sourceTree = "<group>"; };
+		8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage-SQLitePersistence.m"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.m"; sourceTree = "<group>"; };
+		8498AAC40FAE7E8D00DCD37B /* UIImage-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage-SQLitePersistence.h"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.h"; sourceTree = "<group>"; };
+		8498AAC50FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor-SQLitePersistentObject.m"; path = "SqlitePersistentObjects/UIColor-SQLitePersistentObject.m"; sourceTree = "<group>"; };
+		8498AAC60FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor-SQLitePersistentObject.h"; path = "SqlitePersistentObjects/UIColor-SQLitePersistentObject.h"; sourceTree = "<group>"; };
+		8498AAC70FAE7E8D00DCD37B /* SQLitePersistentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLitePersistentObject.m; path = SqlitePersistentObjects/SQLitePersistentObject.m; sourceTree = "<group>"; };
+		8498AAC80FAE7E8D00DCD37B /* SQLitePersistentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLitePersistentObject.h; path = SqlitePersistentObjects/SQLitePersistentObject.h; sourceTree = "<group>"; };
+		8498AAC90FAE7E8D00DCD37B /* SQLiteInstanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLiteInstanceManager.m; path = SqlitePersistentObjects/SQLiteInstanceManager.m; sourceTree = "<group>"; };
+		8498AACA0FAE7E8D00DCD37B /* SQLiteInstanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLiteInstanceManager.h; path = SqlitePersistentObjects/SQLiteInstanceManager.h; sourceTree = "<group>"; };
+		8498AACB0FAE7E8D00DCD37B /* NSString-UppercaseFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString-UppercaseFirst.m"; path = "SqlitePersistentObjects/NSString-UppercaseFirst.m"; sourceTree = "<group>"; };
+		8498AACC0FAE7E8D00DCD37B /* NSString-UppercaseFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString-UppercaseFirst.h"; path = "SqlitePersistentObjects/NSString-UppercaseFirst.h"; sourceTree = "<group>"; };
+		8498AACD0FAE7E8D00DCD37B /* NSString-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString-SQLitePersistence.m"; path = "SqlitePersistentObjects/NSString-SQLitePersistence.m"; sourceTree = "<group>"; };
+		8498AACE0FAE7E8D00DCD37B /* NSString-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString-SQLitePersistence.h"; path = "SqlitePersistentObjects/NSString-SQLitePersistence.h"; sourceTree = "<group>"; };
+		8498AACF0FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString-SQLiteColumnName.m"; path = "SqlitePersistentObjects/NSString-SQLiteColumnName.m"; sourceTree = "<group>"; };
+		8498AAD00FAE7E8D00DCD37B /* NSString-SQLiteColumnName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString-SQLiteColumnName.h"; path = "SqlitePersistentObjects/NSString-SQLiteColumnName.h"; sourceTree = "<group>"; };
+		8498AAD10FAE7E8D00DCD37B /* NSString-NumberStuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString-NumberStuff.m"; path = "SqlitePersistentObjects/NSString-NumberStuff.m"; sourceTree = "<group>"; };
+		8498AAD20FAE7E8D00DCD37B /* NSString-NumberStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString-NumberStuff.h"; path = "SqlitePersistentObjects/NSString-NumberStuff.h"; sourceTree = "<group>"; };
+		8498AAD30FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject-SQLitePersistence.m"; path = "SqlitePersistentObjects/NSObject-SQLitePersistence.m"; sourceTree = "<group>"; };
+		8498AAD40FAE7E8D00DCD37B /* NSObject-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject-SQLitePersistence.h"; path = "SqlitePersistentObjects/NSObject-SQLitePersistence.h"; sourceTree = "<group>"; };
+		8498AAD50FAE7E8D00DCD37B /* NSObject-MissingKV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject-MissingKV.m"; path = "SqlitePersistentObjects/NSObject-MissingKV.m"; sourceTree = "<group>"; };
+		8498AAD60FAE7E8D00DCD37B /* NSObject-MissingKV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject-MissingKV.h"; path = "SqlitePersistentObjects/NSObject-MissingKV.h"; sourceTree = "<group>"; };
+		8498AAD70FAE7E8D00DCD37B /* NSObject-ClassName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject-ClassName.m"; path = "SqlitePersistentObjects/NSObject-ClassName.m"; sourceTree = "<group>"; };
+		8498AAD80FAE7E8D00DCD37B /* NSObject-ClassName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject-ClassName.h"; path = "SqlitePersistentObjects/NSObject-ClassName.h"; sourceTree = "<group>"; };
+		8498AAD90FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber-SQLitePersistence.m"; path = "SqlitePersistentObjects/NSNumber-SQLitePersistence.m"; sourceTree = "<group>"; };
+		8498AADA0FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber-SQLitePersistence.h"; path = "SqlitePersistentObjects/NSNumber-SQLitePersistence.h"; sourceTree = "<group>"; };
+		8498AADB0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableData-SQLitePersistence.m"; path = "SqlitePersistentObjects/NSMutableData-SQLitePersistence.m"; sourceTree = "<group>"; };
+		8498AADC0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableData-SQLitePersistence.h"; path = "SqlitePersistentObjects/NSMutableData-SQLitePersistence.h"; sourceTree = "<group>"; };
+		8498AADD0FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray-MultipleSort.m"; path = "SqlitePersistentObjects/NSMutableArray-MultipleSort.m"; sourceTree = "<group>"; };
+		8498AADE0FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray-MultipleSort.h"; path = "SqlitePersistentObjects/NSMutableArray-MultipleSort.h"; sourceTree = "<group>"; };
+		8498AADF0FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate-SQLitePersistence.m"; path = "SqlitePersistentObjects/NSDate-SQLitePersistence.m"; sourceTree = "<group>"; };
+		8498AAE00FAE7E8D00DCD37B /* NSDate-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate-SQLitePersistence.h"; path = "SqlitePersistentObjects/NSDate-SQLitePersistence.h"; sourceTree = "<group>"; };
+		8498AAE10FAE7E8D00DCD37B /* NSData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData-SQLitePersistence.m"; path = "SqlitePersistentObjects/NSData-SQLitePersistence.m"; sourceTree = "<group>"; };
+		8498AAE20FAE7E8D00DCD37B /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData-SQLitePersistence.h"; path = "SqlitePersistentObjects/NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
+		8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		84AF32C10FAEACC00074174A /* 001_create_tables */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; name = 001_create_tables; path = Db/Migrate/001_create_tables; sourceTree = "<group>"; };
+		84AF32ED0FAEBBFC0074174A /* ExpenseReportItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseReportItem.h; path = Models/ExpenseReportItem.h; sourceTree = "<group>"; };
+		84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseReportItem.m; path = Models/ExpenseReportItem.m; sourceTree = "<group>"; };
+		84AF333A0FAEC1F10074174A /* ExpenseReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseReport.h; path = Models/ExpenseReport.h; sourceTree = "<group>"; };
+		84AF333B0FAEC1F10074174A /* ExpenseReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseReport.m; path = Models/ExpenseReport.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ExpenseWorks-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A6613CB20F7676290090624B /* ToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarController.h; sourceTree = "<group>"; };
 		A6613CB30F7676290090624B /* ToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarController.m; sourceTree = "<group>"; };
@@ -72,6 +148,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				8498AB060FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,13 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8416A8790FAE532F00683EA9 /* OCMock.framework in Frameworks */,
+				8498AB050FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		080E96DDFE201D6D7F000001 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				1D3623240D0F684500981E51 /* ExpenseWorksAppDelegate.h */,
@@ -96,6 +174,7 @@
 				A6613CB80F767C0A0090624B /* RootViewController.h */,
 				A6613CB90F767C0A0090624B /* RootViewController.m */,
 			);
+			name = Controllers;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -111,8 +190,11 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				84AF32BE0FAEABD10074174A /* Db */,
+				84AF32A90FAE940A0074174A /* Models */,
+				8498AABD0FAE7E1300DCD37B /* SqlitePersistentObjects */,
 				8416A7CD0FAE303400683EA9 /* GoogleToolbox */,
-				080E96DDFE201D6D7F000001 /* Classes */,
+				080E96DDFE201D6D7F000001 /* Controllers */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				8416A8140FAE398300683EA9 /* UnitTests */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -144,6 +226,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */,
 				8416A8780FAE532F00683EA9 /* OCMock.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -171,6 +254,72 @@
 				8416A8320FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m */,
 			);
 			name = UnitTests;
+			sourceTree = "<group>";
+		};
+		8498AABD0FAE7E1300DCD37B /* SqlitePersistentObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */,
+				8498AAC40FAE7E8D00DCD37B /* UIImage-SQLitePersistence.h */,
+				8498AAC50FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m */,
+				8498AAC60FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.h */,
+				8498AAC70FAE7E8D00DCD37B /* SQLitePersistentObject.m */,
+				8498AAC80FAE7E8D00DCD37B /* SQLitePersistentObject.h */,
+				8498AAC90FAE7E8D00DCD37B /* SQLiteInstanceManager.m */,
+				8498AACA0FAE7E8D00DCD37B /* SQLiteInstanceManager.h */,
+				8498AACB0FAE7E8D00DCD37B /* NSString-UppercaseFirst.m */,
+				8498AACC0FAE7E8D00DCD37B /* NSString-UppercaseFirst.h */,
+				8498AACD0FAE7E8D00DCD37B /* NSString-SQLitePersistence.m */,
+				8498AACE0FAE7E8D00DCD37B /* NSString-SQLitePersistence.h */,
+				8498AACF0FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m */,
+				8498AAD00FAE7E8D00DCD37B /* NSString-SQLiteColumnName.h */,
+				8498AAD10FAE7E8D00DCD37B /* NSString-NumberStuff.m */,
+				8498AAD20FAE7E8D00DCD37B /* NSString-NumberStuff.h */,
+				8498AAD30FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m */,
+				8498AAD40FAE7E8D00DCD37B /* NSObject-SQLitePersistence.h */,
+				8498AAD50FAE7E8D00DCD37B /* NSObject-MissingKV.m */,
+				8498AAD60FAE7E8D00DCD37B /* NSObject-MissingKV.h */,
+				8498AAD70FAE7E8D00DCD37B /* NSObject-ClassName.m */,
+				8498AAD80FAE7E8D00DCD37B /* NSObject-ClassName.h */,
+				8498AAD90FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m */,
+				8498AADA0FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.h */,
+				8498AADB0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m */,
+				8498AADC0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.h */,
+				8498AADD0FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m */,
+				8498AADE0FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.h */,
+				8498AADF0FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m */,
+				8498AAE00FAE7E8D00DCD37B /* NSDate-SQLitePersistence.h */,
+				8498AAE10FAE7E8D00DCD37B /* NSData-SQLitePersistence.m */,
+				8498AAE20FAE7E8D00DCD37B /* NSData-SQLitePersistence.h */,
+			);
+			name = SqlitePersistentObjects;
+			sourceTree = "<group>";
+		};
+		84AF32A90FAE940A0074174A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84AF32ED0FAEBBFC0074174A /* ExpenseReportItem.h */,
+				84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */,
+				84AF333A0FAEC1F10074174A /* ExpenseReport.h */,
+				84AF333B0FAEC1F10074174A /* ExpenseReport.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84AF32BE0FAEABD10074174A /* Db */ = {
+			isa = PBXGroup;
+			children = (
+				84AF32C00FAEAC800074174A /* Migrate */,
+			);
+			name = Db;
+			sourceTree = "<group>";
+		};
+		84AF32C00FAEAC800074174A /* Migrate */ = {
+			isa = PBXGroup;
+			children = (
+				84AF32C10FAEACC00074174A /* 001_create_tables */,
+			);
+			name = Migrate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +422,24 @@
 				1D3623260D0F684500981E51 /* ExpenseWorksAppDelegate.m in Sources */,
 				A6613CB40F7676290090624B /* ToolbarController.m in Sources */,
 				A6613CBA0F767C0A0090624B /* RootViewController.m in Sources */,
+				8498AAF30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m in Sources */,
+				8498AAF40FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m in Sources */,
+				8498AAF50FAE7E8D00DCD37B /* SQLitePersistentObject.m in Sources */,
+				8498AAF60FAE7E8D00DCD37B /* SQLiteInstanceManager.m in Sources */,
+				8498AAF70FAE7E8D00DCD37B /* NSString-UppercaseFirst.m in Sources */,
+				8498AAF80FAE7E8D00DCD37B /* NSString-SQLitePersistence.m in Sources */,
+				8498AAF90FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m in Sources */,
+				8498AAFA0FAE7E8D00DCD37B /* NSString-NumberStuff.m in Sources */,
+				8498AAFB0FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m in Sources */,
+				8498AAFC0FAE7E8D00DCD37B /* NSObject-MissingKV.m in Sources */,
+				8498AAFD0FAE7E8D00DCD37B /* NSObject-ClassName.m in Sources */,
+				8498AAFE0FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m in Sources */,
+				8498AAFF0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m in Sources */,
+				8498AB000FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m in Sources */,
+				8498AB010FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m in Sources */,
+				8498AB020FAE7E8D00DCD37B /* NSData-SQLitePersistence.m in Sources */,
+				84AF32EF0FAEBBFC0074174A /* ExpenseReportItem.m in Sources */,
+				84AF333C0FAEC1F10074174A /* ExpenseReport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +451,24 @@
 				8416A7ED0FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m in Sources */,
 				8416A7EE0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m in Sources */,
 				8416A8330FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m in Sources */,
+				8498AAE30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m in Sources */,
+				8498AAE40FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m in Sources */,
+				8498AAE50FAE7E8D00DCD37B /* SQLitePersistentObject.m in Sources */,
+				8498AAE60FAE7E8D00DCD37B /* SQLiteInstanceManager.m in Sources */,
+				8498AAE70FAE7E8D00DCD37B /* NSString-UppercaseFirst.m in Sources */,
+				8498AAE80FAE7E8D00DCD37B /* NSString-SQLitePersistence.m in Sources */,
+				8498AAE90FAE7E8D00DCD37B /* NSString-SQLiteColumnName.m in Sources */,
+				8498AAEA0FAE7E8D00DCD37B /* NSString-NumberStuff.m in Sources */,
+				8498AAEB0FAE7E8D00DCD37B /* NSObject-SQLitePersistence.m in Sources */,
+				8498AAEC0FAE7E8D00DCD37B /* NSObject-MissingKV.m in Sources */,
+				8498AAED0FAE7E8D00DCD37B /* NSObject-ClassName.m in Sources */,
+				8498AAEE0FAE7E8D00DCD37B /* NSNumber-SQLitePersistence.m in Sources */,
+				8498AAEF0FAE7E8D00DCD37B /* NSMutableData-SQLitePersistence.m in Sources */,
+				8498AAF00FAE7E8D00DCD37B /* NSMutableArray-MultipleSort.m in Sources */,
+				8498AAF10FAE7E8D00DCD37B /* NSDate-SQLitePersistence.m in Sources */,
+				8498AAF20FAE7E8D00DCD37B /* NSData-SQLitePersistence.m in Sources */,
+				84AF32F00FAEBBFC0074174A /* ExpenseReportItem.m in Sources */,
+				84AF333D0FAEC1F10074174A /* ExpenseReport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

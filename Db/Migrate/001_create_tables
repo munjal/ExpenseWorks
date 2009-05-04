@@ -1,0 +1,19 @@
+CREATE TABLE if not exists
+  expense_report_item (
+    pk           INTEGER PRIMARY KEY,
+    project      TEXT,
+    category     TEXT,
+    date         DATE,
+    currency     TEXT,
+    amount       DOUBLE,
+    description  TEXT,
+    vendor       TEXT,
+    payment      TEXT,
+    attendes     TEXT);
+  
+CREATE TABLE if not exists
+  expense_report (
+    pk				INTEGER PRIMARY KEY,
+    report_id		TEXT,
+    created_date    DATE,
+	submitted_date	DATE);
