@@ -290,7 +290,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1D6058940D05DD3E006BFB54 /* Debug Configuration */ = {
+		1D6058940D05DD3E006BFB54 /* Debugs */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -302,9 +302,9 @@
 				INFOPLIST_FILE = "ExpenseWorks-Info.plist";
 				PRODUCT_NAME = ExpenseWorks;
 			};
-			name = "Debug Configuration";
+			name = Debugs;
 		};
-		1D6058950D05DD3E006BFB54 /* Release Configuration */ = {
+		1D6058950D05DD3E006BFB54 /* Releases */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -314,9 +314,9 @@
 				INFOPLIST_FILE = "ExpenseWorks-Info.plist";
 				PRODUCT_NAME = ExpenseWorks;
 			};
-			name = "Release Configuration";
+			name = Releases;
 		};
-		8416A7E40FAE315600683EA9 /* Debug Configuration */ = {
+		8416A7E40FAE315600683EA9 /* Debugs */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -340,9 +340,9 @@
 				PRODUCT_NAME = UnitTest;
 				SDKROOT = iphoneos3.0;
 			};
-			name = "Debug Configuration";
+			name = Debugs;
 		};
-		8416A7E50FAE315600683EA9 /* Release Configuration */ = {
+		8416A7E50FAE315600683EA9 /* Releases */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,9 +366,9 @@
 				PRODUCT_NAME = UnitTest;
 				SDKROOT = iphoneos3.0;
 			};
-			name = "Release Configuration";
+			name = Releases;
 		};
-		C01FCF4F08A954540054247B /* Debug Configuration */ = {
+		C01FCF4F08A954540054247B /* Debugs */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -380,9 +380,9 @@
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.0;
 			};
-			name = "Debug Configuration";
+			name = Debugs;
 		};
-		C01FCF5008A954540054247B /* Release Configuration */ = {
+		C01FCF5008A954540054247B /* Releases */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -393,7 +393,7 @@
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.0;
 			};
-			name = "Release Configuration";
+			name = Releases;
 		};
 /* End XCBuildConfiguration section */
 
@@ -401,29 +401,29 @@
 		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ExpenseWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1D6058940D05DD3E006BFB54 /* Debug Configuration */,
-				1D6058950D05DD3E006BFB54 /* Release Configuration */,
+				1D6058940D05DD3E006BFB54 /* Debugs */,
+				1D6058950D05DD3E006BFB54 /* Releases */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Configuration";
+			defaultConfigurationName = Releases;
 		};
 		8416A7E60FAE315600683EA9 /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8416A7E40FAE315600683EA9 /* Debug Configuration */,
-				8416A7E50FAE315600683EA9 /* Release Configuration */,
+				8416A7E40FAE315600683EA9 /* Debugs */,
+				8416A7E50FAE315600683EA9 /* Releases */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Configuration";
+			defaultConfigurationName = Releases;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ExpenseWorks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C01FCF4F08A954540054247B /* Debug Configuration */,
-				C01FCF5008A954540054247B /* Release Configuration */,
+				C01FCF4F08A954540054247B /* Debugs */,
+				C01FCF5008A954540054247B /* Releases */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release Configuration";
+			defaultConfigurationName = Releases;
 		};
 /* End XCConfigurationList section */
 	};
