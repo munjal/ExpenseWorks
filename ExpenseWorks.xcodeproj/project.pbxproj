@@ -19,6 +19,10 @@
 		8416A8330FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A8320FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m */; };
 		8416A8790FAE532F00683EA9 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416A8780FAE532F00683EA9 /* OCMock.framework */; };
 		8416A8840FAE556A00683EA9 /* OCMock.framework in Copy OCMock */ = {isa = PBXBuildFile; fileRef = 8416A8780FAE532F00683EA9 /* OCMock.framework */; };
+		84384A3D0FB7BAD100D469DC /* ExpenseReportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */; };
+		84384A3E0FB7BAD100D469DC /* ExpenseReportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */; };
+		8475C6F00FB4E6F700277D7B /* expenseWorks.db in Resources */ = {isa = PBXBuildFile; fileRef = 8475C6EF0FB4E6F700277D7B /* expenseWorks.db */; };
+		8475C6F10FB4E6F700277D7B /* expenseWorks.db in Resources */ = {isa = PBXBuildFile; fileRef = 8475C6EF0FB4E6F700277D7B /* expenseWorks.db */; };
 		8498AAE30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */; };
 		8498AAE40FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC50FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m */; };
 		8498AAE50FAE7E8D00DCD37B /* SQLitePersistentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC70FAE7E8D00DCD37B /* SQLitePersistentObject.m */; };
@@ -95,6 +99,9 @@
 		8416A7EF0FAE322D00683EA9 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		8416A8320FAE433A00683EA9 /* ExpenseWorksAppDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseWorksAppDelegateTest.m; sourceTree = "<group>"; };
 		8416A8780FAE532F00683EA9 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Frameworks/OCMock.framework; sourceTree = "<group>"; };
+		84384A3B0FB7BAD100D469DC /* ExpenseReportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseReportController.h; sourceTree = "<group>"; };
+		84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseReportController.m; sourceTree = "<group>"; };
+		8475C6EF0FB4E6F700277D7B /* expenseWorks.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = expenseWorks.db; path = Db/expenseWorks.db; sourceTree = "<group>"; };
 		8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage-SQLitePersistence.m"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.m"; sourceTree = "<group>"; };
 		8498AAC40FAE7E8D00DCD37B /* UIImage-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage-SQLitePersistence.h"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.h"; sourceTree = "<group>"; };
 		8498AAC50FAE7E8D00DCD37B /* UIColor-SQLitePersistentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor-SQLitePersistentObject.m"; path = "SqlitePersistentObjects/UIColor-SQLitePersistentObject.m"; sourceTree = "<group>"; };
@@ -173,6 +180,8 @@
 				A6613CB30F7676290090624B /* ToolbarController.m */,
 				A6613CB80F767C0A0090624B /* RootViewController.h */,
 				A6613CB90F767C0A0090624B /* RootViewController.m */,
+				84384A3B0FB7BAD100D469DC /* ExpenseReportController.h */,
+				84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */,
 			);
 			name = Controllers;
 			path = Classes;
@@ -309,6 +318,7 @@
 		84AF32BE0FAEABD10074174A /* Db */ = {
 			isa = PBXGroup;
 			children = (
+				8475C6EF0FB4E6F700277D7B /* expenseWorks.db */,
 				84AF32C00FAEAC800074174A /* Migrate */,
 			);
 			name = Db;
@@ -385,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				8475C6F00FB4E6F700277D7B /* expenseWorks.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8475C6F10FB4E6F700277D7B /* expenseWorks.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +452,7 @@
 				8498AB020FAE7E8D00DCD37B /* NSData-SQLitePersistence.m in Sources */,
 				84AF32EF0FAEBBFC0074174A /* ExpenseReportItem.m in Sources */,
 				84AF333C0FAEC1F10074174A /* ExpenseReport.m in Sources */,
+				84384A3E0FB7BAD100D469DC /* ExpenseReportController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +482,7 @@
 				8498AAF20FAE7E8D00DCD37B /* NSData-SQLitePersistence.m in Sources */,
 				84AF32F00FAEBBFC0074174A /* ExpenseReportItem.m in Sources */,
 				84AF333D0FAEC1F10074174A /* ExpenseReport.m in Sources */,
+				84384A3D0FB7BAD100D469DC /* ExpenseReportController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,13 +2,13 @@
 #import "SQLitePersistentObject.h"
 
 @interface ExpenseReport : SQLitePersistentObject {
-	NSString		*report_id;
-	NSDate			*created_date;
-	NSDate			*submitted_date;	
+	NSString		*reportId;
+	NSDate			*createdOn;
+	NSDate			*submittedOn;	
 }
 
-@property (nonatomic, retain) NSString	*report_id;
-@property (nonatomic, retain) NSDate	*created_date;
-@property (nonatomic, retain) NSDate	*submitted_date;
+@property (nonatomic, retain) NSString	*reportId;
+@property (nonatomic, retain) NSDate	*createdOn;
+@property (nonatomic, retain) NSDate	*submittedOn;
 
 @end
