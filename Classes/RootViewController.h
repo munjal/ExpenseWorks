@@ -1,8 +1,5 @@
 #import <UIKit/UIKit.h>
 #import "ToolbarController.h"
-#import "SQLiteInstanceManager.h"
-#import "ExpenseReport.h"
-#import "ExpenseReportItem.h"
 
 @interface RootViewController : UITableViewController {
 	NSArray *expenseReports;

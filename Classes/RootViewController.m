@@ -1,4 +1,9 @@
 #import "RootViewController.h"
+#import "SQLiteInstanceManager.h"
+#import "ExpenseReport.h"
+#import "ExpenseReportItem.h"
+#import "ExpenseType.h"
+#import "Vendor.h"
 
 @implementation RootViewController
 
@@ -80,25 +85,94 @@
 //	expenseReportItem.attendes = @"me";
 //	[expenseReportItem save];
 	
-	
+//	NSArray *expenseTypes = 
+//		[[NSArray alloc] initWithObjects: @"Business Meal", @"Flight", @"Benefit", @"Books", @"Car Rental",
+//		 @"Conference", @"Due Subscriptions", @"Gas", @"High Speed Internet", @"Hotel", @"Local Transportation",
+//		 @"Mileage and Tolls", @"Office Supplies", @"Other", @"Passport", @"Postage & Shipping",
+//		 @"Stipend - UK/US", @"Telephone", @"Training/Education", nil
+//		 ];
+//	
+//	for(NSString *expenseTypeName in expenseTypes) {
+//		ExpenseType *expenseType = [[ExpenseType alloc] init];
+//		expenseType.name = expenseTypeName;
+//		[expenseType save];
+//	}	
+//	ExpenseType *expenseType = [[ExpenseType alloc] init];
+//	expenseType.name = @"BusinessMeal";
 //	NSString *sqlString = [NSString stringWithFormat: @"sqlite3 '%@' .schema", [self databaseFileNameWithPath]];
 //	NSLog(sqlString);
 //	printf("The schema is \n");
 //	system([sqlString UTF8String]);
 //	printf("\n");
+//	
+//	sqlString = [NSString stringWithFormat: @"sqlite3 -header -column '%@' 'select * from expense_report_item'", 
+//				 [self databaseFileNameWithPath]];
+//	NSLog(sqlString);
+//	printf("The values in expense_report_item are: \n");
+//	system([sqlString UTF8String]);
+//	printf("\n");
+//	
+//	id expenseReportItems = [ExpenseReportItem findByCriteria:@"where expense_report like 'ExpenseReport%'"];
+//	NSLog(@"expense report items: %@", expenseReportItems);
+
+	//ExpenseReport *expenseReport = [ExpenseReport findByCriteria:@"where pk =1"];
+//	NSString *criteria = [NSString stringWithFormat:@"where expense_report = 'ExpenseReport-%d'", 1];
+//	id expenseReportItems = [ExpenseReportItem findByCriteria:criteria];
+//	NSLog(@"expense report are: %@", expenseReportItems);
 //
-	id expenseReportItems = [ExpenseReportItem findByCriteria:@"where 1 = 1"];
-	NSLog(@"expense report items are: %@", expenseReportItems);
+//	id expenseTypes = [ExpenseType allObjects];
+//	NSLog(@"expense types are: %@", expenseTypes);
+	
+	//Flights Vendor
+//	id expenseTypes = [ExpenseType findByName:@"Flight"];
+//	ExpenseType *expenseType = [expenseTypes objectAtIndex:0];
+//	
+//	NSArray *flightVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"United", @"American", @"Southwest", @"Delta", nil];
+//	for (NSString *name in flightVendors) {
+//		Vendor *vendor = [[Vendor alloc] init];
+//		vendor.name = name;
+//		vendor.expenseType = expenseType;
+//		[vendor save];		
+//	}
+	
+//	//Car Vendors
+//	id carRentalExpenseTypes = [ExpenseType findByName:@"Car Rental"];
+//	ExpenseType *carRentalExpenseType = [carRentalExpenseTypes objectAtIndex:0];
+//	NSArray *carVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"Avis", @"Hertz", @"Enterprise", @"Alamo", @"Thrifty", nil];	
+//	for (NSString *name in carVendors) {
+//		Vendor *vendor = [[Vendor alloc] init];
+//		vendor.name = name;
+//		vendor.expenseType = carRentalExpenseType;
+//		[vendor save];		
+//	}
+
+	//Hotel Vendors
+//	id hotelExpenseTypes = [ExpenseType findByName:@"Hotel"];
+//	ExpenseType *hotelExpenseType = [hotelExpenseTypes objectAtIndex:0];
+//	NSArray *hotelVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"Marriott", @"Hilton", @"Starwood", @"Hyatt", nil];	
+//	for (NSString *name in hotelVendors) {
+//		Vendor *vendor = [[Vendor alloc] init];
+//		vendor.name = name;
+//		vendor.expenseType = hotelExpenseType;
+//		[vendor save];		
+//	}
+	
+	
+	
+//	NSLog(@"Vendors: %@", [Vendor allObjects]);
+
+//	id expenseReportsItems = [ExpenseReportItem findByCriteria:@"where "]
+	
+//	id expenseReportItems = [ExpenseReportItem findByCriteria:@"where 1 = 1"];
+//	NSLog(@"expense report items are: %@", expenseReportItems);
 //	
 	return [ExpenseReport findByCriteria:@"where 1 = 1"];
 }
 
 - (void)viewDidLoad {
-	NSLog(@"Hello world");
  	if (([self initDatabase]) == FALSE) NSLog(@"Could not initiated databse");
 	
 	self.expenseReports =  [[NSArray alloc] initWithArray:[self getExpenseReports]];
-	NSLog(@"Expense Reports count is %d", [self.expenseReports count]);
 }
 
 
@@ -106,7 +180,8 @@
 {
     if (self = [super initWithStyle:UITableViewStylePlain]) {
 		self.toolbarItems = items;
-		self.title = [NSString stringWithFormat:@"Level %d", 7 - [items count]];
+		self.title = @"Expense Report Index";
+		//self.title = [NSString stringWithFormat:@"Level %d", 7 - [items count]];
     }
     return self;
 }

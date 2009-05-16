@@ -61,6 +61,16 @@
 		84AF32F00FAEBBFC0074174A /* ExpenseReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */; };
 		84AF333C0FAEC1F10074174A /* ExpenseReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF333B0FAEC1F10074174A /* ExpenseReport.m */; };
 		84AF333D0FAEC1F10074174A /* ExpenseReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF333B0FAEC1F10074174A /* ExpenseReport.m */; };
+		84D0AA760FBDD8AA009105AA /* NewExpenseReportItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0AA750FBDD8AA009105AA /* NewExpenseReportItemController.m */; };
+		84D0AA770FBDD8AA009105AA /* NewExpenseReportItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0AA750FBDD8AA009105AA /* NewExpenseReportItemController.m */; };
+		84D0AAB00FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D0AAAF0FBDDDCA009105AA /* NewExpenseReportItem.xib */; };
+		84D0AAB10FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D0AAAF0FBDDDCA009105AA /* NewExpenseReportItem.xib */; };
+		84D0AAD30FBDE3C1009105AA /* ExpenseTypesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0AAD20FBDE3C1009105AA /* ExpenseTypesController.m */; };
+		84D0AAD40FBDE3C1009105AA /* ExpenseTypesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0AAD20FBDE3C1009105AA /* ExpenseTypesController.m */; };
+		84D0AAE30FBDF793009105AA /* ExpenseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0AAE10FBDF793009105AA /* ExpenseType.m */; };
+		84D0AAE40FBDF793009105AA /* ExpenseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0AAE10FBDF793009105AA /* ExpenseType.m */; };
+		84D9F48B0FBE300E0087185D /* Vendor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9F4890FBE300E0087185D /* Vendor.m */; };
+		84D9F48C0FBE300E0087185D /* Vendor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9F4890FBE300E0087185D /* Vendor.m */; };
 		A6613CB40F7676290090624B /* ToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6613CB30F7676290090624B /* ToolbarController.m */; };
 		A6613CBA0F767C0A0090624B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6613CB90F767C0A0090624B /* RootViewController.m */; };
 /* End PBXBuildFile section */
@@ -140,6 +150,15 @@
 		84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseReportItem.m; path = Models/ExpenseReportItem.m; sourceTree = "<group>"; };
 		84AF333A0FAEC1F10074174A /* ExpenseReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseReport.h; path = Models/ExpenseReport.h; sourceTree = "<group>"; };
 		84AF333B0FAEC1F10074174A /* ExpenseReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseReport.m; path = Models/ExpenseReport.m; sourceTree = "<group>"; };
+		84D0AA740FBDD8AA009105AA /* NewExpenseReportItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewExpenseReportItemController.h; sourceTree = "<group>"; };
+		84D0AA750FBDD8AA009105AA /* NewExpenseReportItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewExpenseReportItemController.m; sourceTree = "<group>"; };
+		84D0AAAF0FBDDDCA009105AA /* NewExpenseReportItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewExpenseReportItem.xib; sourceTree = "<group>"; };
+		84D0AAD10FBDE3C1009105AA /* ExpenseTypesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseTypesController.h; sourceTree = "<group>"; };
+		84D0AAD20FBDE3C1009105AA /* ExpenseTypesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseTypesController.m; sourceTree = "<group>"; };
+		84D0AAE10FBDF793009105AA /* ExpenseType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseType.m; path = Models/ExpenseType.m; sourceTree = "<group>"; };
+		84D0AAE20FBDF793009105AA /* ExpenseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseType.h; path = Models/ExpenseType.h; sourceTree = "<group>"; };
+		84D9F4890FBE300E0087185D /* Vendor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vendor.m; path = Models/Vendor.m; sourceTree = "<group>"; };
+		84D9F48A0FBE300E0087185D /* Vendor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vendor.h; path = Models/Vendor.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ExpenseWorks-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A6613CB20F7676290090624B /* ToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarController.h; sourceTree = "<group>"; };
 		A6613CB30F7676290090624B /* ToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarController.m; sourceTree = "<group>"; };
@@ -182,6 +201,10 @@
 				A6613CB90F767C0A0090624B /* RootViewController.m */,
 				84384A3B0FB7BAD100D469DC /* ExpenseReportController.h */,
 				84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */,
+				84D0AA740FBDD8AA009105AA /* NewExpenseReportItemController.h */,
+				84D0AA750FBDD8AA009105AA /* NewExpenseReportItemController.m */,
+				84D0AAD10FBDE3C1009105AA /* ExpenseTypesController.h */,
+				84D0AAD20FBDE3C1009105AA /* ExpenseTypesController.m */,
 			);
 			name = Controllers;
 			path = Classes;
@@ -228,6 +251,7 @@
 			children = (
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */,
+				84D0AAAF0FBDDDCA009105AA /* NewExpenseReportItem.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -307,6 +331,10 @@
 		84AF32A90FAE940A0074174A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84D9F4890FBE300E0087185D /* Vendor.m */,
+				84D9F48A0FBE300E0087185D /* Vendor.h */,
+				84D0AAE10FBDF793009105AA /* ExpenseType.m */,
+				84D0AAE20FBDF793009105AA /* ExpenseType.h */,
 				84AF32ED0FAEBBFC0074174A /* ExpenseReportItem.h */,
 				84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */,
 				84AF333A0FAEC1F10074174A /* ExpenseReport.h */,
@@ -396,6 +424,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				8475C6F00FB4E6F700277D7B /* expenseWorks.db in Resources */,
+				84D0AAB00FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8475C6F10FB4E6F700277D7B /* expenseWorks.db in Resources */,
+				84D0AAB10FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +483,10 @@
 				84AF32EF0FAEBBFC0074174A /* ExpenseReportItem.m in Sources */,
 				84AF333C0FAEC1F10074174A /* ExpenseReport.m in Sources */,
 				84384A3E0FB7BAD100D469DC /* ExpenseReportController.m in Sources */,
+				84D0AA770FBDD8AA009105AA /* NewExpenseReportItemController.m in Sources */,
+				84D0AAD40FBDE3C1009105AA /* ExpenseTypesController.m in Sources */,
+				84D0AAE40FBDF793009105AA /* ExpenseType.m in Sources */,
+				84D9F48C0FBE300E0087185D /* Vendor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +517,10 @@
 				84AF32F00FAEBBFC0074174A /* ExpenseReportItem.m in Sources */,
 				84AF333D0FAEC1F10074174A /* ExpenseReport.m in Sources */,
 				84384A3D0FB7BAD100D469DC /* ExpenseReportController.m in Sources */,
+				84D0AA760FBDD8AA009105AA /* NewExpenseReportItemController.m in Sources */,
+				84D0AAD30FBDE3C1009105AA /* ExpenseTypesController.m in Sources */,
+				84D0AAE30FBDF793009105AA /* ExpenseType.m in Sources */,
+				84D9F48B0FBE300E0087185D /* Vendor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

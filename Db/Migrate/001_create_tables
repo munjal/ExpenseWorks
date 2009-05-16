@@ -6,3 +6,7 @@ CREATE TABLE if not exists expense_report_item (
 	pk INTEGER PRIMARY KEY, project TEXT, attendes TEXT, report_id TEXT, expense_report TEXT, amount REAL, 
 	payment TEXT, vendor TEXT, description TEXT, currency TEXT, date REAL, category TEXT
 );
+
+CREATE TABLE if not exists expense_type (
+	pk INTEGER PRIMARY KEY, name TEXT, type_id TEXT
+);

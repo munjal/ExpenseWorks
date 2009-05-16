@@ -1,7 +1,19 @@
-#import "ExpenseReportController.h"
+//
+//  ExpenseTypesController.m
+//  ExpenseWorks
+//
+//  Created by mbudhabh on 5/15/09.
+//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//
+
+#import "ExpenseTypesController.h"
+#import "ExpenseType.h"
+#import "NewExpenseReportItemController.h"
+
+@implementation ExpenseTypesController
+@synthesize expenseTypes;
 
 
-@implementation ExpenseReportController
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -12,20 +24,23 @@
 }
 */
 
-/*
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [super viewDidLoad];	
+	self.expenseTypes =  [[NSArray alloc] initWithArray:[ExpenseType allObjects]];
 }
-*/
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
+
+
+
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//	self.expenseTypes = [ExpenseType allObjects];
+//	[self.expenseTypes retain];
+//	NSLog(@"The expense types is NSArray kind: %@", [expenseTypes isKindOfClass:[NSArray class]]);
+//
+//}
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -72,7 +87,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [self.expenseTypes count];
 }
 
 
@@ -80,23 +95,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
-    // Set up the cell...
+	
+	cell.text = [[self.expenseTypes objectAtIndex:indexPath.row] name];
 	
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController];
-	// [anotherViewController release];
+	NewExpenseReportItemController *newItemController = [[NewExpenseReportItemController alloc] initWithNibName:@"NewExpenseReportItem" bundle:nil];
+	newItemController.expenseType = [self.expenseTypes objectAtIndex:indexPath.row];
+	[self.navigationController pushViewController:newItemController	animated:TRUE];
+	[newItemController release];
+	
 }
 
 

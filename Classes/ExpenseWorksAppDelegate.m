@@ -1,6 +1,8 @@
 #import "ExpenseWorksAppDelegate.h"
 #import "ToolbarController.h"
 #import "RootViewController.h"
+#import "NewExpenseReportItemController.h"
+#import "ExpenseTypesController.h"
 
 @implementation ExpenseWorksAppDelegate
 
@@ -9,12 +11,12 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	NSArray* toolbarItems = [NSArray arrayWithObjects:
-			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:@selector(doStuff)],				 
-			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(doStuff)],
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],				 
+			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showNewExpenseReportItemController)],
 			nil];
 	[toolbarItems makeObjectsPerformSelector:@selector(release)];
 	RootViewController* rootController = [[RootViewController alloc] initWithToolbarItems:toolbarItems];
-	UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:rootController];
+	navController = [[UINavigationController alloc] initWithRootViewController:rootController];
 	ToolbarController* toolbarController = [[ToolbarController alloc] initWithContentViewController:navController];
 		
 	[window addSubview:toolbarController.view];
@@ -22,8 +24,13 @@
 	[window makeKeyAndVisible];
 }
 
-- (IBAction) doStuff {
-	NSLog(@"Do some stuff");
+- (IBAction) showNewExpenseReportItemController {
+//	NewExpenseReportItemController *newItemController = [[NewExpenseReportItemController alloc] initWithNibName:@"NewExpenseReportItem" bundle:nil];
+//	[navController pushViewController:newItemController	animated:TRUE];
+	
+	ExpenseTypesController *expenseTypesController = [[ExpenseTypesController alloc] init];
+	[navController pushViewController: expenseTypesController animated:TRUE];
+	NSLog(@"Do some nasty stuff");
 }
 
 
