@@ -10,11 +10,40 @@
 
 
 @implementation NewExpenseReportItemController
+
+@synthesize expenseType, segmentedControl, mainView, amountDateView, vendorClientView;
+
 @synthesize projectCode;
-@synthesize expenseType;
-@synthesize vendorPickerView;
-@synthesize vendorPickerItems;
-@synthesize vendor;
+
+
+@synthesize vendorPickerView, vendorPickerItems, vendor;
+
+
+#pragma mark ---- UISegmentedControl value changed methods----
+- (IBAction)segmentedControlValueChanged:(id)sender {
+	NSLog(@"Value of current segment is: %@", [self.segmentedControl titleForSegmentAtIndex:self.segmentedControl.selectedSegmentIndex]);
+	switch (self.segmentedControl.selectedSegmentIndex) {
+		case 0:	//Vendor
+			[self showView:vendorClientView];
+			break;
+		case 1: //Amount & Date
+			[self showView:amountDateView];
+			break;
+		case 2: //Attendes
+			break;
+		case 3: //Client
+			break;
+	}
+}
+
+- (void) showView:(UIView *)view {
+	if ([[mainView subviews] containsObject:view]) {
+		[mainView bringSubviewToFront:view];
+	}
+	else {
+		[mainView addSubview:view];
+	}	
+}
 
 #pragma mark ---- UIPickerViewDataSource delegate methods ----
 
@@ -67,6 +96,8 @@
     [super viewDidLoad];
 	[self.projectCode setText:self.expenseType.name];
 	self.vendorPickerItems =  [[NSArray alloc] initWithArray:[Vendor findByExpenseType:self.expenseType]];
+	self.navigationItem.titleView = self.segmentedControl;
+	[self showView:vendorClientView];
 }
 
 

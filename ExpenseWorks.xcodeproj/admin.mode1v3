@@ -331,8 +331,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>5</integer>
+									<integer>22</integer>
+									<integer>16</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -386,19 +386,16 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>84D9F58F0FBF0D8D0087185D</string>
+										<string>84D9F6F50FC0A3EE0087185D</string>
 										<key>history</key>
 										<array>
 											<string>84D9F50B0FBE690E0087185D</string>
 											<string>84D9F50C0FBE690E0087185D</string>
-											<string>84D9F5500FBF09410087185D</string>
 											<string>84D9F5640FBF0AAD0087185D</string>
 											<string>84D9F5650FBF0AAD0087185D</string>
-											<string>84D9F5660FBF0AAD0087185D</string>
-										</array>
-										<key>nextStack</key>
-										<array>
-											<string>84D9F5680FBF0AAD0087185D</string>
+											<string>84D9F6C20FC09FBB0087185D</string>
+											<string>84D9F6D00FC0A15B0087185D</string>
+											<string>84D9F6D10FC0A15B0087185D</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -413,6 +410,19 @@
 											<string>84D9F53C0FBF08610087185D</string>
 											<string>84D9F5510FBF09410087185D</string>
 											<string>84D9F5670FBF0AAD0087185D</string>
+											<string>84D9F6710FC0968C0087185D</string>
+											<string>84D9F6730FC0968C0087185D</string>
+											<string>84D9F6750FC0968C0087185D</string>
+											<string>84D9F6770FC0968C0087185D</string>
+											<string>84D9F68A0FC0986A0087185D</string>
+											<string>84D9F6970FC09BB30087185D</string>
+											<string>84D9F6AD0FC09EC20087185D</string>
+											<string>84D9F6AF0FC09EC20087185D</string>
+											<string>84D9F6B10FC09EC20087185D</string>
+											<string>84D9F6D20FC0A15B0087185D</string>
+											<string>84D9F6D30FC0A15B0087185D</string>
+											<string>84D9F6D40FC0A15B0087185D</string>
+											<string>84D9F6D50FC0A15B0087185D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -591,7 +601,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>264179085.287249</real>
+	<real>264283118.61203101</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -610,10 +620,10 @@
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>84D9F5090FBE68B10087185D</string>
 		<string>84D9F50A0FBE68B10087185D</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>84C798030FA7DFEF00736383</string>
 		<string>/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 55 1436 823 0 0 1440 878 </string>
@@ -850,8 +860,6 @@
 							<key>Dock</key>
 							<array>
 								<dict>
-									<key>BecomeActive</key>
-									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
@@ -878,6 +886,8 @@
 							<string>237pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -989,7 +999,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
