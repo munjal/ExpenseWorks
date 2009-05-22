@@ -15,6 +15,8 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		840CFD860FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
 		840CFD870FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
+		840CFE8A0FC719C100A7E2BD /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CFE880FC719C100A7E2BD /* Currency.m */; };
+		840CFE8B0FC719C100A7E2BD /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CFE880FC719C100A7E2BD /* Currency.m */; };
 		8416A7EC0FAE31EC00683EA9 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7E70FAE31EC00683EA9 /* GTMSenTestCase.m */; };
 		8416A7ED0FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7E90FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m */; };
 		8416A7EE0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7EA0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m */; };
@@ -102,6 +104,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ExpenseWorks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseWorks_Prefix.pch; sourceTree = "<group>"; };
 		840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrow24x24.png; sourceTree = "<group>"; };
+		840CFE880FC719C100A7E2BD /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Currency.m; path = Models/Currency.m; sourceTree = "<group>"; };
+		840CFE890FC719C100A7E2BD /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Currency.h; path = Models/Currency.h; sourceTree = "<group>"; };
 		8416A7E10FAE315500683EA9 /* UnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8416A7E30FAE315500683EA9 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
 		8416A7E70FAE31EC00683EA9 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
@@ -335,6 +339,8 @@
 		84AF32A90FAE940A0074174A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				840CFE880FC719C100A7E2BD /* Currency.m */,
+				840CFE890FC719C100A7E2BD /* Currency.h */,
 				84D9F4890FBE300E0087185D /* Vendor.m */,
 				84D9F48A0FBE300E0087185D /* Vendor.h */,
 				84D0AAE10FBDF793009105AA /* ExpenseType.m */,
@@ -493,6 +499,7 @@
 				84D0AAD40FBDE3C1009105AA /* ExpenseTypesController.m in Sources */,
 				84D0AAE40FBDF793009105AA /* ExpenseType.m in Sources */,
 				84D9F48C0FBE300E0087185D /* Vendor.m in Sources */,
+				840CFE8B0FC719C100A7E2BD /* Currency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +534,7 @@
 				84D0AAD30FBDE3C1009105AA /* ExpenseTypesController.m in Sources */,
 				84D0AAE30FBDF793009105AA /* ExpenseType.m in Sources */,
 				84D9F48B0FBE300E0087185D /* Vendor.m in Sources */,
+				840CFE8A0FC719C100A7E2BD /* Currency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

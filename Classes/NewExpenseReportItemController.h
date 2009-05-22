@@ -10,10 +10,13 @@
 #import "ExpenseType.h"
 #import "Vendor.h"
 
-//@interface NewExpenseReportItemController : UIViewController <UIPickerViewDelegate> {
-@interface NewExpenseReportItemController : UIViewController <UITextFieldDelegate> {
+@interface NewExpenseReportItemController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate> {
 	ExpenseType							*expenseType;
 	Vendor								*vendor;
+	//	IBOutlet UIPickerView				*vendorPickerView;
+	NSArray								*vendorPickerItems;
+
+	
 	
 	IBOutlet UIView						*mainView;
 	IBOutlet UIScrollView				*scrollView;
@@ -29,13 +32,14 @@
 	IBOutlet UITextField				*projectField;
 	IBOutlet UITextField				*attendesField;
 	NSMutableArray						*textFields;
-	
-//	IBOutlet UIPickerView				*vendorPickerView;
-//	NSArray								*vendorPickerItems;
+
+	IBOutlet UIPickerView				*genericPicker;
+	IBOutlet UIDatePicker				*datePicker;
 	
 	IBOutlet UIButton					*previousButton;
 	IBOutlet UIButton					*nextButton;
 	IBOutlet UIButton					*doneButton;
+	
 	
 	BOOL			keyboardShown;
 	UITextField		*activeField;
@@ -60,12 +64,15 @@
 @property (nonatomic, retain) UITextField				*attendesField;
 @property (nonatomic, retain) NSMutableArray			*textFields;
 
+@property (nonatomic, retain) UIPickerView				*genericPicker; 
+@property (nonatomic, retain) UIDatePicker				*datePicker;
+
 @property (nonatomic, retain) IBOutlet UIButton			*previousButton;
 @property (nonatomic, retain) IBOutlet UIButton			*nextButton;
 @property (nonatomic, retain) IBOutlet UIButton			*doneButton;
 
 //@property (nonatomic, retain) UIPickerView				*vendorPickerView;
-//@property (nonatomic, retain) NSArray					*vendorPickerItems;
+@property (nonatomic, retain) NSArray					*vendorPickerItems;
 
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField;

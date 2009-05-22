@@ -14,37 +14,35 @@
 @synthesize expenseType, vendor;
 @synthesize mainView, scrollView, contentView, navigationPopupView, datePickerView, genericPickerView;
 @synthesize vendorField, dateField, currencyField, amountField, projectField, attendesField, textFields;
+@synthesize genericPicker, datePicker;
 @synthesize previousButton, nextButton, doneButton;
-
+@synthesize vendorPickerItems;
 //@synthesize vendorPickerView, vendorPickerItems, vendor;
 
-//#pragma mark ---- UIPickerViewDataSource delegate methods ----
-//
-//// returns the number of columns to display.
-//- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-//	NSLog(@"numberOfComponentsInPickerView");
-//	return 1;
-//}
-//
-//// returns the number of rows
-//- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-//	NSLog(@"number of rows");
-//	return [vendorPickerItems count];
-//}
-//
-//
-//#pragma mark ---- UIPickerViewDelegate delegate methods ----
-//// returns the title of each row
-//- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-//	NSLog(@"title of each row");
-//	Vendor *currentVendor = [vendorPickerItems objectAtIndex:row];
-//	return currentVendor.name;
-//}
-//
-//// gets called when the user settles on a row
-//- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-//	vendor = [vendorPickerItems objectAtIndex:row];
-//}
+#pragma mark ---- UIPickerViewDataSource delegate methods ----
+
+// returns the number of columns to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+	return 1;
+}
+
+// returns the number of rows
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+	return [vendorPickerItems count];
+}
+
+
+#pragma mark ---- UIPickerViewDelegate delegate methods ----
+// returns the title of each row
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+	Vendor *currentVendor = [vendorPickerItems objectAtIndex:row];
+	return currentVendor.name;
+}
+
+// gets called when the user settles on a row
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+	vendor = [vendorPickerItems objectAtIndex:row];
+}
 
 
 /*
@@ -74,7 +72,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-//	self.vendorPickerItems =  [[NSArray alloc] initWithArray:[Vendor findByExpenseType:self.expenseType]];
+	self.vendorPickerItems =  [[NSArray alloc] initWithArray:[Vendor findByExpenseType:self.expenseType]];
 	
 	[self registerForKeyboardNotifications];
 	
@@ -177,19 +175,28 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 		[activeField resignFirstResponder];
 	activeField = (UITextField *)sender.superview;
 	
+	UIView *pickerViewToDisplay;
+	if (activeField == self.dateField)
+		pickerViewToDisplay = self.datePickerView;
+	else
+		pickerViewToDisplay = self.genericPickerView;
 	
-	[scrollView.superview addSubview:self.datePickerView];
-	long y = scrollView.superview.bounds.size.height + 44 - (self.datePickerView.bounds.size.height/2);
+	[scrollView.superview addSubview:pickerViewToDisplay];
+	long y = scrollView.superview.bounds.size.height + 44 - (pickerViewToDisplay.bounds.size.height/2);
 	
-	self.datePickerView.center = CGPointMake(navigationPopupView.center.x, y);
+	pickerViewToDisplay.center = CGPointMake(navigationPopupView.center.x, y);
 	
 	if (keyboardShown)
 		return;
 	
 	[scrollView.superview addSubview:self.navigationPopupView];
 	
-	y = scrollView.superview.bounds.size.height + 44 - datePickerView.bounds.size.height - (navigationPopupView.bounds.size.height/2);
+	y = scrollView.superview.bounds.size.height + 44 - pickerViewToDisplay.bounds.size.height - (navigationPopupView.bounds.size.height/2);
 	navigationPopupView.center = CGPointMake(navigationPopupView.center.x, y);
+	
+//	if (pickerViewToDisplay == self.genericPickerView) {
+//		[self.genericPicker selectRow:2 inComponent:0 animated:TRUE];
+//	}
 }
 
 // Called when the UIKeyboardDidHideNotification is sent
@@ -230,6 +237,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 
 - (IBAction)tabDoneControl {
 	[activeField resignFirstResponder];
+	[self.genericPickerView removeFromSuperview];
 	[self.datePickerView removeFromSuperview];
 	[self.navigationPopupView removeFromSuperview];
 }
@@ -259,7 +267,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	[self.navigationPopupView		dealloc];
 	[self.datePickerView			dealloc];
 	[self.genericPickerView			dealloc];
-		
+	
 	[self.vendorField				dealloc];
 	[self.dateField					dealloc];
 	[self.currencyField				dealloc];
@@ -267,6 +275,9 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	[self.projectField				dealloc];
 	[self.attendesField				dealloc];
 	[self.textFields				dealloc];
+	
+	[self.genericPicker				dealloc];
+	[self.datePicker				dealloc];
 	
 	[self.previousButton			dealloc];
 	[self.nextButton				dealloc];

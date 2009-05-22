@@ -4,6 +4,7 @@
 #import "ExpenseReportItem.h"
 #import "ExpenseType.h"
 #import "Vendor.h"
+#import "Currency.h"
 
 @implementation RootViewController
 
@@ -156,17 +157,28 @@
 //		vendor.expenseType = hotelExpenseType;
 //		[vendor save];		
 //	}
-	
-	
-	
 //	NSLog(@"Vendors: %@", [Vendor allObjects]);
+	
+	
+	//Currency
+//	NSArray *currencies = [[NSArray alloc] initWithObjects: @"Australian AUD $", @"Euro €", @"British GBP £", @"Indian INR ₨", @"Chinese RMB ¥", @"United States USD $", nil];
+//	
+//	for(NSString *currencyName in currencies) {
+//		Currency *currency = [[Currency alloc] init];
+//		currency.name = currencyName;
+//		currency.lastSelectedOn = [NSDate date];
+//		[currency save];
+//	}	
+//	NSLog(@"Currencies: %@", [Currency findByCriteria:@" ORDER BY last_selected_on DESC"]);
+	
+
 
 //	id expenseReportsItems = [ExpenseReportItem findByCriteria:@"where "]
 	
 //	id expenseReportItems = [ExpenseReportItem findByCriteria:@"where 1 = 1"];
 //	NSLog(@"expense report items are: %@", expenseReportItems);
 //	
-	return [ExpenseReport findByCriteria:@"where 1 = 1"];
+	return [ExpenseReport findByCriteria:@""];
 }
 
 - (void)viewDidLoad {
