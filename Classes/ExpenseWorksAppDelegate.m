@@ -25,12 +25,8 @@
 }
 
 - (IBAction) showNewExpenseReportItemController {
-//	NewExpenseReportItemController *newItemController = [[NewExpenseReportItemController alloc] initWithNibName:@"NewExpenseReportItem" bundle:nil];
-//	[navController pushViewController:newItemController	animated:TRUE];
-	
 	ExpenseTypesController *expenseTypesController = [[ExpenseTypesController alloc] init];
 	[navController pushViewController: expenseTypesController animated:TRUE];
-	NSLog(@"Do some nasty stuff");
 }
 
 

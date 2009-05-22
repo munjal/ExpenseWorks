@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		840CFD860FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
+		840CFD870FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
 		8416A7EC0FAE31EC00683EA9 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7E70FAE31EC00683EA9 /* GTMSenTestCase.m */; };
 		8416A7ED0FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7E90FAE31EC00683EA9 /* GTMIPhoneUnitTestMain.m */; };
 		8416A7EE0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416A7EA0FAE31EC00683EA9 /* GTMIPhoneUnitTestDelegate.m */; };
@@ -99,6 +101,7 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ExpenseWorks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseWorks_Prefix.pch; sourceTree = "<group>"; };
+		840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrow24x24.png; sourceTree = "<group>"; };
 		8416A7E10FAE315500683EA9 /* UnitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8416A7E30FAE315500683EA9 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
 		8416A7E70FAE31EC00683EA9 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* ExpenseWorks-Info.plist */,
 				84D0AAAF0FBDDDCA009105AA /* NewExpenseReportItem.xib */,
@@ -425,6 +429,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				8475C6F00FB4E6F700277D7B /* expenseWorks.db in Resources */,
 				84D0AAB00FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */,
+				840CFD870FC618BB00A7E2BD /* DownArrow24x24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +439,7 @@
 			files = (
 				8475C6F10FB4E6F700277D7B /* expenseWorks.db in Resources */,
 				84D0AAB10FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */,
+				840CFD860FC618BB00A7E2BD /* DownArrow24x24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
