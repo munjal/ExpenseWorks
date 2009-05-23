@@ -337,7 +337,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 94}, {294, 764}}</string>
+							<string>{{0, 128}, {294, 764}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -386,7 +386,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>840C02730FC8664D00A7E2BD</string>
+										<string>840C02C60FC8752A00A7E2BD</string>
 										<key>history</key>
 										<array>
 											<string>840CFEEC0FC7263C00A7E2BD</string>
@@ -401,8 +401,8 @@
 											<string>840C00430FC771AA00A7E2BD</string>
 											<string>840C00450FC771AA00A7E2BD</string>
 											<string>840C00CB0FC77DE000A7E2BD</string>
-											<string>840C017B0FC84F7100A7E2BD</string>
-											<string>840C017C0FC84F7100A7E2BD</string>
+											<string>840C02B80FC874B500A7E2BD</string>
+											<string>840C02B90FC874B500A7E2BD</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -411,16 +411,22 @@
 											<string>840CFF6C0FC7614900A7E2BD</string>
 											<string>840C00CE0FC77DE000A7E2BD</string>
 											<string>840C00CF0FC77DE000A7E2BD</string>
-											<string>840C00E80FC77EDE00A7E2BD</string>
-											<string>840C00E90FC77EDE00A7E2BD</string>
-											<string>840C01150FC78A0C00A7E2BD</string>
-											<string>840C01220FC78B3800A7E2BD</string>
-											<string>840C01570FC84E6D00A7E2BD</string>
-											<string>840C01580FC84E6D00A7E2BD</string>
-											<string>840C01590FC84E6D00A7E2BD</string>
-											<string>840C015A0FC84E6D00A7E2BD</string>
-											<string>840C017D0FC84F7100A7E2BD</string>
-											<string>840C017E0FC84F7100A7E2BD</string>
+											<string>840C02AA0FC8731B00A7E2BD</string>
+											<string>840C02AB0FC8731B00A7E2BD</string>
+											<string>840C02AC0FC8731B00A7E2BD</string>
+											<string>840C02AD0FC8731B00A7E2BD</string>
+											<string>840C02AE0FC8731B00A7E2BD</string>
+											<string>840C02AF0FC8731B00A7E2BD</string>
+											<string>840C02B00FC8731B00A7E2BD</string>
+											<string>840C02B10FC8731B00A7E2BD</string>
+											<string>840C02BA0FC874B500A7E2BD</string>
+											<string>840C02BB0FC874B500A7E2BD</string>
+											<string>840C02BC0FC874B500A7E2BD</string>
+											<string>840C02BD0FC874B500A7E2BD</string>
+											<string>840C02BE0FC874B500A7E2BD</string>
+											<string>840C02BF0FC874B500A7E2BD</string>
+											<string>840C02C00FC874B500A7E2BD</string>
+											<string>840C02C10FC874B500A7E2BD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -478,9 +484,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>840CFECB0FC7252B00A7E2BD</string>
+				<string>840C028E0FC8706E00A7E2BD</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>840CFECC0FC7252B00A7E2BD</string>
+				<string>840C028F0FC8706E00A7E2BD</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -599,7 +605,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>264791629.63898101</real>
+	<real>264795434.32449001</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -614,15 +620,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>840CFF950FC7633500A7E2BD</string>
 		<string>844192850FAD0C0700CDED9F</string>
-		<string>840CFECD0FC7252B00A7E2BD</string>
-		<string>840CFECE0FC7252B00A7E2BD</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>84C798030FA7DFEF00736383</string>
-		<string>/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 55 1436 823 0 0 1440 878 </string>
@@ -646,7 +648,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NewExpenseReportItemController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -706,7 +708,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>84C798030FA7DFEF00736383</string>
-				<string>840CFE6F0FC6FAC100A7E2BD</string>
+				<string>840C028B0FC8706200A7E2BD</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -826,13 +828,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>840CFE730FC6FB6B00A7E2BD</string>
+				<string>840C02900FC8706E00A7E2BD</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>840CFE740FC6FB6B00A7E2BD</string>
-				<string>840CFE750FC6FB6B00A7E2BD</string>
-				<string>840CFE760FC6FB6B00A7E2BD</string>
-				<string>840CFE770FC6FB6B00A7E2BD</string>
-				<string>840CFE780FC6FB6B00A7E2BD</string>
+				<string>840C02910FC8706E00A7E2BD</string>
+				<string>840C02920FC8706E00A7E2BD</string>
+				<string>840C02930FC8706E00A7E2BD</string>
+				<string>840C02940FC8706E00A7E2BD</string>
+				<string>840C02950FC8706E00A7E2BD</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -988,7 +990,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>840CFE790FC6FB6B00A7E2BD</string>
+				<string>840C02960FC8706E00A7E2BD</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -1494,7 +1496,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>844192850FAD0C0700CDED9F</string>
-				<string>840CFF1E0FC7532900A7E2BD</string>
+				<string>840C029A0FC8712A00A7E2BD</string>
 				<string>844192840FAD0C0700CDED9F</string>
 			</array>
 			<key>WindowString</key>

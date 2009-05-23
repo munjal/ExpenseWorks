@@ -36,20 +36,6 @@
 	//vendor = [vendors objectAtIndex:row];
 }
 
-NSInteger sortByTop(id control1, id control2, void *reverse) {
-	
-	int top1 = ((UITextField *)control1).center.y;
-	int top2 = ((UITextField *)control2).center.y;
-	
-	if (top1 < top2)
-		return NSOrderedAscending;
-	else if (top1 > top2)
-		return NSOrderedDescending;
-	else
-		return NSOrderedSame;
-}
-
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,8 +45,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	
 	[scrollView setContentSize:CGSizeMake(self.contentView.bounds.size.width, self.contentView.bounds.size.height)];
 	[scrollView addSubview:self.contentView];
-	[self populateTextFieldsArraySortedByPosition];
-	[self addDropDownButtonToTextView];
+	[self populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField];
 	
 }
 
@@ -76,31 +61,46 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 								   ]];
 }
 
-- (void)populateTextFieldsArraySortedByPosition {
+- (void)populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField {
 	self.textFields = [[NSMutableArray alloc] init];
 
 	NSArray *sortedArray = [[contentView subviews] sortedArrayUsingFunction:sortByTop context:NULL];
 	for (UIView *curentView in sortedArray) {
 		if ([curentView isKindOfClass:[UITextField class]]){
-			UITextField *currentField = (UITextField *)curentView;
-			[currentField setDelegate:self];
-			[self.textFields addObject:currentField];
+			UITextField *currentTextField = (UITextField *)curentView;
+			[currentTextField setDelegate:self];
+			[self addButtonInRightViewModeTo:currentTextField];
+			[self.textFields addObject:currentTextField];
 		}
 			
 	}
 }
 
-- (void)addDropDownButtonToTextView {
+NSInteger sortByTop(id control1, id control2, void *reverse) {
+	int top1 = ((UITextField *)control1).center.y;
+	int top2 = ((UITextField *)control2).center.y;
+	
+	if (top1 < top2)
+		return NSOrderedAscending;
+	else if (top1 > top2)
+		return NSOrderedDescending;
+	else
+		return NSOrderedSame;
+}
+
+
+- (void) addButtonInRightViewModeTo:(UITextField *)textField {
+	textField.rightViewMode = UITextFieldViewModeAlways;
+	textField.rightView = [self createDropDownButton];
+}
+
+- (UIButton *)createDropDownButton {
 	UIImage *downArrowImage = [UIImage imageNamed:@"DownArrow24x24.png"];
-	for (UITextField *currentTextField in self.textFields) {
-		UIButton *downArrowButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		[downArrowButton setFrame:CGRectMake(0, 0, 24, 24)];
-		[downArrowButton setImage:downArrowImage forState:UIControlStateNormal];
-		currentTextField.rightViewMode = UITextFieldViewModeAlways;
-		currentTextField.rightView = downArrowButton;
-		
-		[downArrowButton addTarget:self action:@selector(showPicker:) forControlEvents:UIControlEventTouchDown];
-	}
+	UIButton *downArrowButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[downArrowButton setFrame:CGRectMake(0, 0, 24, 24)];
+	[downArrowButton setImage:downArrowImage forState:UIControlStateNormal];
+	[downArrowButton addTarget:self action:@selector(showPicker:) forControlEvents:UIControlEventTouchDown];
+	return downArrowButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -188,8 +188,11 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 		[activeField resignFirstResponder];
 	
 	navigationPopupShown = TRUE;
+	activeField.backgroundColor = nil;
 	
 	activeField = (UITextField *)sender.superview;
+	
+	activeField.backgroundColor = [UIColor blueColor];
 	
 	UIView *pickerViewToDisplay;
 	if (activeField == self.dateField)

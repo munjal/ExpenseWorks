@@ -83,11 +83,15 @@
 - (IBAction)tabToNextControl;
 - (IBAction)tabDoneControl;
 
-- (void)populatePickerItems;
-- (void)populateTextFieldsArraySortedByPosition;
-- (void)addDropDownButtonToTextView;
+NSInteger sortByTop(id control1, id control2, void *reverse);
 
-- (void) resizeScrollViewForKeyboardOrPopupViewDisplay:(CGSize)keyboardSize;
+- (void)populatePickerItems;
+- (void)populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField;
+
+- (void)addButtonInRightViewModeTo:(UITextField *)textField;
+- (UIButton *)createDropDownButton;
+
+- (void)resizeScrollViewForKeyboardOrPopupViewDisplay:(CGSize)keyboardSize;
 
 - (NSArray *)pickerArrayForTextField:(UITextField *)textField;
 - (IBAction)showPicker:(UIButton *)sender;
