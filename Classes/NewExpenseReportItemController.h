@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "ExpenseType.h"
 #import "Vendor.h"
+#import "Currency.h"
 
 @interface NewExpenseReportItemController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate> {
 	ExpenseType							*expenseType;
 	Vendor								*vendor;
-	//	IBOutlet UIPickerView				*vendorPickerView;
-	NSArray								*vendorPickerItems;
-
-	
+	NSArray								*vendors;
+	NSArray								*currencies;
+	NSArray								*activePickerArray;
+	NSDictionary						*modelToTextFieldMapper;
 	
 	IBOutlet UIView						*mainView;
 	IBOutlet UIScrollView				*scrollView;
@@ -32,7 +33,8 @@
 	IBOutlet UITextField				*projectField;
 	IBOutlet UITextField				*attendesField;
 	NSMutableArray						*textFields;
-
+	UITextField							*activeField;
+	
 	IBOutlet UIPickerView				*genericPicker;
 	IBOutlet UIDatePicker				*datePicker;
 	
@@ -40,14 +42,16 @@
 	IBOutlet UIButton					*nextButton;
 	IBOutlet UIButton					*doneButton;
 	
-	
-	BOOL			keyboardShown;
-	UITextField		*activeField;
-	
+	BOOL								keyboardShown;
+	BOOL								navigationPopupShown;
 }
 
 @property (nonatomic, retain) ExpenseType				*expenseType;
 @property (nonatomic, retain) Vendor					*vendor;
+@property (nonatomic, retain) NSArray					*vendors;
+@property (nonatomic, retain) NSArray					*currencies;
+@property (nonatomic, retain) NSArray					*activePickerArray;
+@property (nonatomic, retain) NSDictionary				*modelToTextFieldMapper;
 
 @property (nonatomic, retain) UIView					*mainView;
 @property (nonatomic, retain) UIScrollView				*scrollView;
@@ -71,10 +75,6 @@
 @property (nonatomic, retain) IBOutlet UIButton			*nextButton;
 @property (nonatomic, retain) IBOutlet UIButton			*doneButton;
 
-//@property (nonatomic, retain) UIPickerView				*vendorPickerView;
-@property (nonatomic, retain) NSArray					*vendorPickerItems;
-
-
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 - (void)registerForKeyboardNotifications;
@@ -83,9 +83,13 @@
 - (IBAction)tabToNextControl;
 - (IBAction)tabDoneControl;
 
+- (void)populatePickerItems;
 - (void)populateTextFieldsArraySortedByPosition;
 - (void)addDropDownButtonToTextView;
 
+- (void) resizeScrollViewForKeyboardOrPopupViewDisplay:(CGSize)keyboardSize;
+
+- (NSArray *)pickerArrayForTextField:(UITextField *)textField;
 - (IBAction)showPicker:(UIButton *)sender;
 - (void)makeControlFirstResponder:(BOOL)next;
 

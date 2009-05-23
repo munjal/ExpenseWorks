@@ -331,13 +331,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>5</integer>
+									<integer>28</integer>
+									<integer>18</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 16}, {294, 764}}</string>
+							<string>{{0, 94}, {294, 764}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -374,7 +374,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>NewExpenseReportItemController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -382,23 +382,45 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.m</string>
+										<string>NewExpenseReportItemController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>840CFF130FC7272C00A7E2BD</string>
+										<string>840C02730FC8664D00A7E2BD</string>
 										<key>history</key>
 										<array>
-											<string>840CFDA50FC61AE700A7E2BD</string>
 											<string>840CFEEC0FC7263C00A7E2BD</string>
 											<string>840CFEED0FC7263C00A7E2BD</string>
 											<string>840CFEEE0FC7263C00A7E2BD</string>
 											<string>840CFEFD0FC726E500A7E2BD</string>
-											<string>840CFEFE0FC726E500A7E2BD</string>
+											<string>840CFF2E0FC7534100A7E2BD</string>
+											<string>840CFF630FC7614900A7E2BD</string>
+											<string>840CFF640FC7614900A7E2BD</string>
+											<string>840CFF650FC7614900A7E2BD</string>
+											<string>840CFFA20FC763D700A7E2BD</string>
+											<string>840C00430FC771AA00A7E2BD</string>
+											<string>840C00450FC771AA00A7E2BD</string>
+											<string>840C00CB0FC77DE000A7E2BD</string>
+											<string>840C017B0FC84F7100A7E2BD</string>
+											<string>840C017C0FC84F7100A7E2BD</string>
 										</array>
-										<key>nextStack</key>
+										<key>prevStack</key>
 										<array>
-											<string>840CFEFF0FC726E500A7E2BD</string>
+											<string>840CFF6A0FC7614900A7E2BD</string>
+											<string>840CFF6B0FC7614900A7E2BD</string>
+											<string>840CFF6C0FC7614900A7E2BD</string>
+											<string>840C00CE0FC77DE000A7E2BD</string>
+											<string>840C00CF0FC77DE000A7E2BD</string>
+											<string>840C00E80FC77EDE00A7E2BD</string>
+											<string>840C00E90FC77EDE00A7E2BD</string>
+											<string>840C01150FC78A0C00A7E2BD</string>
+											<string>840C01220FC78B3800A7E2BD</string>
+											<string>840C01570FC84E6D00A7E2BD</string>
+											<string>840C01580FC84E6D00A7E2BD</string>
+											<string>840C01590FC84E6D00A7E2BD</string>
+											<string>840C015A0FC84E6D00A7E2BD</string>
+											<string>840C017D0FC84F7100A7E2BD</string>
+											<string>840C017E0FC84F7100A7E2BD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -577,7 +599,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>264709932.39397901</real>
+	<real>264791629.63898101</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -592,6 +614,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>840CFF950FC7633500A7E2BD</string>
+		<string>844192850FAD0C0700CDED9F</string>
 		<string>840CFECD0FC7252B00A7E2BD</string>
 		<string>840CFECE0FC7252B00A7E2BD</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -621,7 +646,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>NewExpenseReportItemController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -839,7 +864,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UINavigationController.h</string>
+										<string></string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -897,8 +922,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>84D9F4F50FBE68AA0087185D</string>
-				<string>84D9F4F60FBE68AA0087185D</string>
+				<string>840C00B50FC77D7B00A7E2BD</string>
+				<string>840C00B60FC77D7B00A7E2BD</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>
@@ -1442,7 +1467,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1158, 667}}</string>
 								<key>RubberWindowFrame</key>
-								<string>131 141 1158 708 0 0 1440 878 </string>
+								<string>179 49 1158 708 0 0 1440 878 </string>
 								<key>XCRefactoringSplitViewLowerHeight</key>
 								<real>288</real>
 								<key>XCRefactoringSplitViewTotalHeight</key>
@@ -1469,11 +1494,11 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>844192850FAD0C0700CDED9F</string>
-				<string>84D9F5290FBF08560087185D</string>
+				<string>840CFF1E0FC7532900A7E2BD</string>
 				<string>844192840FAD0C0700CDED9F</string>
 			</array>
 			<key>WindowString</key>
-			<string>131 141 1158 708 0 0 1440 878 </string>
+			<string>179 49 1158 708 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>844192850FAD0C0700CDED9F</string>
 			<key>WindowToolIsVisible</key>

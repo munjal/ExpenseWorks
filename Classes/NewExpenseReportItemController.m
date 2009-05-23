@@ -1,23 +1,15 @@
-//
-//  NewExpenseReportItemController.m
-//  ExpenseWorks
-//
-//  Created by mbudhabh on 5/15/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
 #import "NewExpenseReportItemController.h"
 
 
 @implementation NewExpenseReportItemController
 
 @synthesize expenseType, vendor;
+@synthesize vendors, currencies, activePickerArray, modelToTextFieldMapper;
+
 @synthesize mainView, scrollView, contentView, navigationPopupView, datePickerView, genericPickerView;
 @synthesize vendorField, dateField, currencyField, amountField, projectField, attendesField, textFields;
 @synthesize genericPicker, datePicker;
 @synthesize previousButton, nextButton, doneButton;
-@synthesize vendorPickerItems;
-//@synthesize vendorPickerView, vendorPickerItems, vendor;
 
 #pragma mark ---- UIPickerViewDataSource delegate methods ----
 
@@ -28,32 +20,21 @@
 
 // returns the number of rows
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-	return [vendorPickerItems count];
+	return [[self pickerArrayForTextField:activeField] count];
 }
 
 
 #pragma mark ---- UIPickerViewDelegate delegate methods ----
 // returns the title of each row
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-	Vendor *currentVendor = [vendorPickerItems objectAtIndex:row];
-	return currentVendor.name;
+	return [[[self pickerArrayForTextField:activeField] objectAtIndex:row] name];
 }
 
 // gets called when the user settles on a row
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-	vendor = [vendorPickerItems objectAtIndex:row];
+	activeField.text = [[[self pickerArrayForTextField:activeField] objectAtIndex:row] name];
+	//vendor = [vendors objectAtIndex:row];
 }
-
-
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
 
 NSInteger sortByTop(id control1, id control2, void *reverse) {
 	
@@ -72,7 +53,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.vendorPickerItems =  [[NSArray alloc] initWithArray:[Vendor findByExpenseType:self.expenseType]];
+	[self populatePickerItems];
 	
 	[self registerForKeyboardNotifications];
 	
@@ -83,13 +64,29 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	
 }
 
+- (void)populatePickerItems {
+	self.vendors =  [[NSArray alloc] initWithArray:[Vendor findByExpenseType:self.expenseType]];
+	self.currencies = [[NSArray alloc] initWithArray:[Currency findByCriteria:@" ORDER BY last_selected_on DESC"]];
+
+	self.modelToTextFieldMapper = [[NSDictionary alloc] 
+								   initWithObjects: [[NSArray alloc] initWithObjects:self.vendors, self.currencies, nil]
+										   forKeys: [[NSArray alloc] initWithObjects:
+													 [NSNumber numberWithInt:self.vendorField.hash], 
+													 [NSNumber numberWithInt:self.currencyField.hash], nil
+								   ]];
+}
+
 - (void)populateTextFieldsArraySortedByPosition {
 	self.textFields = [[NSMutableArray alloc] init];
-	
+
 	NSArray *sortedArray = [[contentView subviews] sortedArrayUsingFunction:sortByTop context:NULL];
 	for (UIView *curentView in sortedArray) {
-		if ([curentView isKindOfClass:[UITextField class]])
-			[self.textFields addObject:curentView];
+		if ([curentView isKindOfClass:[UITextField class]]){
+			UITextField *currentField = (UITextField *)curentView;
+			[currentField setDelegate:self];
+			[self.textFields addObject:currentField];
+		}
+			
 	}
 }
 
@@ -103,7 +100,6 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 		currentTextField.rightView = downArrowButton;
 		
 		[downArrowButton addTarget:self action:@selector(showPicker:) forControlEvents:UIControlEventTouchDown];
-		[currentTextField setDelegate:self];
 	}
 }
 
@@ -137,7 +133,18 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	[self.doneButton		addTarget:self action:@selector(tabDoneControl)			forControlEvents:UIControlEventTouchDown];
 }
 
-// Called when the UIKeyboardDidShowNotification is sent.
+- (void)scrollActiveTextFieldIntoView {
+    // Scroll the active text field into view.
+      CGRect textFieldRect = [activeField frame];
+    [self.scrollView scrollRectToVisible:textFieldRect animated:YES];
+
+}
+- (void)resizeScrollViewForKeyboardOrPopupViewDisplay:(CGSize)keyboardSize {
+	CGRect viewFrame = [scrollView frame];
+	viewFrame.size.height = scrollView.superview.frame.size.height + 44 - (keyboardSize.height + navigationPopupView.bounds.size.height);
+    scrollView.frame = viewFrame;
+}
+
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
     if (keyboardShown)
@@ -149,42 +156,58 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
     NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
     CGSize keyboardSize = [aValue CGRectValue].size;
 	
-	NSLog(@"The size of keyboard is: height=>%f and width=>%f", keyboardSize.height, keyboardSize.width);
-	
 	// Display the tab selector view
 	[scrollView.superview addSubview:self.navigationPopupView];
 	long y = scrollView.superview.bounds.size.height + 44 - keyboardSize.height - (navigationPopupView.bounds.size.height/2);
 	navigationPopupView.center = CGPointMake(navigationPopupView.center.x, y);
 	
 	
-    // Resize the scroll view (which is the root view of the window)
-    CGRect viewFrame = [scrollView frame];
-    //viewFrame.size.height -= (keyboardSize.height + navigationPopupView.bounds.size.height);
-	viewFrame.size.height = scrollView.superview.frame.size.height + 44 - (keyboardSize.height + navigationPopupView.bounds.size.height);
-    scrollView.frame = viewFrame;
+	[self resizeScrollViewForKeyboardOrPopupViewDisplay:keyboardSize];
+
 	
-    // Scroll the active text field into view.
-    CGRect textFieldRect = [activeField frame];
-    [self.scrollView scrollRectToVisible:textFieldRect animated:YES];
+	[self scrollActiveTextFieldIntoView];
+
 	
     keyboardShown = YES;
+	navigationPopupShown = FALSE;
 }
 
+
+- (NSArray *)pickerArrayForTextField:(UITextField *)textField {
+	return (NSArray *) [self.modelToTextFieldMapper objectForKey:[NSNumber numberWithInt:activeField.hash]];
+}
+
+
 - (IBAction)showPicker:(UIButton *)sender {
+//	BOOL controlChanged = (activeField != sender.superview);
+	
+//	if ((controlChanged == FALSE) && (keyboardShown == FALSE))
+//		return;
+	
 	if (activeField != NULL)
 		[activeField resignFirstResponder];
+	
+	navigationPopupShown = TRUE;
+	
 	activeField = (UITextField *)sender.superview;
 	
 	UIView *pickerViewToDisplay;
 	if (activeField == self.dateField)
 		pickerViewToDisplay = self.datePickerView;
-	else
+	else {
 		pickerViewToDisplay = self.genericPickerView;
+		[self.genericPicker reloadAllComponents];
+	}
+		
+	activeField.text = 	[[[self pickerArrayForTextField:activeField] objectAtIndex:0] name];
 	
 	[scrollView.superview addSubview:pickerViewToDisplay];
 	long y = scrollView.superview.bounds.size.height + 44 - (pickerViewToDisplay.bounds.size.height/2);
 	
 	pickerViewToDisplay.center = CGPointMake(navigationPopupView.center.x, y);
+	
+	[self resizeScrollViewForKeyboardOrPopupViewDisplay:datePickerView.bounds.size];
+	
 	
 	if (keyboardShown)
 		return;
@@ -192,14 +215,9 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	[scrollView.superview addSubview:self.navigationPopupView];
 	
 	y = scrollView.superview.bounds.size.height + 44 - pickerViewToDisplay.bounds.size.height - (navigationPopupView.bounds.size.height/2);
-	navigationPopupView.center = CGPointMake(navigationPopupView.center.x, y);
-	
-//	if (pickerViewToDisplay == self.genericPickerView) {
-//		[self.genericPicker selectRow:2 inComponent:0 animated:TRUE];
-//	}
+	navigationPopupView.center = CGPointMake(navigationPopupView.center.x, y);	
 }
 
-// Called when the UIKeyboardDidHideNotification is sent
 - (void)keyboardWasHidden:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
@@ -218,8 +236,9 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-	NSLog(@"The field is active %@", textField);
+	activeField.backgroundColor = nil;
     activeField = textField;
+	activeField.backgroundColor = [UIColor blueColor];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
@@ -228,31 +247,66 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 }
 
 - (IBAction)tabToPreviousControl {
+	activeField.backgroundColor = nil;
 	[self makeControlFirstResponder:FALSE];
+	if (!keyboardShown) {
+		[self resizeScrollViewForKeyboardOrPopupViewDisplay:datePickerView.bounds.size];
+		[self scrollActiveTextFieldIntoView];		
+	}
+	activeField.backgroundColor = [UIColor blueColor];
 }
 
 - (IBAction)tabToNextControl {
+	activeField.backgroundColor = nil;
 	[self makeControlFirstResponder:TRUE];	
+	if (!keyboardShown) {
+		[self resizeScrollViewForKeyboardOrPopupViewDisplay:datePickerView.bounds.size];
+		[self scrollActiveTextFieldIntoView];		
+	}
+	activeField.backgroundColor = [UIColor blueColor];
 }
 
+
 - (IBAction)tabDoneControl {
+	activeField.backgroundColor = nil;
 	[activeField resignFirstResponder];
 	[self.genericPickerView removeFromSuperview];
 	[self.datePickerView removeFromSuperview];
 	[self.navigationPopupView removeFromSuperview];
+	[self resizeScrollViewForKeyboardOrPopupViewDisplay:CGSizeMake(0, 0)];
 }
 
 - (void)makeControlFirstResponder:(BOOL)next{
+	UITextField *currentField;
 	int indexOfCurrentObject = [self.textFields indexOfObject:activeField];
 	if (next == TRUE) {
 		int nextIndexOfCurrentObject = indexOfCurrentObject == ([self.textFields count] - 1) ? 0 : indexOfCurrentObject + 1;
-		[[self.textFields objectAtIndex:nextIndexOfCurrentObject] becomeFirstResponder];
+		currentField = [self.textFields objectAtIndex:nextIndexOfCurrentObject];
 	}
 	else {
 		int previousIndexOfCurrentObject = indexOfCurrentObject == 0 ? ([self.textFields count] - 1) : indexOfCurrentObject - 1;
-		[[self.textFields objectAtIndex:previousIndexOfCurrentObject] becomeFirstResponder];
+		currentField = [self.textFields objectAtIndex:previousIndexOfCurrentObject];
 	}
+	if (keyboardShown)
+		[currentField becomeFirstResponder];
+	else{
+		for (UIView *currentView in [currentField subviews]) {
+			if ([currentView isKindOfClass:[UIButton class]]) {
+				[self showPicker:(UIButton *)currentView];
+				return;
+			}
+		}
+	}
+		
 }
+
+//TODO using this
+- (void)selectRowInPicker:(UIView *)pickerViewToDisplay {
+	if (pickerViewToDisplay == self.genericPickerView) {
+		[self.genericPicker selectRow:2 inComponent:0 animated:TRUE];
+	}	
+}
+
 
 
 # pragma mark --- Deallocation method ----
@@ -260,6 +314,10 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	
 	[self.expenseType				dealloc];
 	[self.vendor					dealloc];
+	[self.vendors					dealloc];
+	[self.currencies				dealloc];
+	[self.activePickerArray			dealloc];
+	[self.modelToTextFieldMapper	dealloc];
 	
 	[self.mainView 					dealloc];
 	[self.scrollView				dealloc];
