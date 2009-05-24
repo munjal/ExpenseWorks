@@ -65,16 +65,16 @@
 //	expenseReportItem.payment = @"card";
 //	expenseReportItem.attendes = @"me";
 //	[expenseReportItem save];
-
-	
-//	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
+//
+//	
+//	expenseReport = [[ExpenseReport alloc] init];
 //	expenseReport.reportId = @"05";
 //	expenseReport.createdOn = [NSDate date];
 //	expenseReport.submittedOn = [NSDate date];
 //	
 //	[expenseReport save];
 //	
-//	ExpenseReportItem *expenseReportItem = [[ExpenseReportItem alloc] init];
+//	expenseReportItem = [[ExpenseReportItem alloc] init];
 //	expenseReportItem.reportId = @"05";
 //	expenseReportItem.expenseReport = expenseReport;
 //	expenseReportItem.project = @"RACKSPACE";
@@ -87,7 +87,7 @@
 //	expenseReportItem.payment = @"card";
 //	expenseReportItem.attendes = @"me";
 //	[expenseReportItem save];
-	
+//	
 //	NSArray *expenseTypes = 
 //		[[NSArray alloc] initWithObjects: @"Business Meal", @"Flight", @"Benefit", @"Books", @"Car Rental",
 //		 @"Conference", @"Due Subscriptions", @"Gas", @"High Speed Internet", @"Hotel", @"Local Transportation",
@@ -95,13 +95,12 @@
 //		 @"Stipend - UK/US", @"Telephone", @"Training/Education", nil
 //		 ];
 //	
+//	ExpenseType *expenseType;
 //	for(NSString *expenseTypeName in expenseTypes) {
-//		ExpenseType *expenseType = [[ExpenseType alloc] init];
+//		expenseType = [[ExpenseType alloc] init];
 //		expenseType.name = expenseTypeName;
 //		[expenseType save];
 //	}	
-//	ExpenseType *expenseType = [[ExpenseType alloc] init];
-//	expenseType.name = @"BusinessMeal";
 //	NSString *sqlString = [NSString stringWithFormat: @"sqlite3 '%@' .schema", [self databaseFileNameWithPath]];
 //	NSLog(sqlString);
 //	printf("The schema is \n");
@@ -114,21 +113,10 @@
 //	printf("The values in expense_report_item are: \n");
 //	system([sqlString UTF8String]);
 //	printf("\n");
-//	
-//	id expenseReportItems = [ExpenseReportItem findByCriteria:@"where expense_report like 'ExpenseReport%'"];
-//	NSLog(@"expense report items: %@", expenseReportItems);
-
-	//ExpenseReport *expenseReport = [ExpenseReport findByCriteria:@"where pk =1"];
-//	NSString *criteria = [NSString stringWithFormat:@"where expense_report = 'ExpenseReport-%d'", 1];
-//	id expenseReportItems = [ExpenseReportItem findByCriteria:criteria];
-//	NSLog(@"expense report are: %@", expenseReportItems);
-//
-//	id expenseTypes = [ExpenseType allObjects];
-//	NSLog(@"expense types are: %@", expenseTypes);
-	
-	//Flights Vendor
-//	id expenseTypes = [ExpenseType findByName:@"Flight"];
-//	ExpenseType *expenseType = [expenseTypes objectAtIndex:0];
+//		
+//	//Flights Vendor
+//	expenseTypes = [ExpenseType findByName:@"Flight"];
+//	expenseType = [expenseTypes objectAtIndex:0];
 //	
 //	NSArray *flightVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"United", @"American", @"Southwest", @"Delta", nil];
 //	for (NSString *name in flightVendors) {
@@ -137,7 +125,7 @@
 //		vendor.expenseType = expenseType;
 //		[vendor save];		
 //	}
-	
+//	
 //	//Car Vendors
 //	id carRentalExpenseTypes = [ExpenseType findByName:@"Car Rental"];
 //	ExpenseType *carRentalExpenseType = [carRentalExpenseTypes objectAtIndex:0];
@@ -148,8 +136,8 @@
 //		vendor.expenseType = carRentalExpenseType;
 //		[vendor save];		
 //	}
-
-	//Hotel Vendors
+//
+//	//Hotel Vendors
 //	id hotelExpenseTypes = [ExpenseType findByName:@"Hotel"];
 //	ExpenseType *hotelExpenseType = [hotelExpenseTypes objectAtIndex:0];
 //	NSArray *hotelVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"Marriott", @"Hilton", @"Starwood", @"Hyatt", nil];	
@@ -160,9 +148,9 @@
 //		[vendor save];		
 //	}
 //	NSLog(@"Vendors: %@", [Vendor allObjects]);
-	
-	
-	//Currency
+//	
+//	
+//	//Currency
 //	NSArray *currencies = [[NSArray alloc] initWithObjects: @"Australian AUD $", @"Euro €", @"British GBP £", @"Indian INR ₨", @"Chinese RMB ¥", @"United States USD $", nil];
 //	
 //	for(NSString *currencyName in currencies) {
@@ -172,16 +160,12 @@
 //		[currency save];
 //	}	
 //	NSLog(@"Currencies: %@", [Currency findByCriteria:@" ORDER BY last_selected_on DESC"]);
-	
-	NSArray *paymentType = [NSArray empty];
-	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
-	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
-
-//	id expenseReportsItems = [ExpenseReportItem findByCriteria:@"where "]
-	
-//	id expenseReportItems = [ExpenseReportItem findByCriteria:@"where 1 = 1"];
-//	NSLog(@"expense report items are: %@", expenseReportItems);
 //	
+//	NSArray *paymentType = [NSArray empty];
+////	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
+////	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
+
+	
 	return [ExpenseReport findByCriteria:@""];
 }
 
