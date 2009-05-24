@@ -5,8 +5,6 @@
 #import "ExpenseType.h"
 #import "Vendor.h"
 #import "Currency.h"
-//#import <FrameworkXCore/NSArray+X.h>
-//#import <FrameworkXCore/NSString+X.h>
 #import "FrameworkX.h"
 
 @implementation RootViewController
@@ -42,9 +40,84 @@
 	return [documentFolderPath stringByAppendingPathComponent: DATABASE_FILE_NAME];
 }
 
+- (void) createTestExpenseReport {
+	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
+	XHash *record1 = [XHash withVargs:
+		@"reportId", @"03", 
+		@"createdOn", [NSDate date],
+		@"submittedOn", [NSDate date],
+		nil
+	];
+	for (NSString *key in [record1 allKeys]) {
+		NSString *propertyName = (NSString *)[[NSString stringWithFormat:@"set_%@:", key] asCamelCase];
+//		NSLog(propertyName);
+//		NSLog([NSString stringWithFormat:@"set_%@:", key ]);
+//		NSString *propertyName = (NSString *)[[@"set_" append:key] asCamelCase];
+		[expenseReport performSelector:NSSelectorFromString(propertyName) withObject:[record1 valueForKey:key]];
+	}
+	
+	NSLog([expenseReport description]);
+	
+//	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
+//	[expenseReport performSelector:NSSelectorFromString(@"setReportId:") withObject:@"05"];
+//	NSLog(@"val is: %@", expenseReport.reportId);
+	
+//	id abc = @"abc";
+//	NSString *xyz = @"xyz";
+//	NSString *newString = (NSString *)abc;
+//	NSLog(newString);
+//	NSSelectorFromString(@"setReportId:");
+	
+//	for (NSString *key in [record1 allKeys]) {
+//		id abc = [@"set_" append:key];
+//		abc = abc;
+//		
+//		
+////		[[@"set_" append:key ]class]);
+////		NSLog("The property value will be: %@", [[@"set_" append:key] asCamelCase] ); 
+//	}
+	
+	
+//	while((key = [keyEnumerator nextObject])){
+//		NSLog(@"Hi %@", [key class]);
+//		//NSLog("The property value will be: %@", [[@"set_" append:key] asCamelCase] );
+////			objc_msgSend(expenseReport, sel_getUid("setReportId:"), @"03");
+//	}
+}
+
 - (NSArray *)getExpenseReports {
 	SQLiteInstanceManager *manager = [SQLiteInstanceManager sharedManager];
 	manager.databaseFilepath = [self databaseFileNameWithPath];
+	
+	[self createTestExpenseReport];
+//	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
+//	[expenseReport setReportId:@"01"];
+////	NSLog("Haha %@", sel_getUid("setReportId"));
+//
+//	
+//	
+//	NSString *abcDEF = @"set_reportId";
+//	NSLog(@"Pascal case: %@", [abcDEF asCamelCase]);
+//	
+	
+//	id ExpenseReportClass = objc_getClass("ExpenseReport");
+//	unsigned int outCount;
+//	objc_property_t *properties = class_copyPropertyList(ExpenseReportClass, &outCount);
+//	for (int i = 0; i < outCount; i++) {
+//		NSLog(@"The value of property%d: %s", i, property_getName(properties[i]));
+//		property_
+//	}
+//	NSLog(@"Properties are: %@", properties);
+	
+//	objc_msgSend(expenseReport, sel_getUid("setReportId:"), @"03");
+	
+//	NSLog(@"Report :%@", [expenseReport performSelector:sel_getUid("setReportId:")]);
+	
+//	objc_msgSend(expenseReport, sel_getUid("setReportId"), @"03");
+//	[expenseReport performSelector:sel_getUid("setReportId") withObject:@"03"];
+//	NSLog(@"report id is: %@", [expenseReport performSelector:sel_getUid("reportId")]);
+	//NSLog(@"File path is %@", [self performSelector:sel_getUid("databaseFileNameWithPath")]);
+
 	
 //	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
 //	expenseReport.reportId = @"03";
