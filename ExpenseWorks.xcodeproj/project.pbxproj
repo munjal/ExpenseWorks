@@ -19,9 +19,68 @@
 		840C02D40FC8C34700A7E2BD /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02D10FC8C34700A7E2BD /* Project.m */; };
 		840C02D50FC8C34700A7E2BD /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02CF0FC8C34700A7E2BD /* Attendee.m */; };
 		840C02D60FC8C34700A7E2BD /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02D10FC8C34700A7E2BD /* Project.m */; };
-		840C03B10FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */; };
-		840C03B20FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */; };
-		840C03BE0FC8D21D00A7E2BD /* FrameworkXCore.framework in Copy FrameworkXCore */ = {isa = PBXBuildFile; fileRef = 840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */; };
+		840C07BE0FC909C600A7E2BD /* XTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07620FC909C600A7E2BD /* XTriplet.m */; };
+		840C07C00FC909C600A7E2BD /* XTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07650FC909C600A7E2BD /* XTrampoline.m */; };
+		840C07C20FC909C600A7E2BD /* XString.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07680FC909C600A7E2BD /* XString.m */; };
+		840C07C40FC909C600A7E2BD /* XQuadruplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C076B0FC909C600A7E2BD /* XQuadruplet.m */; };
+		840C07C60FC909C600A7E2BD /* XObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C076E0FC909C600A7E2BD /* XObject.m */; };
+		840C07C80FC909C600A7E2BD /* XMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07710FC909C600A7E2BD /* XMethod.m */; };
+		840C07CA0FC909C600A7E2BD /* XDoublet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07740FC909C600A7E2BD /* XDoublet.m */; };
+		840C07CC0FC909C600A7E2BD /* XCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07770FC909C600A7E2BD /* XCore.m */; };
+		840C07CD0FC909C600A7E2BD /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C077B0FC909C600A7E2BD /* RegexKitLite.m */; };
+		840C07CE0FC909C600A7E2BD /* XFile.d in Sources */ = {isa = PBXBuildFile; fileRef = 840C077E0FC909C600A7E2BD /* XFile.d */; };
+		840C07CF0FC909C600A7E2BD /* XFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07800FC909C600A7E2BD /* XFile.m */; };
+		840C07D00FC909C600A7E2BD /* XImage.d in Sources */ = {isa = PBXBuildFile; fileRef = 840C07830FC909C600A7E2BD /* XImage.d */; };
+		840C07D10FC909C600A7E2BD /* XImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07850FC909C600A7E2BD /* XImage.m */; };
+		840C07D20FC909C600A7E2BD /* _XParameterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07890FC909C600A7E2BD /* _XParameterSet.m */; };
+		840C07D40FC909C600A7E2BD /* NSArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C078D0FC909C600A7E2BD /* NSArray+X.m */; };
+		840C07D60FC909C600A7E2BD /* NSData+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07900FC909C600A7E2BD /* NSData+X.m */; };
+		840C07D80FC909C600A7E2BD /* NSDate+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07930FC909C600A7E2BD /* NSDate+X.m */; };
+		840C07DA0FC909C600A7E2BD /* NSDateFormatter+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07960FC909C600A7E2BD /* NSDateFormatter+X.m */; };
+		840C07DC0FC909C600A7E2BD /* NSDictionary+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07990FC909C600A7E2BD /* NSDictionary+X.m */; };
+		840C07DE0FC909C600A7E2BD /* NSException+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C079C0FC909C600A7E2BD /* NSException+X.m */; };
+		840C07E00FC909C600A7E2BD /* NSFileManager+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C079F0FC909C600A7E2BD /* NSFileManager+X.m */; };
+		840C07E20FC909C600A7E2BD /* NSInvocation+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07A20FC909C600A7E2BD /* NSInvocation+X.m */; };
+		840C07E40FC909C600A7E2BD /* NSMutableArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07A50FC909C600A7E2BD /* NSMutableArray+X.m */; };
+		840C07E60FC909C600A7E2BD /* NSMutableDictionary+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07A80FC909C600A7E2BD /* NSMutableDictionary+X.m */; };
+		840C07E80FC909C600A7E2BD /* NSMutableString+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07AB0FC909C600A7E2BD /* NSMutableString+X.m */; };
+		840C07EA0FC909C600A7E2BD /* NSNumber+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07AF0FC909C600A7E2BD /* NSNumber+X.m */; };
+		840C07EC0FC909C600A7E2BD /* NSObject+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07B20FC909C600A7E2BD /* NSObject+X.m */; };
+		840C07EE0FC909C600A7E2BD /* NSString+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07B50FC909C600A7E2BD /* NSString+X.m */; };
+		840C07F00FC909C600A7E2BD /* XArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07B90FC909C600A7E2BD /* XArray.m */; };
+		840C07F20FC909C600A7E2BD /* XHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07BD0FC909C600A7E2BD /* XHash.m */; };
+		840C07F30FC909C600A7E2BD /* XTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07620FC909C600A7E2BD /* XTriplet.m */; };
+		840C07F50FC909C600A7E2BD /* XTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07650FC909C600A7E2BD /* XTrampoline.m */; };
+		840C07F70FC909C600A7E2BD /* XString.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07680FC909C600A7E2BD /* XString.m */; };
+		840C07F90FC909C600A7E2BD /* XQuadruplet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C076B0FC909C600A7E2BD /* XQuadruplet.m */; };
+		840C07FB0FC909C600A7E2BD /* XObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C076E0FC909C600A7E2BD /* XObject.m */; };
+		840C07FD0FC909C600A7E2BD /* XMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07710FC909C600A7E2BD /* XMethod.m */; };
+		840C07FF0FC909C600A7E2BD /* XDoublet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07740FC909C600A7E2BD /* XDoublet.m */; };
+		840C08010FC909C600A7E2BD /* XCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07770FC909C600A7E2BD /* XCore.m */; };
+		840C08020FC909C600A7E2BD /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C077B0FC909C600A7E2BD /* RegexKitLite.m */; };
+		840C08030FC909C600A7E2BD /* XFile.d in Sources */ = {isa = PBXBuildFile; fileRef = 840C077E0FC909C600A7E2BD /* XFile.d */; };
+		840C08040FC909C600A7E2BD /* XFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07800FC909C600A7E2BD /* XFile.m */; };
+		840C08050FC909C600A7E2BD /* XImage.d in Sources */ = {isa = PBXBuildFile; fileRef = 840C07830FC909C600A7E2BD /* XImage.d */; };
+		840C08060FC909C600A7E2BD /* XImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07850FC909C600A7E2BD /* XImage.m */; };
+		840C08070FC909C600A7E2BD /* _XParameterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07890FC909C600A7E2BD /* _XParameterSet.m */; };
+		840C08090FC909C600A7E2BD /* NSArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C078D0FC909C600A7E2BD /* NSArray+X.m */; };
+		840C080B0FC909C600A7E2BD /* NSData+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07900FC909C600A7E2BD /* NSData+X.m */; };
+		840C080D0FC909C600A7E2BD /* NSDate+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07930FC909C600A7E2BD /* NSDate+X.m */; };
+		840C080F0FC909C600A7E2BD /* NSDateFormatter+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07960FC909C600A7E2BD /* NSDateFormatter+X.m */; };
+		840C08110FC909C600A7E2BD /* NSDictionary+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07990FC909C600A7E2BD /* NSDictionary+X.m */; };
+		840C08130FC909C600A7E2BD /* NSException+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C079C0FC909C600A7E2BD /* NSException+X.m */; };
+		840C08150FC909C600A7E2BD /* NSFileManager+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C079F0FC909C600A7E2BD /* NSFileManager+X.m */; };
+		840C08170FC909C600A7E2BD /* NSInvocation+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07A20FC909C600A7E2BD /* NSInvocation+X.m */; };
+		840C08190FC909C600A7E2BD /* NSMutableArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07A50FC909C600A7E2BD /* NSMutableArray+X.m */; };
+		840C081B0FC909C600A7E2BD /* NSMutableDictionary+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07A80FC909C600A7E2BD /* NSMutableDictionary+X.m */; };
+		840C081D0FC909C600A7E2BD /* NSMutableString+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07AB0FC909C600A7E2BD /* NSMutableString+X.m */; };
+		840C081F0FC909C600A7E2BD /* NSNumber+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07AF0FC909C600A7E2BD /* NSNumber+X.m */; };
+		840C08210FC909C600A7E2BD /* NSObject+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07B20FC909C600A7E2BD /* NSObject+X.m */; };
+		840C08230FC909C600A7E2BD /* NSString+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07B50FC909C600A7E2BD /* NSString+X.m */; };
+		840C08250FC909C600A7E2BD /* XArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07B90FC909C600A7E2BD /* XArray.m */; };
+		840C08270FC909C600A7E2BD /* XHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C07BD0FC909C600A7E2BD /* XHash.m */; };
+		840C08A30FC9ABDA00A7E2BD /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C08A20FC9ABDA00A7E2BD /* libicucore.dylib */; };
+		840C08A40FC9ABDA00A7E2BD /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C08A20FC9ABDA00A7E2BD /* libicucore.dylib */; };
 		840CFD860FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
 		840CFD870FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
 		840CFE8A0FC719C100A7E2BD /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CFE880FC719C100A7E2BD /* Currency.m */; };
@@ -89,17 +148,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		840C03B70FC8D12300A7E2BD /* Copy FrameworkXCore */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(BUILT_PRODUCTS_DIR)";
-			dstSubfolderSpec = 0;
-			files = (
-				840C03BE0FC8D21D00A7E2BD /* FrameworkXCore.framework in Copy FrameworkXCore */,
-			);
-			name = "Copy FrameworkXCore";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8416A87E0FAE534800683EA9 /* Copy OCMock */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,7 +177,71 @@
 		840C02D00FC8C34700A7E2BD /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attendee.h; path = Models/Attendee.h; sourceTree = "<group>"; };
 		840C02D10FC8C34700A7E2BD /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Project.m; path = Models/Project.m; sourceTree = "<group>"; };
 		840C02D20FC8C34700A7E2BD /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Project.h; path = Models/Project.h; sourceTree = "<group>"; };
-		840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FrameworkXCore.framework; path = Frameworks/FrameworkXCore.framework; sourceTree = "<group>"; };
+		840C07620FC909C600A7E2BD /* XTriplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTriplet.m; sourceTree = "<group>"; };
+		840C07630FC909C600A7E2BD /* XTriplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTriplet.h; sourceTree = "<group>"; };
+		840C07650FC909C600A7E2BD /* XTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTrampoline.m; sourceTree = "<group>"; };
+		840C07660FC909C600A7E2BD /* XTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTrampoline.h; sourceTree = "<group>"; };
+		840C07680FC909C600A7E2BD /* XString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XString.m; sourceTree = "<group>"; };
+		840C07690FC909C600A7E2BD /* XString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XString.h; sourceTree = "<group>"; };
+		840C076B0FC909C600A7E2BD /* XQuadruplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQuadruplet.m; sourceTree = "<group>"; };
+		840C076C0FC909C600A7E2BD /* XQuadruplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQuadruplet.h; sourceTree = "<group>"; };
+		840C076E0FC909C600A7E2BD /* XObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XObject.m; sourceTree = "<group>"; };
+		840C076F0FC909C600A7E2BD /* XObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XObject.h; sourceTree = "<group>"; };
+		840C07710FC909C600A7E2BD /* XMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMethod.m; sourceTree = "<group>"; };
+		840C07720FC909C600A7E2BD /* XMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMethod.h; sourceTree = "<group>"; };
+		840C07740FC909C600A7E2BD /* XDoublet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDoublet.m; sourceTree = "<group>"; };
+		840C07750FC909C600A7E2BD /* XDoublet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDoublet.h; sourceTree = "<group>"; };
+		840C07770FC909C600A7E2BD /* XCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCore.m; sourceTree = "<group>"; };
+		840C07780FC909C600A7E2BD /* XCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCore.h; sourceTree = "<group>"; };
+		840C077A0FC909C600A7E2BD /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		840C077B0FC909C600A7E2BD /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		840C077C0FC909C600A7E2BD /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		840C077E0FC909C600A7E2BD /* XFile.d */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.dtrace; path = XFile.d; sourceTree = "<group>"; };
+		840C077F0FC909C600A7E2BD /* XFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFile.h; sourceTree = "<group>"; };
+		840C07800FC909C600A7E2BD /* XFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFile.m; sourceTree = "<group>"; };
+		840C07810FC909C600A7E2BD /* XIo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIo.h; sourceTree = "<group>"; };
+		840C07830FC909C600A7E2BD /* XImage.d */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.dtrace; path = XImage.d; sourceTree = "<group>"; };
+		840C07840FC909C600A7E2BD /* XImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XImage.h; sourceTree = "<group>"; };
+		840C07850FC909C600A7E2BD /* XImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XImage.m; sourceTree = "<group>"; };
+		840C07860FC909C600A7E2BD /* FrameworkX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameworkX.h; sourceTree = "<group>"; };
+		840C07880FC909C600A7E2BD /* _XParameterSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _XParameterSet.h; sourceTree = "<group>"; };
+		840C07890FC909C600A7E2BD /* _XParameterSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _XParameterSet.m; sourceTree = "<group>"; };
+		840C078A0FC909C600A7E2BD /* Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extensions.h; sourceTree = "<group>"; };
+		840C078C0FC909C600A7E2BD /* NSArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+X.h"; sourceTree = "<group>"; };
+		840C078D0FC909C600A7E2BD /* NSArray+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+X.m"; sourceTree = "<group>"; };
+		840C078F0FC909C600A7E2BD /* NSData+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+X.h"; sourceTree = "<group>"; };
+		840C07900FC909C600A7E2BD /* NSData+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+X.m"; sourceTree = "<group>"; };
+		840C07920FC909C600A7E2BD /* NSDate+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+X.h"; sourceTree = "<group>"; };
+		840C07930FC909C600A7E2BD /* NSDate+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+X.m"; sourceTree = "<group>"; };
+		840C07950FC909C600A7E2BD /* NSDateFormatter+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+X.h"; sourceTree = "<group>"; };
+		840C07960FC909C600A7E2BD /* NSDateFormatter+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+X.m"; sourceTree = "<group>"; };
+		840C07980FC909C600A7E2BD /* NSDictionary+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+X.h"; sourceTree = "<group>"; };
+		840C07990FC909C600A7E2BD /* NSDictionary+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+X.m"; sourceTree = "<group>"; };
+		840C079B0FC909C600A7E2BD /* NSException+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+X.h"; sourceTree = "<group>"; };
+		840C079C0FC909C600A7E2BD /* NSException+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+X.m"; sourceTree = "<group>"; };
+		840C079E0FC909C600A7E2BD /* NSFileManager+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+X.h"; sourceTree = "<group>"; };
+		840C079F0FC909C600A7E2BD /* NSFileManager+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+X.m"; sourceTree = "<group>"; };
+		840C07A10FC909C600A7E2BD /* NSInvocation+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+X.h"; sourceTree = "<group>"; };
+		840C07A20FC909C600A7E2BD /* NSInvocation+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+X.m"; sourceTree = "<group>"; };
+		840C07A40FC909C600A7E2BD /* NSMutableArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+X.h"; sourceTree = "<group>"; };
+		840C07A50FC909C600A7E2BD /* NSMutableArray+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+X.m"; sourceTree = "<group>"; };
+		840C07A70FC909C600A7E2BD /* NSMutableDictionary+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+X.h"; sourceTree = "<group>"; };
+		840C07A80FC909C600A7E2BD /* NSMutableDictionary+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+X.m"; sourceTree = "<group>"; };
+		840C07AA0FC909C600A7E2BD /* NSMutableString+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+X.h"; sourceTree = "<group>"; };
+		840C07AB0FC909C600A7E2BD /* NSMutableString+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+X.m"; sourceTree = "<group>"; };
+		840C07AC0FC909C600A7E2BD /* NSNull+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+X.h"; sourceTree = "<group>"; };
+		840C07AE0FC909C600A7E2BD /* NSNumber+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+X.h"; sourceTree = "<group>"; };
+		840C07AF0FC909C600A7E2BD /* NSNumber+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+X.m"; sourceTree = "<group>"; };
+		840C07B10FC909C600A7E2BD /* NSObject+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+X.h"; sourceTree = "<group>"; };
+		840C07B20FC909C600A7E2BD /* NSObject+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+X.m"; sourceTree = "<group>"; };
+		840C07B40FC909C600A7E2BD /* NSString+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+X.h"; sourceTree = "<group>"; };
+		840C07B50FC909C600A7E2BD /* NSString+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+X.m"; sourceTree = "<group>"; };
+		840C07B80FC909C600A7E2BD /* XArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XArray.h; sourceTree = "<group>"; };
+		840C07B90FC909C600A7E2BD /* XArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XArray.m; sourceTree = "<group>"; };
+		840C07BA0FC909C600A7E2BD /* XCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCollections.h; sourceTree = "<group>"; };
+		840C07BC0FC909C600A7E2BD /* XHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHash.h; sourceTree = "<group>"; };
+		840C07BD0FC909C600A7E2BD /* XHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHash.m; sourceTree = "<group>"; };
+		840C08A20FC9ABDA00A7E2BD /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrow24x24.png; sourceTree = "<group>"; };
 		840CFE880FC719C100A7E2BD /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Currency.m; path = Models/Currency.m; sourceTree = "<group>"; };
 		840CFE890FC719C100A7E2BD /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Currency.h; path = Models/Currency.h; sourceTree = "<group>"; };
@@ -209,7 +321,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				8498AB060FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */,
-				840C03B20FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */,
+				840C08A40FC9ABDA00A7E2BD /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +331,7 @@
 			files = (
 				8416A8790FAE532F00683EA9 /* OCMock.framework in Frameworks */,
 				8498AB050FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */,
-				840C03B10FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */,
+				840C08A30FC9ABDA00A7E2BD /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +370,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				840C07610FC9099700A7E2BD /* FxCore */,
 				84AF32BE0FAEABD10074174A /* Db */,
 				84AF32A90FAE940A0074174A /* Models */,
 				8498AABD0FAE7E1300DCD37B /* SqlitePersistentObjects */,
@@ -296,7 +409,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */,
+				840C08A20FC9ABDA00A7E2BD /* libicucore.dylib */,
 				8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */,
 				8416A8780FAE532F00683EA9 /* OCMock.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -304,6 +417,117 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840C07610FC9099700A7E2BD /* FxCore */ = {
+			isa = PBXGroup;
+			children = (
+				840C07620FC909C600A7E2BD /* XTriplet.m */,
+				840C07630FC909C600A7E2BD /* XTriplet.h */,
+				840C07650FC909C600A7E2BD /* XTrampoline.m */,
+				840C07660FC909C600A7E2BD /* XTrampoline.h */,
+				840C07680FC909C600A7E2BD /* XString.m */,
+				840C07690FC909C600A7E2BD /* XString.h */,
+				840C076B0FC909C600A7E2BD /* XQuadruplet.m */,
+				840C076C0FC909C600A7E2BD /* XQuadruplet.h */,
+				840C076E0FC909C600A7E2BD /* XObject.m */,
+				840C076F0FC909C600A7E2BD /* XObject.h */,
+				840C07710FC909C600A7E2BD /* XMethod.m */,
+				840C07720FC909C600A7E2BD /* XMethod.h */,
+				840C07740FC909C600A7E2BD /* XDoublet.m */,
+				840C07750FC909C600A7E2BD /* XDoublet.h */,
+				840C07770FC909C600A7E2BD /* XCore.m */,
+				840C07780FC909C600A7E2BD /* XCore.h */,
+				840C07790FC909C600A7E2BD /* reg_ex */,
+				840C077C0FC909C600A7E2BD /* Macros.h */,
+				840C077D0FC909C600A7E2BD /* io */,
+				840C07820FC909C600A7E2BD /* images */,
+				840C07860FC909C600A7E2BD /* FrameworkX.h */,
+				840C07870FC909C600A7E2BD /* extensions */,
+				840C07B60FC909C600A7E2BD /* collections */,
+			);
+			name = FxCore;
+			sourceTree = "<group>";
+		};
+		840C07790FC909C600A7E2BD /* reg_ex */ = {
+			isa = PBXGroup;
+			children = (
+				840C077A0FC909C600A7E2BD /* RegexKitLite.h */,
+				840C077B0FC909C600A7E2BD /* RegexKitLite.m */,
+			);
+			path = reg_ex;
+			sourceTree = "<group>";
+		};
+		840C077D0FC909C600A7E2BD /* io */ = {
+			isa = PBXGroup;
+			children = (
+				840C077E0FC909C600A7E2BD /* XFile.d */,
+				840C077F0FC909C600A7E2BD /* XFile.h */,
+				840C07800FC909C600A7E2BD /* XFile.m */,
+				840C07810FC909C600A7E2BD /* XIo.h */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		840C07820FC909C600A7E2BD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				840C07830FC909C600A7E2BD /* XImage.d */,
+				840C07840FC909C600A7E2BD /* XImage.h */,
+				840C07850FC909C600A7E2BD /* XImage.m */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		840C07870FC909C600A7E2BD /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				840C07880FC909C600A7E2BD /* _XParameterSet.h */,
+				840C07890FC909C600A7E2BD /* _XParameterSet.m */,
+				840C078A0FC909C600A7E2BD /* Extensions.h */,
+				840C078C0FC909C600A7E2BD /* NSArray+X.h */,
+				840C078D0FC909C600A7E2BD /* NSArray+X.m */,
+				840C078F0FC909C600A7E2BD /* NSData+X.h */,
+				840C07900FC909C600A7E2BD /* NSData+X.m */,
+				840C07920FC909C600A7E2BD /* NSDate+X.h */,
+				840C07930FC909C600A7E2BD /* NSDate+X.m */,
+				840C07950FC909C600A7E2BD /* NSDateFormatter+X.h */,
+				840C07960FC909C600A7E2BD /* NSDateFormatter+X.m */,
+				840C07980FC909C600A7E2BD /* NSDictionary+X.h */,
+				840C07990FC909C600A7E2BD /* NSDictionary+X.m */,
+				840C079B0FC909C600A7E2BD /* NSException+X.h */,
+				840C079C0FC909C600A7E2BD /* NSException+X.m */,
+				840C079E0FC909C600A7E2BD /* NSFileManager+X.h */,
+				840C079F0FC909C600A7E2BD /* NSFileManager+X.m */,
+				840C07A10FC909C600A7E2BD /* NSInvocation+X.h */,
+				840C07A20FC909C600A7E2BD /* NSInvocation+X.m */,
+				840C07A40FC909C600A7E2BD /* NSMutableArray+X.h */,
+				840C07A50FC909C600A7E2BD /* NSMutableArray+X.m */,
+				840C07A70FC909C600A7E2BD /* NSMutableDictionary+X.h */,
+				840C07A80FC909C600A7E2BD /* NSMutableDictionary+X.m */,
+				840C07AA0FC909C600A7E2BD /* NSMutableString+X.h */,
+				840C07AB0FC909C600A7E2BD /* NSMutableString+X.m */,
+				840C07AC0FC909C600A7E2BD /* NSNull+X.h */,
+				840C07AE0FC909C600A7E2BD /* NSNumber+X.h */,
+				840C07AF0FC909C600A7E2BD /* NSNumber+X.m */,
+				840C07B10FC909C600A7E2BD /* NSObject+X.h */,
+				840C07B20FC909C600A7E2BD /* NSObject+X.m */,
+				840C07B40FC909C600A7E2BD /* NSString+X.h */,
+				840C07B50FC909C600A7E2BD /* NSString+X.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		840C07B60FC909C600A7E2BD /* collections */ = {
+			isa = PBXGroup;
+			children = (
+				840C07B80FC909C600A7E2BD /* XArray.h */,
+				840C07B90FC909C600A7E2BD /* XArray.m */,
+				840C07BA0FC909C600A7E2BD /* XCollections.h */,
+				840C07BC0FC909C600A7E2BD /* XHash.h */,
+				840C07BD0FC909C600A7E2BD /* XHash.m */,
+			);
+			path = collections;
 			sourceTree = "<group>";
 		};
 		8416A7CD0FAE303400683EA9 /* GoogleToolbox */ = {
@@ -415,7 +639,6 @@
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
-				840C03B70FC8D12300A7E2BD /* Copy FrameworkXCore */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
 			);
 			buildRules = (
@@ -540,6 +763,36 @@
 				840C02CE0FC8C1EC00A7E2BD /* PaymentType.m in Sources */,
 				840C02D50FC8C34700A7E2BD /* Attendee.m in Sources */,
 				840C02D60FC8C34700A7E2BD /* Project.m in Sources */,
+				840C07F30FC909C600A7E2BD /* XTriplet.m in Sources */,
+				840C07F50FC909C600A7E2BD /* XTrampoline.m in Sources */,
+				840C07F70FC909C600A7E2BD /* XString.m in Sources */,
+				840C07F90FC909C600A7E2BD /* XQuadruplet.m in Sources */,
+				840C07FB0FC909C600A7E2BD /* XObject.m in Sources */,
+				840C07FD0FC909C600A7E2BD /* XMethod.m in Sources */,
+				840C07FF0FC909C600A7E2BD /* XDoublet.m in Sources */,
+				840C08010FC909C600A7E2BD /* XCore.m in Sources */,
+				840C08020FC909C600A7E2BD /* RegexKitLite.m in Sources */,
+				840C08030FC909C600A7E2BD /* XFile.d in Sources */,
+				840C08040FC909C600A7E2BD /* XFile.m in Sources */,
+				840C08050FC909C600A7E2BD /* XImage.d in Sources */,
+				840C08060FC909C600A7E2BD /* XImage.m in Sources */,
+				840C08070FC909C600A7E2BD /* _XParameterSet.m in Sources */,
+				840C08090FC909C600A7E2BD /* NSArray+X.m in Sources */,
+				840C080B0FC909C600A7E2BD /* NSData+X.m in Sources */,
+				840C080D0FC909C600A7E2BD /* NSDate+X.m in Sources */,
+				840C080F0FC909C600A7E2BD /* NSDateFormatter+X.m in Sources */,
+				840C08110FC909C600A7E2BD /* NSDictionary+X.m in Sources */,
+				840C08130FC909C600A7E2BD /* NSException+X.m in Sources */,
+				840C08150FC909C600A7E2BD /* NSFileManager+X.m in Sources */,
+				840C08170FC909C600A7E2BD /* NSInvocation+X.m in Sources */,
+				840C08190FC909C600A7E2BD /* NSMutableArray+X.m in Sources */,
+				840C081B0FC909C600A7E2BD /* NSMutableDictionary+X.m in Sources */,
+				840C081D0FC909C600A7E2BD /* NSMutableString+X.m in Sources */,
+				840C081F0FC909C600A7E2BD /* NSNumber+X.m in Sources */,
+				840C08210FC909C600A7E2BD /* NSObject+X.m in Sources */,
+				840C08230FC909C600A7E2BD /* NSString+X.m in Sources */,
+				840C08250FC909C600A7E2BD /* XArray.m in Sources */,
+				840C08270FC909C600A7E2BD /* XHash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +831,36 @@
 				840C02CD0FC8C1EC00A7E2BD /* PaymentType.m in Sources */,
 				840C02D30FC8C34700A7E2BD /* Attendee.m in Sources */,
 				840C02D40FC8C34700A7E2BD /* Project.m in Sources */,
+				840C07BE0FC909C600A7E2BD /* XTriplet.m in Sources */,
+				840C07C00FC909C600A7E2BD /* XTrampoline.m in Sources */,
+				840C07C20FC909C600A7E2BD /* XString.m in Sources */,
+				840C07C40FC909C600A7E2BD /* XQuadruplet.m in Sources */,
+				840C07C60FC909C600A7E2BD /* XObject.m in Sources */,
+				840C07C80FC909C600A7E2BD /* XMethod.m in Sources */,
+				840C07CA0FC909C600A7E2BD /* XDoublet.m in Sources */,
+				840C07CC0FC909C600A7E2BD /* XCore.m in Sources */,
+				840C07CD0FC909C600A7E2BD /* RegexKitLite.m in Sources */,
+				840C07CE0FC909C600A7E2BD /* XFile.d in Sources */,
+				840C07CF0FC909C600A7E2BD /* XFile.m in Sources */,
+				840C07D00FC909C600A7E2BD /* XImage.d in Sources */,
+				840C07D10FC909C600A7E2BD /* XImage.m in Sources */,
+				840C07D20FC909C600A7E2BD /* _XParameterSet.m in Sources */,
+				840C07D40FC909C600A7E2BD /* NSArray+X.m in Sources */,
+				840C07D60FC909C600A7E2BD /* NSData+X.m in Sources */,
+				840C07D80FC909C600A7E2BD /* NSDate+X.m in Sources */,
+				840C07DA0FC909C600A7E2BD /* NSDateFormatter+X.m in Sources */,
+				840C07DC0FC909C600A7E2BD /* NSDictionary+X.m in Sources */,
+				840C07DE0FC909C600A7E2BD /* NSException+X.m in Sources */,
+				840C07E00FC909C600A7E2BD /* NSFileManager+X.m in Sources */,
+				840C07E20FC909C600A7E2BD /* NSInvocation+X.m in Sources */,
+				840C07E40FC909C600A7E2BD /* NSMutableArray+X.m in Sources */,
+				840C07E60FC909C600A7E2BD /* NSMutableDictionary+X.m in Sources */,
+				840C07E80FC909C600A7E2BD /* NSMutableString+X.m in Sources */,
+				840C07EA0FC909C600A7E2BD /* NSNumber+X.m in Sources */,
+				840C07EC0FC909C600A7E2BD /* NSObject+X.m in Sources */,
+				840C07EE0FC909C600A7E2BD /* NSString+X.m in Sources */,
+				840C07F00FC909C600A7E2BD /* XArray.m in Sources */,
+				840C07F20FC909C600A7E2BD /* XHash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
