@@ -162,11 +162,13 @@
 //	}	
 //	NSLog(@"Currencies: %@", [Currency findByCriteria:@" ORDER BY last_selected_on DESC"]);
 //	
-	NSArray *paymentType = [NSArray empty];
-	NSLog(@"The payment type is: %@", paymentType);
-////	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
-////	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
 
+//	//Testing FrameworkX
+	NSArray *paymentType = [NSArray empty];
+	NSLog(@"The payment type is cool: %@", paymentType);
+	
+	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
+	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
 	
 	return [ExpenseReport findByCriteria:@""];
 }
