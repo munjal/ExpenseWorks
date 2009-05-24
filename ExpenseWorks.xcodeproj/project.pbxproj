@@ -13,6 +13,15 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		840C02CD0FC8C1EC00A7E2BD /* PaymentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02CB0FC8C1EC00A7E2BD /* PaymentType.m */; };
+		840C02CE0FC8C1EC00A7E2BD /* PaymentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02CB0FC8C1EC00A7E2BD /* PaymentType.m */; };
+		840C02D30FC8C34700A7E2BD /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02CF0FC8C34700A7E2BD /* Attendee.m */; };
+		840C02D40FC8C34700A7E2BD /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02D10FC8C34700A7E2BD /* Project.m */; };
+		840C02D50FC8C34700A7E2BD /* Attendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02CF0FC8C34700A7E2BD /* Attendee.m */; };
+		840C02D60FC8C34700A7E2BD /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C02D10FC8C34700A7E2BD /* Project.m */; };
+		840C03B10FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */; };
+		840C03B20FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */; };
+		840C03BE0FC8D21D00A7E2BD /* FrameworkXCore.framework in Copy FrameworkXCore */ = {isa = PBXBuildFile; fileRef = 840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */; };
 		840CFD860FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
 		840CFD870FC618BB00A7E2BD /* DownArrow24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = 840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */; };
 		840CFE8A0FC719C100A7E2BD /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CFE880FC719C100A7E2BD /* Currency.m */; };
@@ -80,6 +89,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		840C03B70FC8D12300A7E2BD /* Copy FrameworkXCore */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(BUILT_PRODUCTS_DIR)";
+			dstSubfolderSpec = 0;
+			files = (
+				840C03BE0FC8D21D00A7E2BD /* FrameworkXCore.framework in Copy FrameworkXCore */,
+			);
+			name = "Copy FrameworkXCore";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8416A87E0FAE534800683EA9 /* Copy OCMock */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,6 +123,13 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ExpenseWorks_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseWorks_Prefix.pch; sourceTree = "<group>"; };
+		840C02CB0FC8C1EC00A7E2BD /* PaymentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentType.m; path = Models/PaymentType.m; sourceTree = "<group>"; };
+		840C02CC0FC8C1EC00A7E2BD /* PaymentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentType.h; path = Models/PaymentType.h; sourceTree = "<group>"; };
+		840C02CF0FC8C34700A7E2BD /* Attendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Attendee.m; path = Models/Attendee.m; sourceTree = "<group>"; };
+		840C02D00FC8C34700A7E2BD /* Attendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attendee.h; path = Models/Attendee.h; sourceTree = "<group>"; };
+		840C02D10FC8C34700A7E2BD /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Project.m; path = Models/Project.m; sourceTree = "<group>"; };
+		840C02D20FC8C34700A7E2BD /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Project.h; path = Models/Project.h; sourceTree = "<group>"; };
+		840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FrameworkXCore.framework; path = Frameworks/FrameworkXCore.framework; sourceTree = "<group>"; };
 		840CFD850FC618BB00A7E2BD /* DownArrow24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrow24x24.png; sourceTree = "<group>"; };
 		840CFE880FC719C100A7E2BD /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Currency.m; path = Models/Currency.m; sourceTree = "<group>"; };
 		840CFE890FC719C100A7E2BD /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Currency.h; path = Models/Currency.h; sourceTree = "<group>"; };
@@ -182,6 +209,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				8498AB060FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */,
+				840C03B20FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +219,7 @@
 			files = (
 				8416A8790FAE532F00683EA9 /* OCMock.framework in Frameworks */,
 				8498AB050FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */,
+				840C03B10FC8D0DE00A7E2BD /* FrameworkXCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +296,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840C03B00FC8D0DE00A7E2BD /* FrameworkXCore.framework */,
 				8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */,
 				8416A8780FAE532F00683EA9 /* OCMock.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -339,8 +369,14 @@
 		84AF32A90FAE940A0074174A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				840C02CF0FC8C34700A7E2BD /* Attendee.m */,
+				840C02D00FC8C34700A7E2BD /* Attendee.h */,
 				840CFE880FC719C100A7E2BD /* Currency.m */,
 				840CFE890FC719C100A7E2BD /* Currency.h */,
+				840C02D10FC8C34700A7E2BD /* Project.m */,
+				840C02D20FC8C34700A7E2BD /* Project.h */,
+				840C02CB0FC8C1EC00A7E2BD /* PaymentType.m */,
+				840C02CC0FC8C1EC00A7E2BD /* PaymentType.h */,
 				84D9F4890FBE300E0087185D /* Vendor.m */,
 				84D9F48A0FBE300E0087185D /* Vendor.h */,
 				84D0AAE10FBDF793009105AA /* ExpenseType.m */,
@@ -379,6 +415,7 @@
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
+				840C03B70FC8D12300A7E2BD /* Copy FrameworkXCore */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
 			);
 			buildRules = (
@@ -500,6 +537,9 @@
 				84D0AAE40FBDF793009105AA /* ExpenseType.m in Sources */,
 				84D9F48C0FBE300E0087185D /* Vendor.m in Sources */,
 				840CFE8B0FC719C100A7E2BD /* Currency.m in Sources */,
+				840C02CE0FC8C1EC00A7E2BD /* PaymentType.m in Sources */,
+				840C02D50FC8C34700A7E2BD /* Attendee.m in Sources */,
+				840C02D60FC8C34700A7E2BD /* Project.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +575,9 @@
 				84D0AAE30FBDF793009105AA /* ExpenseType.m in Sources */,
 				84D9F48B0FBE300E0087185D /* Vendor.m in Sources */,
 				840CFE8A0FC719C100A7E2BD /* Currency.m in Sources */,
+				840C02CD0FC8C1EC00A7E2BD /* PaymentType.m in Sources */,
+				840C02D30FC8C34700A7E2BD /* Attendee.m in Sources */,
+				840C02D40FC8C34700A7E2BD /* Project.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +589,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../fx-core/build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -560,6 +607,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../fx-core/build/Debug\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ExpenseWorks_Prefix.pch;
 				INFOPLIST_FILE = "ExpenseWorks-Info.plist";
@@ -576,6 +627,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../OcMock\"",
 					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)/../fx-core/build/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
@@ -602,6 +654,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../OcMock\"",
 					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)/../fx-core/build/Debug\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";

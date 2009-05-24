@@ -5,6 +5,8 @@
 #import "ExpenseType.h"
 #import "Vendor.h"
 #import "Currency.h"
+#import <FrameworkXCore/NSArray+X.h>
+#import <FrameworkXCore/NSString+X.h>
 
 @implementation RootViewController
 
@@ -171,7 +173,9 @@
 //	}	
 //	NSLog(@"Currencies: %@", [Currency findByCriteria:@" ORDER BY last_selected_on DESC"]);
 	
-
+	NSArray *paymentType = [NSArray empty];
+	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
+	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
 
 //	id expenseReportsItems = [ExpenseReportItem findByCriteria:@"where "]
 	

@@ -190,6 +190,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	navigationPopupShown = TRUE;
 	activeField.backgroundColor = nil;
 	
+	
 	activeField = (UITextField *)sender.superview;
 	
 	activeField.backgroundColor = [UIColor blueColor];
