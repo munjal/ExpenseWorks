@@ -317,25 +317,25 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>840C07610FC9099700A7E2BD</string>
-								<string>840C07870FC909C600A7E2BD</string>
-								<string>840C07B60FC909C600A7E2BD</string>
+								<string>846733790FCA22FD00B25652</string>
+								<string>84AF32BE0FAEABD10074174A</string>
+								<string>84AF32C00FAEAC800074174A</string>
 								<string>84AF32A90FAE940A0074174A</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>55</integer>
-									<integer>23</integer>
-									<integer>1</integer>
+									<integer>47</integer>
+									<integer>41</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 765}, {294, 764}}</string>
+							<string>{{0, 237}, {294, 764}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -384,19 +384,26 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8467334A0FCA189400B25652</string>
+										<string>846735660FCA389300B25652</string>
 										<key>history</key>
 										<array>
-											<string>846733300FCA17A400B25652</string>
-											<string>846733310FCA17A400B25652</string>
-											<string>846733450FCA189400B25652</string>
-											<string>846733460FCA189400B25652</string>
-											<string>846733470FCA189400B25652</string>
+											<string>846734C90FCA325800B25652</string>
+											<string>846734DC0FCA33DC00B25652</string>
+											<string>846734DD0FCA33DC00B25652</string>
+											<string>846734F80FCA358F00B25652</string>
+											<string>8467352B0FCA374500B25652</string>
+											<string>8467352C0FCA374500B25652</string>
+											<string>8467352D0FCA374500B25652</string>
+											<string>8467352E0FCA374500B25652</string>
+											<string>8467352F0FCA374500B25652</string>
 										</array>
-										<key>nextStack</key>
+										<key>prevStack</key>
 										<array>
-											<string>846733480FCA189400B25652</string>
-											<string>846733490FCA189400B25652</string>
+											<string>846735300FCA374500B25652</string>
+											<string>846735310FCA374500B25652</string>
+											<string>846735320FCA374500B25652</string>
+											<string>846735330FCA374500B25652</string>
+											<string>846735340FCA374500B25652</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -575,7 +582,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>264902804.469338</real>
+	<real>264910995.066677</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -590,6 +597,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>8467337B0FCA230500B25652</string>
+		<string>8467337C0FCA230500B25652</string>
 		<string>84C798030FA7DFEF00736383</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks.xcodeproj</string>

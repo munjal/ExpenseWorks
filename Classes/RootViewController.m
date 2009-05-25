@@ -8,6 +8,8 @@
 #import "FrameworkX.h"
 #import "SQLitePersistentObject+X.h"
 
+#import "JSON.h"
+
 @implementation RootViewController
 
 @synthesize toolbarItems = _toolbarItems;
@@ -43,16 +45,35 @@
 
 - (void) createTestExpenseReport {
 	
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSSS"];
+	[dateFormatter stringFromDate:[NSDate date]];
 	
-	XHash *record1 = [XHash withVargs:
-		@"reportId", @"03", 
-		@"createdOn", [NSDate date],
-		@"submittedOn", [NSDate date],
-		nil
-	];
-//	ExpenseReport *expenseReport = [ExpenseReport newWithParams:record1];
+//	XHash *record1 = [XHash withVargs:
+//		@"reportId", @"06", 
+//		@"createdOn", [dateFormatter stringFromDate:[NSDate date]],
+//		@"submittedOn", [dateFormatter stringFromDate:[NSDate date]],
+//		nil
+//	];
+	
+//	"{"submittedOn":"2009-05-24 20:43:09 -0500","reportId":"03","createdOn":"2009-05-24 20:43:09 -0500"}"
+	
+	NSString *jsonString = @"{\"submittedOn\":\"2009-05-24 21:17:43.2430\",\"reportId\":\"06\",\"createdOn\":\"2009-05-24 21:17:43.2430\"}";
+	
+//	
+	SBJSON *sbjson = [SBJSON new];
+	sbjson.maxDepth = 5;
+	NSDictionary *record1 = (NSDictionary *)[sbjson objectWithString:jsonString error:NULL];
+	//NSLog(@"Dic is: %@", record);
+	
 	ExpenseReport *expenseReport = [ExpenseReport createWithParams:record1];
-	NSLog([expenseReport description]);
+	
+//	NSString *jsonString = [record1 JSONRepresentation];
+//	NSLog(@"Json string is:");
+//	NSLog(jsonString);
+//	ExpenseReport *expenseReport = [ExpenseReport newWithParams:record1];
+//	ExpenseReport *expenseReport = [ExpenseReport createWithParams:record1];
+//	NSLog([expenseReport description]);
 	
 //	for (NSString *key in [record1 allKeys]) {
 //		NSString *propertyName = (NSString *)[[NSString stringWithFormat:@"set_%@:", key] asCamelCase];
