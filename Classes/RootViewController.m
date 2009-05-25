@@ -6,6 +6,7 @@
 #import "Vendor.h"
 #import "Currency.h"
 #import "FrameworkX.h"
+#import "SQLitePersistentObject+X.h"
 
 @implementation RootViewController
 
@@ -41,22 +42,27 @@
 }
 
 - (void) createTestExpenseReport {
-	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
+	
+	
 	XHash *record1 = [XHash withVargs:
 		@"reportId", @"03", 
 		@"createdOn", [NSDate date],
 		@"submittedOn", [NSDate date],
 		nil
 	];
-	for (NSString *key in [record1 allKeys]) {
-		NSString *propertyName = (NSString *)[[NSString stringWithFormat:@"set_%@:", key] asCamelCase];
-//		NSLog(propertyName);
-//		NSLog([NSString stringWithFormat:@"set_%@:", key ]);
-//		NSString *propertyName = (NSString *)[[@"set_" append:key] asCamelCase];
-		[expenseReport performSelector:NSSelectorFromString(propertyName) withObject:[record1 valueForKey:key]];
-	}
-	
+//	ExpenseReport *expenseReport = [ExpenseReport newWithParams:record1];
+	ExpenseReport *expenseReport = [ExpenseReport createWithParams:record1];
 	NSLog([expenseReport description]);
+	
+//	for (NSString *key in [record1 allKeys]) {
+//		NSString *propertyName = (NSString *)[[NSString stringWithFormat:@"set_%@:", key] asCamelCase];
+////		NSLog(propertyName);
+////		NSLog([NSString stringWithFormat:@"set_%@:", key ]);
+////		NSString *propertyName = (NSString *)[[@"set_" append:key] asCamelCase];
+//		[expenseReport performSelector:NSSelectorFromString(propertyName) withObject:[record1 valueForKey:key]];
+//	}
+//	
+//	NSLog([expenseReport description]);
 	
 //	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
 //	[expenseReport performSelector:NSSelectorFromString(@"setReportId:") withObject:@"05"];

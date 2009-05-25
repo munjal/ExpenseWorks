@@ -93,6 +93,8 @@
 		8416A8840FAE556A00683EA9 /* OCMock.framework in Copy OCMock */ = {isa = PBXBuildFile; fileRef = 8416A8780FAE532F00683EA9 /* OCMock.framework */; };
 		84384A3D0FB7BAD100D469DC /* ExpenseReportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */; };
 		84384A3E0FB7BAD100D469DC /* ExpenseReportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */; };
+		846732E40FCA12A800B25652 /* SQLitePersistentObject+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 846732E30FCA12A800B25652 /* SQLitePersistentObject+X.m */; };
+		846732E50FCA12A800B25652 /* SQLitePersistentObject+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 846732E30FCA12A800B25652 /* SQLitePersistentObject+X.m */; };
 		8475C6F00FB4E6F700277D7B /* expenseWorks.db in Resources */ = {isa = PBXBuildFile; fileRef = 8475C6EF0FB4E6F700277D7B /* expenseWorks.db */; };
 		8475C6F10FB4E6F700277D7B /* expenseWorks.db in Resources */ = {isa = PBXBuildFile; fileRef = 8475C6EF0FB4E6F700277D7B /* expenseWorks.db */; };
 		8498AAE30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */; };
@@ -257,6 +259,8 @@
 		8416A8780FAE532F00683EA9 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Frameworks/OCMock.framework; sourceTree = "<group>"; };
 		84384A3B0FB7BAD100D469DC /* ExpenseReportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseReportController.h; sourceTree = "<group>"; };
 		84384A3C0FB7BAD100D469DC /* ExpenseReportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseReportController.m; sourceTree = "<group>"; };
+		846732E20FCA12A800B25652 /* SQLitePersistentObject+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SQLitePersistentObject+X.h"; path = "Models/SQLitePersistentObject+X.h"; sourceTree = "<group>"; };
+		846732E30FCA12A800B25652 /* SQLitePersistentObject+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SQLitePersistentObject+X.m"; path = "Models/SQLitePersistentObject+X.m"; sourceTree = "<group>"; };
 		8475C6EF0FB4E6F700277D7B /* expenseWorks.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = expenseWorks.db; path = Db/expenseWorks.db; sourceTree = "<group>"; };
 		8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage-SQLitePersistence.m"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.m"; sourceTree = "<group>"; };
 		8498AAC40FAE7E8D00DCD37B /* UIImage-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage-SQLitePersistence.h"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.h"; sourceTree = "<group>"; };
@@ -609,6 +613,8 @@
 				84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */,
 				84AF333A0FAEC1F10074174A /* ExpenseReport.h */,
 				84AF333B0FAEC1F10074174A /* ExpenseReport.m */,
+				846732E20FCA12A800B25652 /* SQLitePersistentObject+X.h */,
+				846732E30FCA12A800B25652 /* SQLitePersistentObject+X.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -793,6 +799,7 @@
 				840C08230FC909C600A7E2BD /* NSString+X.m in Sources */,
 				840C08250FC909C600A7E2BD /* XArray.m in Sources */,
 				840C08270FC909C600A7E2BD /* XHash.m in Sources */,
+				846732E40FCA12A800B25652 /* SQLitePersistentObject+X.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +868,7 @@
 				840C07EE0FC909C600A7E2BD /* NSString+X.m in Sources */,
 				840C07F00FC909C600A7E2BD /* XArray.m in Sources */,
 				840C07F20FC909C600A7E2BD /* XHash.m in Sources */,
+				846732E50FCA12A800B25652 /* SQLitePersistentObject+X.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
