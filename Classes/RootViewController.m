@@ -20,12 +20,51 @@
 #define DATABASE_FILE_NAME				@"expenseWorks.db"
 
 
+- (NSArray *)filesWithDirectoryPath:(NSString *)directoryPath filteredByExtension:(NSString *)pathExtension {
+	NSMutableArray *ymlFiles = [NSMutableArray empty];
+	NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:directoryPath];
+	NSString *fileName;
+	while (fileName = [dirEnum nextObject]) {
+		if ([[fileName pathExtension] isEqualToString:pathExtension]) {
+			[ymlFiles addObject:[NSString stringWithFormat:@"%@/%@", directoryPath, fileName]];
+		}
+	}
+	return [ymlFiles autorelease];
+}
+
+- (void) loadFixtures {
+	SBJSON *sbjson = [SBJSON new];
+	sbjson.maxDepth = 5;
+	
+	NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+
+	NSArray *ymlFiles = [[self filesWithDirectoryPath:resourcePath filteredByExtension:@"yml"] retain];
+	NSLog(@"Files are %@", ymlFiles);
+	for (NSString *ymlFile in ymlFiles) {
+		NSString *modelName = [[[NSFileManager defaultManager] displayNameAtPath:ymlFile] stringByDeletingPathExtension];
+		id model = objc_getClass([modelName UTF8String]);
+		
+		NSString *jsonString = [[NSString alloc] initWithContentsOfFile:ymlFile];			
+		NSArray *arrayOfRecords = (NSArray *)[sbjson objectWithString:jsonString error:NULL];
+		NSLog(@"Processing: %@ which has %d records", [model class], [arrayOfRecords count]);
+		for(NSDictionary *record in arrayOfRecords) {
+			if ([record isEmpty]) {
+				NSLog(@"You are crazy");
+			}
+			else {
+				id modelInstance = [model createWithParams:record];
+				NSLog(@"Modle instance %@", modelInstance);
+			}
+
+		}
+	}	
+}
+
 - (BOOL) initDatabase {
 	if ([[NSFileManager defaultManager] fileExistsAtPath: [self databaseFileNameWithPath]]) {
 		NSLog(@"File already exists");
 		return TRUE;
 	}
-		
 	NSString *backupDatabasePath = [[NSBundle mainBundle] pathForResource:DATABASE_RESOURCE_NAME ofType:DATABASE_RESOURCE_TYPE]; 
 	
 	if (backupDatabasePath == nil) {
@@ -35,20 +74,21 @@
 		
 	NSLog(@"Copying database file");
 	return [[NSFileManager defaultManager] copyItemAtPath:backupDatabasePath toPath:[self databaseFileNameWithPath] error:nil];
+	
+	return TRUE;
 }
 
 - (NSString *)databaseFileNameWithPath {
 	NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentFolderPath = [searchPaths objectAtIndex: 0];
+	NSString *documentFolderPath = [searchPaths objectAtIndex: 0];	
 	return [documentFolderPath stringByAppendingPathComponent: DATABASE_FILE_NAME];
 }
 
 - (void) createTestExpenseReport {
 	
-	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSSS"];
-	[dateFormatter stringFromDate:[NSDate date]];
-	
+//	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+//	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSSS"];
+//	[dateFormatter stringFromDate:[NSDate date]];	
 //	XHash *record1 = [XHash withVargs:
 //		@"reportId", @"06", 
 //		@"createdOn", [dateFormatter stringFromDate:[NSDate date]],
@@ -58,15 +98,15 @@
 	
 //	"{"submittedOn":"2009-05-24 20:43:09 -0500","reportId":"03","createdOn":"2009-05-24 20:43:09 -0500"}"
 	
-	NSString *jsonString = @"{\"submittedOn\":\"2009-05-24 21:17:43.2430\",\"reportId\":\"06\",\"createdOn\":\"2009-05-24 21:17:43.2430\"}";
+	//NSString *jsonString = @"{\"submittedOn\":\"2009-05-24 21:17:43.2430\",\"reportId\":\"06\",\"createdOn\":\"2009-05-24 21:17:43.2430\"}";
 	
 //	
-	SBJSON *sbjson = [SBJSON new];
-	sbjson.maxDepth = 5;
-	NSDictionary *record1 = (NSDictionary *)[sbjson objectWithString:jsonString error:NULL];
+//	SBJSON *sbjson = [SBJSON new];
+//	sbjson.maxDepth = 5;
+//	NSDictionary *record1 = (NSDictionary *)[sbjson objectWithString:jsonString error:NULL];
 	//NSLog(@"Dic is: %@", record);
 	
-	ExpenseReport *expenseReport = [ExpenseReport createWithParams:record1];
+//	ExpenseReport *expenseReport = [ExpenseReport createWithParams:record1];
 	
 //	NSString *jsonString = [record1 JSONRepresentation];
 //	NSLog(@"Json string is:");
@@ -89,63 +129,53 @@
 //	[expenseReport performSelector:NSSelectorFromString(@"setReportId:") withObject:@"05"];
 //	NSLog(@"val is: %@", expenseReport.reportId);
 	
-//	id abc = @"abc";
-//	NSString *xyz = @"xyz";
-//	NSString *newString = (NSString *)abc;
-//	NSLog(newString);
-//	NSSelectorFromString(@"setReportId:");
+}
+
+- (void)initDatabaseConnection {
+	SQLiteInstanceManager *manager = [SQLiteInstanceManager sharedManager];
+	manager.databaseFilepath = [self databaseFileNameWithPath];
+}
+
+- (void)printDatabaseStructure {
+	NSString *sqlString = [NSString stringWithFormat: @"sqlite3 '%@' .schema", [self databaseFileNameWithPath]];
+	NSLog(sqlString);
+	printf("The schema is \n");
+	system([sqlString UTF8String]);
+	printf("\n");
 	
-//	for (NSString *key in [record1 allKeys]) {
-//		id abc = [@"set_" append:key];
-//		abc = abc;
-//		
-//		
-////		[[@"set_" append:key ]class]);
-////		NSLog("The property value will be: %@", [[@"set_" append:key] asCamelCase] ); 
-//	}
+	NSMutableArray *modelNames = (NSMutableArray *)[NSArray withVargs:@"expense_report", @"expense_report_item", @"vendor", @"expense_type", nil];
 	
+	for(NSString *modelName in modelNames) {
+		//print expense_report
+		sqlString = [NSString stringWithFormat: @"sqlite3 -header -column '%@' 'select * from %@'", 
+					 [self databaseFileNameWithPath], modelName];
+		NSLog(sqlString);
+		printf("The values in expense_report_item are: \n");
+		system([sqlString UTF8String]);
+		printf("\n");		
+	}
+//	//print expense_report
+//	sqlString = [NSString stringWithFormat: @"sqlite3 -header -column '%@' 'select * from expense_report'", 
+//				 [self databaseFileNameWithPath]];
+//	NSLog(sqlString);
+//	printf("The values in expense_report_item are: \n");
+//	system([sqlString UTF8String]);
+//	printf("\n");
+//	
+//	//print expense report item
+//	sqlString = [NSString stringWithFormat: @"sqlite3 -header -column '%@' 'select * from expense_report_item'", 
+//				 [self databaseFileNameWithPath]];
+//	NSLog(sqlString);
+//	printf("The values in expense_report_item are: \n");
+//	system([sqlString UTF8String]);
+//	printf("\n");
 	
-//	while((key = [keyEnumerator nextObject])){
-//		NSLog(@"Hi %@", [key class]);
-//		//NSLog("The property value will be: %@", [[@"set_" append:key] asCamelCase] );
-////			objc_msgSend(expenseReport, sel_getUid("setReportId:"), @"03");
-//	}
 }
 
 - (NSArray *)getExpenseReports {
-	SQLiteInstanceManager *manager = [SQLiteInstanceManager sharedManager];
-	manager.databaseFilepath = [self databaseFileNameWithPath];
 	
-	[self createTestExpenseReport];
-//	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
-//	[expenseReport setReportId:@"01"];
-////	NSLog("Haha %@", sel_getUid("setReportId"));
-//
-//	
-//	
-//	NSString *abcDEF = @"set_reportId";
-//	NSLog(@"Pascal case: %@", [abcDEF asCamelCase]);
-//	
 	
-//	id ExpenseReportClass = objc_getClass("ExpenseReport");
-//	unsigned int outCount;
-//	objc_property_t *properties = class_copyPropertyList(ExpenseReportClass, &outCount);
-//	for (int i = 0; i < outCount; i++) {
-//		NSLog(@"The value of property%d: %s", i, property_getName(properties[i]));
-//		property_
-//	}
-//	NSLog(@"Properties are: %@", properties);
-	
-//	objc_msgSend(expenseReport, sel_getUid("setReportId:"), @"03");
-	
-//	NSLog(@"Report :%@", [expenseReport performSelector:sel_getUid("setReportId:")]);
-	
-//	objc_msgSend(expenseReport, sel_getUid("setReportId"), @"03");
-//	[expenseReport performSelector:sel_getUid("setReportId") withObject:@"03"];
-//	NSLog(@"report id is: %@", [expenseReport performSelector:sel_getUid("reportId")]);
-	//NSLog(@"File path is %@", [self performSelector:sel_getUid("databaseFileNameWithPath")]);
-
-	
+//	[self createTestExpenseReport];
 //	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
 //	expenseReport.reportId = @"03";
 //	expenseReport.createdOn = [NSDate date];
@@ -166,8 +196,6 @@
 //	expenseReportItem.payment = @"card";
 //	expenseReportItem.attendes = @"me";
 //	[expenseReportItem save];
-//
-//	
 //	expenseReport = [[ExpenseReport alloc] init];
 //	expenseReport.reportId = @"05";
 //	expenseReport.createdOn = [NSDate date];
@@ -176,6 +204,7 @@
 //	[expenseReport save];
 //	
 //	expenseReportItem = [[ExpenseReportItem alloc] init];
+//	[expenseReportItem setPk:11];
 //	expenseReportItem.reportId = @"05";
 //	expenseReportItem.expenseReport = expenseReport;
 //	expenseReportItem.project = @"RACKSPACE";
@@ -202,18 +231,7 @@
 //		expenseType.name = expenseTypeName;
 //		[expenseType save];
 //	}	
-//	NSString *sqlString = [NSString stringWithFormat: @"sqlite3 '%@' .schema", [self databaseFileNameWithPath]];
-//	NSLog(sqlString);
-//	printf("The schema is \n");
-//	system([sqlString UTF8String]);
-//	printf("\n");
-//	
-//	sqlString = [NSString stringWithFormat: @"sqlite3 -header -column '%@' 'select * from expense_report_item'", 
-//				 [self databaseFileNameWithPath]];
-//	NSLog(sqlString);
-//	printf("The values in expense_report_item are: \n");
-//	system([sqlString UTF8String]);
-//	printf("\n");
+	
 //		
 //	//Flights Vendor
 //	expenseTypes = [ExpenseType findByName:@"Flight"];
@@ -264,18 +282,19 @@
 //	
 
 //	//Testing FrameworkX
-	NSArray *paymentType = [NSArray empty];
-	NSLog(@"The payment type is cool: %@", paymentType);
+//	NSArray *paymentType = [NSArray empty];
 	
-	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
-	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
+//	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
+//	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
 	
 	return [ExpenseReport findByCriteria:@""];
 }
 
 - (void)viewDidLoad {
  	if (([self initDatabase]) == FALSE) NSLog(@"Could not initiated databse");
-	
+	[self initDatabaseConnection];
+	[self loadFixtures];
+	[self printDatabaseStructure];
 	self.expenseReports =  [[NSArray alloc] initWithArray:[self getExpenseReports]];
 }
 

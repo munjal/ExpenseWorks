@@ -107,6 +107,8 @@
 		846734470FCA2DE100B25652 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 846734390FCA2DE100B25652 /* SBJsonBase.m */; };
 		846734480FCA2DE100B25652 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467343B0FCA2DE100B25652 /* SBJsonParser.m */; };
 		846734490FCA2DE100B25652 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467343D0FCA2DE100B25652 /* SBJsonWriter.m */; };
+		846736FD0FCC7B0100B25652 /* ExpenseReport.yml in Resources */ = {isa = PBXBuildFile; fileRef = 846736FC0FCC7B0100B25652 /* ExpenseReport.yml */; };
+		846736FE0FCC7B0100B25652 /* ExpenseReport.yml in Resources */ = {isa = PBXBuildFile; fileRef = 846736FC0FCC7B0100B25652 /* ExpenseReport.yml */; };
 		8475C6F00FB4E6F700277D7B /* expenseWorks.db in Resources */ = {isa = PBXBuildFile; fileRef = 8475C6EF0FB4E6F700277D7B /* expenseWorks.db */; };
 		8475C6F10FB4E6F700277D7B /* expenseWorks.db in Resources */ = {isa = PBXBuildFile; fileRef = 8475C6EF0FB4E6F700277D7B /* expenseWorks.db */; };
 		8498AAE30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */; };
@@ -143,6 +145,12 @@
 		8498AB020FAE7E8D00DCD37B /* NSData-SQLitePersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498AAE10FAE7E8D00DCD37B /* NSData-SQLitePersistence.m */; };
 		8498AB050FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */; };
 		8498AB060FAE7F4200DCD37B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */; };
+		84A538500FCD063500A934D6 /* ExpenseReportItem.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A5384F0FCD063500A934D6 /* ExpenseReportItem.yml */; };
+		84A538510FCD063500A934D6 /* ExpenseReportItem.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A5384F0FCD063500A934D6 /* ExpenseReportItem.yml */; };
+		84A538900FCD863E00A934D6 /* ExpenseType.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A5388F0FCD863E00A934D6 /* ExpenseType.yml */; };
+		84A538910FCD863E00A934D6 /* ExpenseType.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A5388F0FCD863E00A934D6 /* ExpenseType.yml */; };
+		84A538A90FCD898400A934D6 /* Vendor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A538A80FCD898400A934D6 /* Vendor.yml */; };
+		84A538AA0FCD898400A934D6 /* Vendor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A538A80FCD898400A934D6 /* Vendor.yml */; };
 		84AF32EF0FAEBBFC0074174A /* ExpenseReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */; };
 		84AF32F00FAEBBFC0074174A /* ExpenseReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */; };
 		84AF333C0FAEC1F10074174A /* ExpenseReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF333B0FAEC1F10074174A /* ExpenseReport.m */; };
@@ -286,6 +294,7 @@
 		8467343B0FCA2DE100B25652 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = Json/SBJsonParser.m; sourceTree = "<group>"; };
 		8467343C0FCA2DE100B25652 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = Json/SBJsonWriter.h; sourceTree = "<group>"; };
 		8467343D0FCA2DE100B25652 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = Json/SBJsonWriter.m; sourceTree = "<group>"; };
+		846736FC0FCC7B0100B25652 /* ExpenseReport.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ExpenseReport.yml; path = Db/Fixtures/ExpenseReport.yml; sourceTree = "<group>"; };
 		8475C6EF0FB4E6F700277D7B /* expenseWorks.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = expenseWorks.db; path = Db/expenseWorks.db; sourceTree = "<group>"; };
 		8498AAC30FAE7E8D00DCD37B /* UIImage-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage-SQLitePersistence.m"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.m"; sourceTree = "<group>"; };
 		8498AAC40FAE7E8D00DCD37B /* UIImage-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage-SQLitePersistence.h"; path = "SqlitePersistentObjects/UIImage-SQLitePersistence.h"; sourceTree = "<group>"; };
@@ -320,6 +329,9 @@
 		8498AAE10FAE7E8D00DCD37B /* NSData-SQLitePersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData-SQLitePersistence.m"; path = "SqlitePersistentObjects/NSData-SQLitePersistence.m"; sourceTree = "<group>"; };
 		8498AAE20FAE7E8D00DCD37B /* NSData-SQLitePersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData-SQLitePersistence.h"; path = "SqlitePersistentObjects/NSData-SQLitePersistence.h"; sourceTree = "<group>"; };
 		8498AB040FAE7F4200DCD37B /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		84A5384F0FCD063500A934D6 /* ExpenseReportItem.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ExpenseReportItem.yml; path = Db/Fixtures/ExpenseReportItem.yml; sourceTree = "<group>"; };
+		84A5388F0FCD863E00A934D6 /* ExpenseType.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ExpenseType.yml; path = Db/Fixtures/ExpenseType.yml; sourceTree = "<group>"; };
+		84A538A80FCD898400A934D6 /* Vendor.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Vendor.yml; path = Db/Fixtures/Vendor.yml; sourceTree = "<group>"; };
 		84AF32C10FAEACC00074174A /* 001_create_tables */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; name = 001_create_tables; path = Db/Migrate/001_create_tables; sourceTree = "<group>"; };
 		84AF32ED0FAEBBFC0074174A /* ExpenseReportItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseReportItem.h; path = Models/ExpenseReportItem.h; sourceTree = "<group>"; };
 		84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseReportItem.m; path = Models/ExpenseReportItem.m; sourceTree = "<group>"; };
@@ -601,6 +613,17 @@
 			name = Json;
 			sourceTree = "<group>";
 		};
+		846736F90FCC7AC200B25652 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				84A538A80FCD898400A934D6 /* Vendor.yml */,
+				84A5388F0FCD863E00A934D6 /* ExpenseType.yml */,
+				84A5384F0FCD063500A934D6 /* ExpenseReportItem.yml */,
+				846736FC0FCC7B0100B25652 /* ExpenseReport.yml */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		8498AABD0FAE7E1300DCD37B /* SqlitePersistentObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +691,7 @@
 		84AF32BE0FAEABD10074174A /* Db */ = {
 			isa = PBXGroup;
 			children = (
+				846736F90FCC7AC200B25652 /* Fixtures */,
 				8475C6EF0FB4E6F700277D7B /* expenseWorks.db */,
 				84AF32C00FAEAC800074174A /* Migrate */,
 			);
@@ -748,6 +772,10 @@
 				8475C6F00FB4E6F700277D7B /* expenseWorks.db in Resources */,
 				84D0AAB00FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */,
 				840CFD870FC618BB00A7E2BD /* DownArrow24x24.png in Resources */,
+				846736FE0FCC7B0100B25652 /* ExpenseReport.yml in Resources */,
+				84A538510FCD063500A934D6 /* ExpenseReportItem.yml in Resources */,
+				84A538910FCD863E00A934D6 /* ExpenseType.yml in Resources */,
+				84A538AA0FCD898400A934D6 /* Vendor.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +786,10 @@
 				8475C6F10FB4E6F700277D7B /* expenseWorks.db in Resources */,
 				84D0AAB10FBDDDCA009105AA /* NewExpenseReportItem.xib in Resources */,
 				840CFD860FC618BB00A7E2BD /* DownArrow24x24.png in Resources */,
+				846736FD0FCC7B0100B25652 /* ExpenseReport.yml in Resources */,
+				84A538500FCD063500A934D6 /* ExpenseReportItem.yml in Resources */,
+				84A538900FCD863E00A934D6 /* ExpenseType.yml in Resources */,
+				84A538A90FCD898400A934D6 /* Vendor.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

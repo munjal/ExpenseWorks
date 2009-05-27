@@ -1,0 +1,16 @@
+[
+	{
+		"pk":"1",
+		"reportId":"1",
+		"project":"RACKSPACE",
+		"category":"Flights",
+		"date":"2009-04-24 21:33:39.0650",
+		"currency":"USD",
+		"amount":"100.99",
+		"remarks":"nothing",
+		"vendor":"American",
+		"payment":"Cash",
+		"attendes":"me",
+		"expenseReport":"ExpenseReport-1"
+	}
+]
