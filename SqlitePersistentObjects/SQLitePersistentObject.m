@@ -98,7 +98,7 @@ static id findByMethodImp(id self, SEL _cmd, id value)
 
 @interface SQLitePersistentObject (private)
 + (void)tableCheck;
-- (void)setPk:(int)newPk;
+- (void)setPk:(NSNumber *)newPk;
 + (NSString *)classNameForTableName:(NSString *)theTable;
 //+ (void)setUpDynamicMethods;
 - (void)makeClean;
@@ -188,9 +188,9 @@ NSMutableArray *checkedTables;
 {
 	return [[self class] findByCriteria:@""];
 }
-+(void)deleteObject:(NSInteger)inPk cascade:(BOOL)cascade
++(void)deleteObject:(NSNumber *)inPk cascade:(BOOL)cascade
 {
-	if(inPk < 0)
+	if([inPk intValue] < 0)
 		return;
 	
 	[self tableCheck];
@@ -203,7 +203,7 @@ NSMutableArray *checkedTables;
 	
 	[self unregisterObject:objToDelete];
 	
-	NSString *deleteQuery = [NSString stringWithFormat:@"DELETE FROM %@ WHERE pk = %d", [self tableName], inPk];
+	NSString *deleteQuery = [NSString stringWithFormat:@"DELETE FROM %@ WHERE pk = %d", [self tableName], [inPk intValue]];
 	sqlite3 *database = [[SQLiteInstanceManager sharedManager] database];
 	char *errmsg = NULL;
 	if (sqlite3_exec (database, [deleteQuery UTF8String], NULL, NULL, &errmsg) != SQLITE_OK)
@@ -223,7 +223,7 @@ NSMutableArray *checkedTables;
 				if (cascade)
 				{
 					
-					NSString *xRefLoopQuery = [NSString stringWithFormat:@"select fk_table_name, fk from %@_%@ where parent_pk = %d", [[self class] tableName], [prop stringAsSQLColumnName], inPk];
+					NSString *xRefLoopQuery = [NSString stringWithFormat:@"select fk_table_name, fk from %@_%@ where parent_pk = %d", [[self class] tableName], [prop stringAsSQLColumnName], [inPk intValue]];
 					
 					sqlite3_stmt *xLoopStmt;
 					if (sqlite3_prepare_v2( database, [xRefLoopQuery UTF8String], -1, &xLoopStmt, NULL) == SQLITE_OK)
@@ -255,7 +255,7 @@ NSMutableArray *checkedTables;
 					
 				}
 				
-				NSString *xRefDeleteQuery = [NSString stringWithFormat:@"DELETE FROM %@_%@ WHERE parent_pk = %d",  [[self class] tableName], [prop stringAsSQLColumnName], inPk];
+				NSString *xRefDeleteQuery = [NSString stringWithFormat:@"DELETE FROM %@_%@ WHERE parent_pk = %d",  [[self class] tableName], [prop stringAsSQLColumnName], [inPk intValue]];
 				if (sqlite3_exec (database, [xRefDeleteQuery UTF8String], NULL, NULL, &errmsg) != SQLITE_OK)
 					NSLog(@"Error deleting from foreign key table: %s", errmsg);
 				sqlite3_free(errmsg);
@@ -263,9 +263,9 @@ NSMutableArray *checkedTables;
 		}
 	}
 }
-+(SQLitePersistentObject *)findByPK:(int)inPk
++(SQLitePersistentObject *)findByPK:(NSNumber *)inPk
 {
-	return [self findFirstByCriteria:[NSString stringWithFormat:@"WHERE pk = %d", inPk]];
+	return [self findFirstByCriteria:[NSString stringWithFormat:@"WHERE pk = %d", [inPk intValue]]];
 }
 
 +(NSArray *)findByCriteria:(NSString *)criteriaString
@@ -285,7 +285,7 @@ NSMutableArray *checkedTables;
 			BOOL foundInMemory = NO;
 			id oneItem = [[[self class] alloc] init];
 			
-			[oneItem setPk:sqlite3_column_int(statement, 0)];
+			[oneItem setPk:[[NSNumber alloc] initWithInt:sqlite3_column_int(statement, 0)]];
 			NSString *mapKey = [oneItem memoryMapKey];
 			if ([[objectMap allKeys] containsObject:mapKey])
 			{
@@ -388,7 +388,7 @@ NSMutableArray *checkedTables;
 								NSString *classString = [parts objectAtIndex:0];
 								int fk = [[parts objectAtIndex:1] intValue];
 								Class propClass = objc_lookUpClass([classString UTF8String]);
-								id fkObj = [propClass findByPK:fk];
+								id fkObj = [propClass findByPK:[[NSNumber alloc] initWithInt:fk]];
 								[oneItem setValue:fkObj forKey:propName];
 							}
 						}
@@ -431,7 +431,7 @@ NSMutableArray *checkedTables;
 							/*
 							 parent_pk INTEGER, fk INTEGER, fk_table_name TEXT, object_data TEXT
 							 */
-							NSString *setQuery = [NSString stringWithFormat:@"SELECT fk, fk_table_name, object_data, object_class FROM %@_%@ WHERE parent_pk = %d", [[self class] tableName], [propName stringAsSQLColumnName], [oneItem pk]];
+							NSString *setQuery = [NSString stringWithFormat:@"SELECT fk, fk_table_name, object_data, object_class FROM %@_%@ WHERE parent_pk = %d", [[self class] tableName], [propName stringAsSQLColumnName], [[oneItem pk] intValue]];
 							sqlite3_stmt *setStmt;
 							if (sqlite3_prepare_v2(database, [setQuery UTF8String], -1, &setStmt, NULL) == SQLITE_OK)
 							{
@@ -480,7 +480,7 @@ NSMutableArray *checkedTables;
 							NSMutableArray *array = [NSMutableArray array];
 							[oneItem setValue:array forKey:propName];
 							
-							NSString *arrayQuery = [NSString stringWithFormat:@"SELECT fk, fk_table_name, object_data, object_class FROM %@_%@ WHERE parent_pk = %d order by array_index", [[self class] tableName], [propName stringAsSQLColumnName], [oneItem pk]];
+							NSString *arrayQuery = [NSString stringWithFormat:@"SELECT fk, fk_table_name, object_data, object_class FROM %@_%@ WHERE parent_pk = %d order by array_index", [[self class] tableName], [propName stringAsSQLColumnName], [[oneItem pk] intValue]];
 							sqlite3_stmt *arrayStmt;
 							if (sqlite3_prepare_v2(database, [arrayQuery UTF8String], -1, &arrayStmt, NULL) == SQLITE_OK)
 							{
@@ -532,7 +532,7 @@ NSMutableArray *checkedTables;
 							[oneItem setValue:dictionary forKey:propName];
 							/* parent_pk integer, dictionary_key TEXT, fk INTEGER, fk_table_name TEXT, object_data BLOB, object_class  */
 							
-							NSString *dictionaryQuery = [NSString stringWithFormat:@"SELECT dictionary_key, fk, fk_table_name, object_data, object_class FROM %@_%@ WHERE parent_pk = %d", [[self class] tableName], [propName stringAsSQLColumnName], [oneItem pk]];
+							NSString *dictionaryQuery = [NSString stringWithFormat:@"SELECT dictionary_key, fk, fk_table_name, object_data, object_class FROM %@_%@ WHERE parent_pk = %d", [[self class] tableName], [propName stringAsSQLColumnName], [[oneItem pk] intValue]];
 							sqlite3_stmt *dictionaryStmt;
 							if (sqlite3_prepare_v2(database, [dictionaryQuery UTF8String], -1, &dictionaryStmt, NULL) == SQLITE_OK)
 							{
@@ -726,7 +726,7 @@ NSMutableArray *checkedTables;
 }
 #pragma mark -
 #pragma mark Public Instance Methods
--(int)pk
+-(NSNumber *)pk
 {
 	return pk;
 }
@@ -738,7 +738,7 @@ NSMutableArray *checkedTables;
 	
 	[[self class] tableCheck];
 	
-    if (pk == 0)
+    if ([pk intValue] == 0)
     {
         NSLog(@"Object of type '%@' seems to be uninitialised, perhaps init does not call super init.", [[self class] description] );
         return;
@@ -799,7 +799,11 @@ NSMutableArray *checkedTables;
 		// If this object is new, we need to figure out the correct primary key value, 
 		// which will be one higher than the current highest pk value in the table.
 		
-		if (pk < 0)
+//		if (pk > 0) {
+//			
+//		}
+		
+		if ([pk intValue] < 0)
 		{
 			NSString *pkQuery = [NSString stringWithFormat:@"SELECT SEQ FROM SQLITESEQUENCE WHERE NAME='%@'", [[self class] tableName]];
 			sqlite3_stmt *statement;
@@ -807,10 +811,10 @@ NSMutableArray *checkedTables;
 			{
 				if (sqlite3_step(statement) == SQLITE_ROW) 
 				{
-					pk = sqlite3_column_int(statement, 0)+1;
+					pk = [[NSNumber alloc] initWithInt:sqlite3_column_int(statement, 0)+1];
 					char* errmsg;
 					
-					NSString *seqIncrementQuery = [NSString stringWithFormat:@"UPDATE SQLITESEQUENCE set seq=%d WHERE name='%@'", pk, [[self class] tableName]];
+					NSString *seqIncrementQuery = [NSString stringWithFormat:@"UPDATE SQLITESEQUENCE set seq=%d WHERE name='%@'", [pk intValue], [[self class] tableName]];
 					if (sqlite3_exec (database, [seqIncrementQuery UTF8String], NULL, NULL, &errmsg) != SQLITE_OK)		
 						NSLog(@"Error Message: %s", errmsg);
 				}
@@ -851,7 +855,7 @@ NSMutableArray *checkedTables;
 		if (result == SQLITE_OK)
 		{
 			int colIndex = 1;
-			sqlite3_bind_int(stmt, colIndex++, pk);
+			sqlite3_bind_int(stmt, colIndex++, [pk intValue]);
 			
 			props = [[self class] propertiesWithEncodedTypes];
 			for (NSString *propName in props)
@@ -915,7 +919,7 @@ NSMutableArray *checkedTables;
 					else
 					{
 						// Too difficult to try and figure out what's changed, just wipe rows and re-insert the current data.
-						NSString *xrefDelete = [NSString stringWithFormat:@"delete from %@_%@ where parent_pk = %d", [[self class] tableName], [propName stringAsSQLColumnName], pk];
+						NSString *xrefDelete = [NSString stringWithFormat:@"delete from %@_%@ where parent_pk = %d", [[self class] tableName], [propName stringAsSQLColumnName], [pk intValue]];
 						char *errmsg = NULL;
 						if (sqlite3_exec (database, [xrefDelete UTF8String], NULL, NULL, &errmsg) != SQLITE_OK)
 							NSLog(@"Error deleting child rows in xref table for array: %s", errmsg);
@@ -930,7 +934,7 @@ NSMutableArray *checkedTables;
 								if ([oneObject isKindOfClass:[SQLitePersistentObject class]])
 								{
 									[oneObject save];
-									NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, array_index, fk, fk_table_name) values (%d, %d, %d, '%@')", [[self class] tableName], [propName stringAsSQLColumnName],  pk, arrayIndex++, [oneObject pk], [[oneObject class] tableName]];
+									NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, array_index, fk, fk_table_name) values (%d, %d, %d, '%@')", [[self class] tableName], [propName stringAsSQLColumnName],  [pk intValue], arrayIndex++, [[oneObject pk] intValue], [[oneObject class] tableName]];
 									if (sqlite3_exec (database, [xrefInsert UTF8String], NULL, NULL, &errmsg) != SQLITE_OK)
 										NSLog(@"Error inserting child rows in xref table for array: %s", errmsg);
 									sqlite3_free(errmsg);
@@ -939,7 +943,7 @@ NSMutableArray *checkedTables;
 								{
 									if ([[oneObject class] canBeStoredInSQLite])
 									{
-										NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, array_index, object_data, object_class) values (%d, %d, ?, '%@')", [[self class] tableName], [propName stringAsSQLColumnName], pk, arrayIndex++, [oneObject className]];
+										NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, array_index, object_data, object_class) values (%d, %d, ?, '%@')", [[self class] tableName], [propName stringAsSQLColumnName], [pk intValue], arrayIndex++, [oneObject className]];
 										
 										sqlite3_stmt *xStmt;
 										if (sqlite3_prepare_v2( database, [xrefInsert UTF8String], -1, &xStmt, nil) == SQLITE_OK)
@@ -978,7 +982,7 @@ NSMutableArray *checkedTables;
 								if ([(NSObject *)oneObject isKindOfClass:[SQLitePersistentObject class]])
 								{
 									[(SQLitePersistentObject *)oneObject save];
-									NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, dictionary_key, fk, fk_table_name) values (%d, '%@', %d, '%@')",  [[self class] tableName], [propName stringAsSQLColumnName], pk, oneKey, [(SQLitePersistentObject *)oneObject pk], [[oneObject class] tableName]];
+									NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, dictionary_key, fk, fk_table_name) values (%d, '%@', %d, '%@')",  [[self class] tableName], [propName stringAsSQLColumnName], [pk intValue], oneKey, [[(SQLitePersistentObject *)oneObject pk] intValue], [[oneObject class] tableName]];
 									if (sqlite3_exec (database, [xrefInsert UTF8String], NULL, NULL, &errmsg) != SQLITE_OK)
 										NSLog(@"Error inserting child rows in xref table for array: %s", errmsg);
 									sqlite3_free(errmsg);
@@ -987,7 +991,7 @@ NSMutableArray *checkedTables;
 								{
 									if ([[oneObject class] canBeStoredInSQLite])
 									{
-										NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, dictionary_key, object_data, object_class) values (%d, '%@', ?, '%@')", [[self class] tableName], [propName stringAsSQLColumnName], pk, oneKey, [oneObject className]];
+										NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, dictionary_key, object_data, object_class) values (%d, '%@', ?, '%@')", [[self class] tableName], [propName stringAsSQLColumnName], [pk intValue], oneKey, [oneObject className]];
 										sqlite3_stmt *xStmt;
 										if (sqlite3_prepare_v2( database, [xrefInsert UTF8String], -1, &xStmt, nil) == SQLITE_OK)
 										{
@@ -1014,7 +1018,7 @@ NSMutableArray *checkedTables;
 								if ([oneObject isKindOfClass:[SQLitePersistentObject class]])
 								{
 									[oneObject save];
-									NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, fk, fk_table_name) values (%d, %d, '%@')", [[self class] tableName], [propName stringAsSQLColumnName],  pk, [oneObject pk], [[oneObject class] tableName]];
+									NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, fk, fk_table_name) values (%d, %d, '%@')", [[self class] tableName], [propName stringAsSQLColumnName],  [pk intValue], [[oneObject pk] intValue], [[oneObject class] tableName]];
 									if (sqlite3_exec (database, [xrefInsert UTF8String], NULL, NULL, &errmsg) != SQLITE_OK)
 										NSLog(@"Error inserting child rows in xref table for array: %s", errmsg);
 									sqlite3_free(errmsg);
@@ -1023,7 +1027,7 @@ NSMutableArray *checkedTables;
 								{
 									if ([[oneObject class] canBeStoredInSQLite])
 									{
-										NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, object_data, object_class) values (%d, ?, '%@')", [[self class] tableName], [propName stringAsSQLColumnName], pk, [oneObject className]];
+										NSString *xrefInsert = [NSString stringWithFormat:@"insert into %@_%@ (parent_pk, object_data, object_class) values (%d, ?, '%@')", [[self class] tableName], [propName stringAsSQLColumnName], [pk intValue], [oneObject className]];
 										
 										sqlite3_stmt *xStmt;
 										if (sqlite3_prepare_v2( database, [xrefInsert UTF8String], -1, &xStmt, nil) == SQLITE_OK)
@@ -1066,7 +1070,7 @@ NSMutableArray *checkedTables;
 -(BOOL) existsInDB
 {
     // pk must be greater than 0 if its on the db
-	return pk > 0;
+	return [pk intValue] > 0;
 }
 -(void)deleteObject
 {
@@ -1075,7 +1079,7 @@ NSMutableArray *checkedTables;
 
 -(void)deleteObjectCascade:(BOOL)cascade
 {
-	[[self class] deleteObject:[self pk] cascade:cascade];
+	[[self class] deleteObject:[[self pk] intValue] cascade:cascade];
 }
 
 - (NSArray *)findRelated:(Class)cls forProperty:(NSString *)prop filter:(NSString *)filter
@@ -1267,7 +1271,7 @@ NSMutableArray* recursionCheck;
 {
 	if ((self=[super init]))
 	{
-		pk = -1;
+		pk = [[NSNumber alloc] initWithInt:-1];
 		dirty = YES;
 		alreadySaving = NO;
 		for (NSString *oneProp in [[self class] propertiesWithEncodedTypes])
@@ -1586,7 +1590,7 @@ NSMutableArray* recursionCheck;
 		}
 	}
 }
-- (void)setPk:(int)newPk
+- (void)setPk:(NSNumber *)newPk
 {
 	pk = newPk;
 }
@@ -1609,9 +1613,9 @@ NSMutableArray* recursionCheck;
 }
 #pragma mark -
 #pragma mark Memory Map Methods
-+ (NSString *)memoryMapKeyForObject:(NSInteger)thePK
++ (NSString *)memoryMapKeyForObject:(NSNumber *)thePK
 {
-	return [NSString stringWithFormat:@"%@-%d", [self className], thePK];
+	return [NSString stringWithFormat:@"%@-%@", [self className], thePK];
 }
 - (NSString *)memoryMapKey
 {

@@ -17,7 +17,7 @@
 }
 
 + (NSArray *) findByExpenseType:(ExpenseType*) expenseType {
-	NSString *criteria = [NSString stringWithFormat:@"where expense_type = 'ExpenseType-%d'", expenseType.pk];
+	NSString *criteria = [NSString stringWithFormat:@"where expense_type = 'ExpenseType-%d'", [expenseType.pk intValue]];
 	return [Vendor findByCriteria:criteria];
 }
 @end

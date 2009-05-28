@@ -52,8 +52,8 @@
 
 @interface SQLitePersistentObject : NSObject {
 
-@private
-	NSInteger	pk;	
+//@private
+	NSNumber	*pk;	
 	BOOL		dirty;
 	BOOL		alreadySaving;
 }
@@ -70,7 +70,7 @@
  */
 +(NSArray *)findByCriteria:(NSString *)criteriaString;
 +(SQLitePersistentObject *)findFirstByCriteria:(NSString *)criteriaString;
-+(SQLitePersistentObject *)findByPK:(int)inPk;
++(SQLitePersistentObject *)findByPK:(NSNumber *)inPk;
 +(NSArray *)allObjects;
 
 /*!
@@ -103,7 +103,7 @@
  Deletes this object's corresponding row from the database table. This version does NOT cascade to child objects in other tables.
  */
 -(void)deleteObject;
-+(void)deleteObject:(NSInteger)pk cascade:(BOOL)cascade;
++(void)deleteObject:(NSNumber *)pk cascade:(BOOL)cascade;
 
 /*!
  Deletes this object's corresponding row from the database table.
@@ -162,7 +162,7 @@
 /*!
  Returns this objects primary key
  */
--(int)pk;
+-(NSNumber *)pk;
 
 -(BOOL) areAllPropertiesEqual:(SQLitePersistentObject*)object;
 

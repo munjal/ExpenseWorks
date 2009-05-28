@@ -36,6 +36,24 @@
 	SBJSON *sbjson = [SBJSON new];
 	sbjson.maxDepth = 5;
 	
+	
+//	XHash *record1 = [XHash withVargs:
+//		@"reportId", [NSNumber numberWithInt:10], 
+//		@"submittedOn", @"abc",
+//		nil
+//	];
+//	
+//	NSLog(@"Crap");
+//	
+//	NSLog([record1 JSONRepresentation]);
+//	NSLog([record1 JSONFragmentValue]);
+
+//	NSString *jsonString = @"{\"reportId\":10,\"submittedOn\":\"abc\"}";
+//	NSDictionary *record1 = (NSDictionary *)[sbjson objectWithString:jsonString error:NULL];
+//	NSLog([[record1 objectForKey:@"reportId"] class]);
+//	ExpenseType *expenseType = [[ExpenseType alloc] init];
+//	[expenseType setPk:5];
+	
 	NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
 
 	NSArray *ymlFiles = [[self filesWithDirectoryPath:resourcePath filteredByExtension:@"yml"] retain];
@@ -293,7 +311,7 @@
 - (void)viewDidLoad {
  	if (([self initDatabase]) == FALSE) NSLog(@"Could not initiated databse");
 	[self initDatabaseConnection];
-	[self loadFixtures];
+//	[self loadFixtures];
 	[self printDatabaseStructure];
 	self.expenseReports =  [[NSArray alloc] initWithArray:[self getExpenseReports]];
 }
