@@ -161,7 +161,7 @@
 	system([sqlString UTF8String]);
 	printf("\n");
 	
-	NSMutableArray *modelNames = (NSMutableArray *)[NSArray withVargs:@"expense_report", @"expense_report_item", @"vendor", @"expense_type", nil];
+	NSMutableArray *modelNames = (NSMutableArray *)[NSArray withVargs:@"expense_report", @"expense_report_item", @"vendor", @"expense_type", @"currency", nil];
 	
 	for(NSString *modelName in modelNames) {
 		//print expense_report
@@ -172,85 +172,9 @@
 		system([sqlString UTF8String]);
 		printf("\n");		
 	}
-//	//print expense_report
-//	sqlString = [NSString stringWithFormat: @"sqlite3 -header -column '%@' 'select * from expense_report'", 
-//				 [self databaseFileNameWithPath]];
-//	NSLog(sqlString);
-//	printf("The values in expense_report_item are: \n");
-//	system([sqlString UTF8String]);
-//	printf("\n");
-//	
-//	//print expense report item
-//	sqlString = [NSString stringWithFormat: @"sqlite3 -header -column '%@' 'select * from expense_report_item'", 
-//				 [self databaseFileNameWithPath]];
-//	NSLog(sqlString);
-//	printf("The values in expense_report_item are: \n");
-//	system([sqlString UTF8String]);
-//	printf("\n");
-	
 }
 
 - (NSArray *)getExpenseReports {
-	
-	
-//	[self createTestExpenseReport];
-//	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
-//	expenseReport.reportId = @"03";
-//	expenseReport.createdOn = [NSDate date];
-//	expenseReport.submittedOn = [NSDate date];
-//
-//	[expenseReport save];
-//	
-//	ExpenseReportItem *expenseReportItem = [[ExpenseReportItem alloc] init];
-//	expenseReportItem.reportId = @"03";
-//	expenseReportItem.expenseReport = expenseReport;
-//	expenseReportItem.project = @"RACKSPACE";
-//	expenseReportItem.category = @"airfare";
-//	expenseReportItem.date = [NSDate date];
-//	expenseReportItem.currency = @"USD";
-//	expenseReportItem.amount = 987.34;
-//	expenseReportItem.remarks = @"Airfare to Las Vegas";
-//	expenseReportItem.vendor = @"American";
-//	expenseReportItem.payment = @"card";
-//	expenseReportItem.attendes = @"me";
-//	[expenseReportItem save];
-//	expenseReport = [[ExpenseReport alloc] init];
-//	expenseReport.reportId = @"05";
-//	expenseReport.createdOn = [NSDate date];
-//	expenseReport.submittedOn = [NSDate date];
-//	
-//	[expenseReport save];
-//	
-//	expenseReportItem = [[ExpenseReportItem alloc] init];
-//	[expenseReportItem setPk:11];
-//	expenseReportItem.reportId = @"05";
-//	expenseReportItem.expenseReport = expenseReport;
-//	expenseReportItem.project = @"RACKSPACE";
-//	expenseReportItem.category = @"hotel";
-//	expenseReportItem.date = [NSDate date];
-//	expenseReportItem.currency = @"USD";
-//	expenseReportItem.amount = 450.99;
-//	expenseReportItem.remarks = @"Hotel";
-//	expenseReportItem.vendor = @"Marriott";
-//	expenseReportItem.payment = @"card";
-//	expenseReportItem.attendes = @"me";
-//	[expenseReportItem save];
-//	
-//	NSArray *expenseTypes = 
-//		[[NSArray alloc] initWithObjects: @"Business Meal", @"Flight", @"Benefit", @"Books", @"Car Rental",
-//		 @"Conference", @"Due Subscriptions", @"Gas", @"High Speed Internet", @"Hotel", @"Local Transportation",
-//		 @"Mileage and Tolls", @"Office Supplies", @"Other", @"Passport", @"Postage & Shipping",
-//		 @"Stipend - UK/US", @"Telephone", @"Training/Education", nil
-//		 ];
-//	
-//	ExpenseType *expenseType;
-//	for(NSString *expenseTypeName in expenseTypes) {
-//		expenseType = [[ExpenseType alloc] init];
-//		expenseType.name = expenseTypeName;
-//		[expenseType save];
-//	}	
-	
-//		
 //	//Flights Vendor
 //	expenseTypes = [ExpenseType findByName:@"Flight"];
 //	expenseType = [expenseTypes objectAtIndex:0];
@@ -287,18 +211,6 @@
 //	NSLog(@"Vendors: %@", [Vendor allObjects]);
 //	
 //	
-//	//Currency
-//	NSArray *currencies = [[NSArray alloc] initWithObjects: @"Australian AUD $", @"Euro €", @"British GBP £", @"Indian INR ₨", @"Chinese RMB ¥", @"United States USD $", nil];
-//	
-//	for(NSString *currencyName in currencies) {
-//		Currency *currency = [[Currency alloc] init];
-//		currency.name = currencyName;
-//		currency.lastSelectedOn = [NSDate date];
-//		[currency save];
-//	}	
-//	NSLog(@"Currencies: %@", [Currency findByCriteria:@" ORDER BY last_selected_on DESC"]);
-//	
-
 //	//Testing FrameworkX
 //	NSArray *paymentType = [NSArray empty];
 	
@@ -311,7 +223,7 @@
 - (void)viewDidLoad {
  	if (([self initDatabase]) == FALSE) NSLog(@"Could not initiated databse");
 	[self initDatabaseConnection];
-//	[self loadFixtures];
+	[self loadFixtures];
 	[self printDatabaseStructure];
 	self.expenseReports =  [[NSArray alloc] initWithArray:[self getExpenseReports]];
 }

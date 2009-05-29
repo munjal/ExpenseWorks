@@ -58,6 +58,8 @@
 	BOOL		alreadySaving;
 }
 
+//@property(nonatomic, retain) NSNumber *pk;
+
 /*!
  Returns the name of the table that this object will use to save its data
  */

@@ -730,6 +730,16 @@ NSMutableArray *checkedTables;
 {
 	return pk;
 }
+- (void)setPk:(NSNumber *)newPk
+{
+	if ([newPk isMemberOfClass:[NSDecimalNumber class]]) {
+		newPk = [[NSNumber alloc] initWithInt:(int)[newPk doubleValue]];
+	}
+	if ([newPk isMemberOfClass:[NSString class]]) {
+		newPk = [[NSNumber alloc] initWithInt:[newPk intValue]];
+	}
+	pk = newPk;
+}
 -(void)save
 {
 	if (alreadySaving)
@@ -1589,10 +1599,6 @@ NSMutableArray* recursionCheck;
 			
 		}
 	}
-}
-- (void)setPk:(NSNumber *)newPk
-{
-	pk = newPk;
 }
 #pragma mark -
 #pragma mark KV

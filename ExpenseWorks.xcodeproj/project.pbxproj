@@ -151,6 +151,8 @@
 		84A538910FCD863E00A934D6 /* ExpenseType.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A5388F0FCD863E00A934D6 /* ExpenseType.yml */; };
 		84A538A90FCD898400A934D6 /* Vendor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A538A80FCD898400A934D6 /* Vendor.yml */; };
 		84A538AA0FCD898400A934D6 /* Vendor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A538A80FCD898400A934D6 /* Vendor.yml */; };
+		84A53C010FCF2B6F00A934D6 /* Currency.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A53C000FCF2B6F00A934D6 /* Currency.yml */; };
+		84A53C020FCF2B6F00A934D6 /* Currency.yml in Resources */ = {isa = PBXBuildFile; fileRef = 84A53C000FCF2B6F00A934D6 /* Currency.yml */; };
 		84AF32EF0FAEBBFC0074174A /* ExpenseReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */; };
 		84AF32F00FAEBBFC0074174A /* ExpenseReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */; };
 		84AF333C0FAEC1F10074174A /* ExpenseReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AF333B0FAEC1F10074174A /* ExpenseReport.m */; };
@@ -332,6 +334,7 @@
 		84A5384F0FCD063500A934D6 /* ExpenseReportItem.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ExpenseReportItem.yml; path = Db/Fixtures/ExpenseReportItem.yml; sourceTree = "<group>"; };
 		84A5388F0FCD863E00A934D6 /* ExpenseType.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ExpenseType.yml; path = Db/Fixtures/ExpenseType.yml; sourceTree = "<group>"; };
 		84A538A80FCD898400A934D6 /* Vendor.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Vendor.yml; path = Db/Fixtures/Vendor.yml; sourceTree = "<group>"; };
+		84A53C000FCF2B6F00A934D6 /* Currency.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Currency.yml; path = Db/Fixtures/Currency.yml; sourceTree = "<group>"; };
 		84AF32C10FAEACC00074174A /* 001_create_tables */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; name = 001_create_tables; path = Db/Migrate/001_create_tables; sourceTree = "<group>"; };
 		84AF32ED0FAEBBFC0074174A /* ExpenseReportItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseReportItem.h; path = Models/ExpenseReportItem.h; sourceTree = "<group>"; };
 		84AF32EE0FAEBBFC0074174A /* ExpenseReportItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseReportItem.m; path = Models/ExpenseReportItem.m; sourceTree = "<group>"; };
@@ -616,6 +619,7 @@
 		846736F90FCC7AC200B25652 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				84A53C000FCF2B6F00A934D6 /* Currency.yml */,
 				84A538A80FCD898400A934D6 /* Vendor.yml */,
 				84A5388F0FCD863E00A934D6 /* ExpenseType.yml */,
 				84A5384F0FCD063500A934D6 /* ExpenseReportItem.yml */,
@@ -776,6 +780,7 @@
 				84A538510FCD063500A934D6 /* ExpenseReportItem.yml in Resources */,
 				84A538910FCD863E00A934D6 /* ExpenseType.yml in Resources */,
 				84A538AA0FCD898400A934D6 /* Vendor.yml in Resources */,
+				84A53C020FCF2B6F00A934D6 /* Currency.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +795,7 @@
 				84A538500FCD063500A934D6 /* ExpenseReportItem.yml in Resources */,
 				84A538900FCD863E00A934D6 /* ExpenseType.yml in Resources */,
 				84A538A90FCD898400A934D6 /* Vendor.yml in Resources */,
+				84A53C010FCF2B6F00A934D6 /* Currency.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,66 +1,66 @@
 [
 	{
-		"pk":"1",
+		"pk":1,
 		"typeId":"01",
 		"name":"Business Meal"
 	},
 	{
-		"pk":"2",
+		"pk":2,
 		"typeId":"01",
 		"name":"Flight"
 	},
 	{
-		"pk":"3",
+		"pk":3,
 		"typeId":"01",
 		"name":"Benefit"
 	},
 	{
-		"pk":"4",
+		"pk":4,
 		"typeId":"01",
 		"name":"Books"
 	},
 	{
-		"pk":"5",
+		"pk":5,
 		"typeId":"01",
 		"name":"Car Rental"
 	},
 	{
-		"pk":"6",
+		"pk":6,
 		"typeId":"01",
 		"name":"Mileage and Tolls"
 	},
 	{
-		"pk":"7",
+		"pk":7,
 		"typeId":"01",
 		"name":"Office Supplies"
 	},
 	{
-		"pk":"8",
+		"pk":8,
 		"typeId":"01",
 		"name":"Other"
 	},
 	{
-		"pk":"9",
+		"pk":9,
 		"typeId":"01",
 		"name":"Passport"
 	},
 	{
-		"pk":"10",
+		"pk":10,
 		"typeId":"01",
 		"name":"Postage & Shipping"
 	},
 	{
-		"pk":"11",
+		"pk":11,
 		"typeId":"01",
 		"name":"Stipend - UK/US"
 	},
 	{
-		"pk":"12",
+		"pk":12,
 		"typeId":"01",
 		"name":"Telephone"
 	},
 	{
-		"pk":"13",
+		"pk":13,
 		"typeId":"01",
 		"name":"Training/Education"
 	}
