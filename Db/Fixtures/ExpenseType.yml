@@ -5,7 +5,7 @@
 		"name":"Business Meal"
 	},
 	{
-		"pk":2,
+		"pk":"2",
 		"typeId":"01",
 		"name":"Flight"
 	},

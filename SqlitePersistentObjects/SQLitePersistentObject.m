@@ -735,8 +735,10 @@ NSMutableArray *checkedTables;
 	if ([newPk isMemberOfClass:[NSDecimalNumber class]]) {
 		newPk = [[NSNumber alloc] initWithInt:(int)[newPk doubleValue]];
 	}
-	if ([newPk isMemberOfClass:[NSString class]]) {
-		newPk = [[NSNumber alloc] initWithInt:[newPk intValue]];
+//	if weird handling of NSCFStrings. If the pk is NSCFString do magic
+	if ([newPk superclass] == [NSMutableString class]) {
+		NSString *numberString = (@"%@", [newPk capitalizedString]);
+		newPk = [[NSNumber alloc] initWithInt:[numberString intValue]];
 	}
 	pk = newPk;
 }
