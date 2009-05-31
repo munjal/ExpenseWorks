@@ -7,14 +7,15 @@
 @implementation ExpenseWorksAppDelegate
 
 @synthesize window;
-
-
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	NSArray* toolbarItems = [NSArray arrayWithObjects:
 			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],				 
 			[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showNewExpenseReportItemController)],
 			nil];
 	[toolbarItems makeObjectsPerformSelector:@selector(release)];
+	
+//	textViewTypes.
+	
 	RootViewController* rootController = [[RootViewController alloc] initWithToolbarItems:toolbarItems];
 	navController = [[UINavigationController alloc] initWithRootViewController:rootController];
 	ToolbarController* toolbarController = [[ToolbarController alloc] initWithContentViewController:navController];

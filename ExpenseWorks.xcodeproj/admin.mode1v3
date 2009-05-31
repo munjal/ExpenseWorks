@@ -321,7 +321,6 @@
 								<string>846736F90FCC7AC200B25652</string>
 								<string>84AF32C00FAEAC800074174A</string>
 								<string>84AF32A90FAE940A0074174A</string>
-								<string>8498AABD0FAE7E1300DCD37B</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
@@ -332,13 +331,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>31</integer>
-									<integer>13</integer>
+									<integer>53</integer>
+									<integer>49</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 39}, {294, 760}}</string>
+							<string>{{0, 412}, {294, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -375,7 +374,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SQLitePersistentObject.m</string>
+								<string>NewExpenseReportItemController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -383,27 +382,44 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SQLitePersistentObject.m</string>
+										<string>NewExpenseReportItemController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>84A53E8C0FD1E4C400A934D6</string>
+										<string>84A53F8E0FD2536100A934D6</string>
 										<key>history</key>
 										<array>
-											<string>84A53E460FD0A12E00A934D6</string>
-											<string>84A53E860FD1E4C400A934D6</string>
-											<string>84A53E870FD1E4C400A934D6</string>
-											<string>84A53E880FD1E4C400A934D6</string>
-										</array>
-										<key>nextStack</key>
-										<array>
-											<string>84A53E8B0FD1E4C400A934D6</string>
+											<string>84A53EB10FD1F44A00A934D6</string>
+											<string>84A53EB30FD1F44A00A934D6</string>
+											<string>84A53F0E0FD21C6B00A934D6</string>
+											<string>84A53F680FD2519900A934D6</string>
+											<string>84A53F690FD2519900A934D6</string>
+											<string>84A53F8A0FD2531B00A934D6</string>
+											<string>84A53F7D0FD2529800A934D6</string>
 										</array>
 										<key>prevStack</key>
 										<array>
 											<string>84A53E4D0FD0A12E00A934D6</string>
-											<string>84A53E890FD1E4C400A934D6</string>
-											<string>84A53E8A0FD1E4C400A934D6</string>
+											<string>84A53EB80FD1F44A00A934D6</string>
+											<string>84A53EBC0FD1F44A00A934D6</string>
+											<string>84A53EBE0FD1F44A00A934D6</string>
+											<string>84A53F110FD21C6B00A934D6</string>
+											<string>84A53F120FD21C6B00A934D6</string>
+											<string>84A53F190FD249FA00A934D6</string>
+											<string>84A53F3B0FD24CAE00A934D6</string>
+											<string>84A53F6C0FD2519900A934D6</string>
+											<string>84A53F6D0FD2519900A934D6</string>
+											<string>84A53F6E0FD2519900A934D6</string>
+											<string>84A53F6F0FD2519900A934D6</string>
+											<string>84A53F700FD2519900A934D6</string>
+											<string>84A53F710FD2519900A934D6</string>
+											<string>84A53F720FD2519900A934D6</string>
+											<string>84A53F730FD2519900A934D6</string>
+											<string>84A53F740FD2519900A934D6</string>
+											<string>84A53F750FD2519900A934D6</string>
+											<string>84A53F760FD2519900A934D6</string>
+											<string>84A53F7E0FD2529800A934D6</string>
+											<string>84A53F8B0FD2531B00A934D6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -582,7 +598,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>265413828.84717</real>
+	<real>265442145.89234999</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -601,9 +617,9 @@
 		<string>84A53BED0FCF27DB00A934D6</string>
 		<string>84A536CB0FCCA4A800A934D6</string>
 		<string>84A536CC0FCCA4A800A934D6</string>
-		<string>84C798030FA7DFEF00736383</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>84C798030FA7DFEF00736383</string>
 		<string>/Users/admin/projects/CocoApps/ExpenseWorks/ExpenseWorks.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -825,7 +841,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -982,7 +998,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

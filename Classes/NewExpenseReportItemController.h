@@ -11,6 +11,14 @@
 #import "Vendor.h"
 #import "Currency.h"
 
+typedef enum TextViewTypes {
+	None = -1,
+	TextView = 0,
+	DropDownView = 1,
+	EditableDropDownView = 2,
+	DateView = 3
+} TextViewTypes;
+
 @interface NewExpenseReportItemController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate> {
 	ExpenseType							*expenseType;
 	Vendor								*vendor;
@@ -82,6 +90,8 @@
 - (IBAction)tabToPreviousControl;
 - (IBAction)tabToNextControl;
 - (IBAction)tabDoneControl;
+
+- (TextViewTypes)activeFieldTextViewType;
 
 NSInteger sortByTop(id control1, id control2, void *reverse);
 

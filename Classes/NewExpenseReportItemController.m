@@ -1,6 +1,4 @@
 #import "NewExpenseReportItemController.h"
-
-
 @implementation NewExpenseReportItemController
 
 @synthesize expenseType, vendor;
@@ -145,8 +143,17 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
     scrollView.frame = viewFrame;
 }
 
+- (TextViewTypes)activeFieldTextViewType {
+	TextViewTypes activeViewType = None;
+	if (activeField != nil)
+		activeViewType = [activeField tag];
+	return activeViewType;
+}
+
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
+	NSLog(@"Tag is %d", [self activeFieldTextViewType]);
+		
     if (keyboardShown)
         return;
 	
