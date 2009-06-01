@@ -12,11 +12,11 @@
 #import "Currency.h"
 
 typedef enum TextViewTypes {
-	None = -1,
-	TextView = 0,
-	DropDownView = 1,
-	EditableDropDownView = 2,
-	DateView = 3
+	None = 0,
+	TextView = 1,
+	DropDownView = 2,
+	EditableDropDownView = 4,
+	DateView = 8
 } TextViewTypes;
 
 @interface NewExpenseReportItemController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate> {
@@ -95,7 +95,7 @@ typedef enum TextViewTypes {
 
 NSInteger sortByTop(id control1, id control2, void *reverse);
 
-
+- (BOOL)dropDownButtonRequiredFor:(UITextField *)textField;
 - (void)populatePickerItems;
 - (void)populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField;
 

@@ -35,25 +35,7 @@
 - (void) loadFixtures {
 	SBJSON *sbjson = [SBJSON new];
 	sbjson.maxDepth = 5;
-	
-	
-//	XHash *record1 = [XHash withVargs:
-//		@"reportId", [NSNumber numberWithInt:10], 
-//		@"submittedOn", @"abc",
-//		nil
-//	];
-//	
-//	NSLog(@"Crap");
-//	
-//	NSLog([record1 JSONRepresentation]);
-//	NSLog([record1 JSONFragmentValue]);
-
-//	NSString *jsonString = @"{\"reportId\":10,\"submittedOn\":\"abc\"}";
-//	NSDictionary *record1 = (NSDictionary *)[sbjson objectWithString:jsonString error:NULL];
-//	NSLog([[record1 objectForKey:@"reportId"] class]);
-//	ExpenseType *expenseType = [[ExpenseType alloc] init];
-//	[expenseType setPk:5];
-	
+		
 	NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
 
 	NSArray *ymlFiles = [[self filesWithDirectoryPath:resourcePath filteredByExtension:@"yml"] retain];
@@ -78,7 +60,7 @@
 	}	
 }
 
-- (BOOL) initDatabase {
+- (BOOL) copyDatabaseAndInitFixtures {
 	if ([[NSFileManager defaultManager] fileExistsAtPath: [self databaseFileNameWithPath]]) {
 		NSLog(@"File already exists");
 		return TRUE;
@@ -91,7 +73,11 @@
 	}
 		
 	NSLog(@"Copying database file");
-	return [[NSFileManager defaultManager] copyItemAtPath:backupDatabasePath toPath:[self databaseFileNameWithPath] error:nil];
+	[[NSFileManager defaultManager] copyItemAtPath:backupDatabasePath toPath:[self databaseFileNameWithPath] error:nil];
+	
+	[self initDatabaseConnection];
+	[self loadFixtures];
+	[self printDatabaseStructure];	
 	
 	return TRUE;
 }
@@ -100,53 +86,6 @@
 	NSArray *searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentFolderPath = [searchPaths objectAtIndex: 0];	
 	return [documentFolderPath stringByAppendingPathComponent: DATABASE_FILE_NAME];
-}
-
-- (void) createTestExpenseReport {
-	
-//	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-//	[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSSS"];
-//	[dateFormatter stringFromDate:[NSDate date]];	
-//	XHash *record1 = [XHash withVargs:
-//		@"reportId", @"06", 
-//		@"createdOn", [dateFormatter stringFromDate:[NSDate date]],
-//		@"submittedOn", [dateFormatter stringFromDate:[NSDate date]],
-//		nil
-//	];
-	
-//	"{"submittedOn":"2009-05-24 20:43:09 -0500","reportId":"03","createdOn":"2009-05-24 20:43:09 -0500"}"
-	
-	//NSString *jsonString = @"{\"submittedOn\":\"2009-05-24 21:17:43.2430\",\"reportId\":\"06\",\"createdOn\":\"2009-05-24 21:17:43.2430\"}";
-	
-//	
-//	SBJSON *sbjson = [SBJSON new];
-//	sbjson.maxDepth = 5;
-//	NSDictionary *record1 = (NSDictionary *)[sbjson objectWithString:jsonString error:NULL];
-	//NSLog(@"Dic is: %@", record);
-	
-//	ExpenseReport *expenseReport = [ExpenseReport createWithParams:record1];
-	
-//	NSString *jsonString = [record1 JSONRepresentation];
-//	NSLog(@"Json string is:");
-//	NSLog(jsonString);
-//	ExpenseReport *expenseReport = [ExpenseReport newWithParams:record1];
-//	ExpenseReport *expenseReport = [ExpenseReport createWithParams:record1];
-//	NSLog([expenseReport description]);
-	
-//	for (NSString *key in [record1 allKeys]) {
-//		NSString *propertyName = (NSString *)[[NSString stringWithFormat:@"set_%@:", key] asCamelCase];
-////		NSLog(propertyName);
-////		NSLog([NSString stringWithFormat:@"set_%@:", key ]);
-////		NSString *propertyName = (NSString *)[[@"set_" append:key] asCamelCase];
-//		[expenseReport performSelector:NSSelectorFromString(propertyName) withObject:[record1 valueForKey:key]];
-//	}
-//	
-//	NSLog([expenseReport description]);
-	
-//	ExpenseReport *expenseReport = [[ExpenseReport alloc] init];
-//	[expenseReport performSelector:NSSelectorFromString(@"setReportId:") withObject:@"05"];
-//	NSLog(@"val is: %@", expenseReport.reportId);
-	
 }
 
 - (void)initDatabaseConnection {
@@ -161,7 +100,14 @@
 	system([sqlString UTF8String]);
 	printf("\n");
 	
-	NSMutableArray *modelNames = (NSMutableArray *)[NSArray withVargs:@"expense_report", @"expense_report_item", @"vendor", @"expense_type", @"currency", nil];
+	NSMutableArray *modelNames = (NSMutableArray *)[NSArray withVargs:@"expense_report", 
+													@"expense_report_item", 
+													@"vendor", 
+													@"expense_type", 
+													@"currency",
+													@"project",
+													@"attendee",
+													nil];
 	
 	for(NSString *modelName in modelNames) {
 		//print expense_report
@@ -175,56 +121,13 @@
 }
 
 - (NSArray *)getExpenseReports {
-//	//Flights Vendor
-//	expenseTypes = [ExpenseType findByName:@"Flight"];
-//	expenseType = [expenseTypes objectAtIndex:0];
-//	
-//	NSArray *flightVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"United", @"American", @"Southwest", @"Delta", nil];
-//	for (NSString *name in flightVendors) {
-//		Vendor *vendor = [[Vendor alloc] init];
-//		vendor.name = name;
-//		vendor.expenseType = expenseType;
-//		[vendor save];		
-//	}
-//	
-//	//Car Vendors
-//	id carRentalExpenseTypes = [ExpenseType findByName:@"Car Rental"];
-//	ExpenseType *carRentalExpenseType = [carRentalExpenseTypes objectAtIndex:0];
-//	NSArray *carVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"Avis", @"Hertz", @"Enterprise", @"Alamo", @"Thrifty", nil];	
-//	for (NSString *name in carVendors) {
-//		Vendor *vendor = [[Vendor alloc] init];
-//		vendor.name = name;
-//		vendor.expenseType = carRentalExpenseType;
-//		[vendor save];		
-//	}
-//
-//	//Hotel Vendors
-//	id hotelExpenseTypes = [ExpenseType findByName:@"Hotel"];
-//	ExpenseType *hotelExpenseType = [hotelExpenseTypes objectAtIndex:0];
-//	NSArray *hotelVendors = [[NSArray alloc] initWithObjects:@"Cliqbook", @"Marriott", @"Hilton", @"Starwood", @"Hyatt", nil];	
-//	for (NSString *name in hotelVendors) {
-//		Vendor *vendor = [[Vendor alloc] init];
-//		vendor.name = name;
-//		vendor.expenseType = hotelExpenseType;
-//		[vendor save];		
-//	}
-//	NSLog(@"Vendors: %@", [Vendor allObjects]);
-//	
-//	
-//	//Testing FrameworkX
-//	NSArray *paymentType = [NSArray empty];
-	
-//	NSArray *p = [NSArray withVargs:@"fooSize", @"barDing", nil];
-//	NSLog(@"Values are: %@", [[p collect] asRubyCase]);
-	
 	return [ExpenseReport findByCriteria:@""];
 }
 
 - (void)viewDidLoad {
- 	if (([self initDatabase]) == FALSE) NSLog(@"Could not initiated databse");
+ 	[self copyDatabaseAndInitFixtures];
 	[self initDatabaseConnection];
-	[self loadFixtures];
-	[self printDatabaseStructure];
+	
 	self.expenseReports =  [[NSArray alloc] initWithArray:[self getExpenseReports]];
 }
 
@@ -234,7 +137,6 @@
     if (self = [super initWithStyle:UITableViewStylePlain]) {
 		self.toolbarItems = items;
 		self.title = @"Expense Report Index";
-		//self.title = [NSString stringWithFormat:@"Level %d", 7 - [items count]];
     }
     return self;
 }

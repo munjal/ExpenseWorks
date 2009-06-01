@@ -1,17 +1,17 @@
 [
 	{
 		"pk":1,
-		"name":"Australian AUD",
+		"name":"AUD",
 		"lastSelectedOn":"2009-04-24 21:33:39.0650"
 	},
 	{
 		"pk":2,
-		"name":"British GBP",
+		"name":"GBP",
 		"lastSelectedOn":"2009-05-24 21:36:39.0650"
 	},
 	{
 		"pk":3,
-		"name":"Chinese RMB",
+		"name":"RMB",
 		"lastSelectedOn":"2009-05-24 21:37:39.0650"
 	},
 	{
@@ -21,12 +21,12 @@
 	},
 	{
 		"pk":5,
-		"name":"Indian INR",
+		"name":"INR",
 		"lastSelectedOn":"2009-05-24 21:39:39.0650"
 	},	
 	{
 		"pk":6,
-		"name":"United States USD",
+		"name":"USD",
 		"lastSelectedOn":"2009-05-24 21:40:39.0650"
 	}
 ]

@@ -17,7 +17,7 @@
 	{
 		"pk":4,
 		"typeId":"01",
-		"name":"Books"
+		"name":"Hotel"
 	},
 	{
 		"pk":5,
@@ -63,6 +63,11 @@
 		"pk":13,
 		"typeId":"01",
 		"name":"Training/Education"
+	},
+	{
+		"pk":14,
+		"typeId":"01",
+		"name":"Books"
 	}
 ]
 

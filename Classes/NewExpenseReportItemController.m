@@ -59,6 +59,10 @@
 								   ]];
 }
 
+- (BOOL)dropDownButtonRequiredFor:(UITextField *)textField{
+	return ([textField tag] > 1) ? TRUE : FALSE;
+}
+
 - (void)populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField {
 	self.textFields = [[NSMutableArray alloc] init];
 
@@ -67,8 +71,10 @@
 		if ([curentView isKindOfClass:[UITextField class]]){
 			UITextField *currentTextField = (UITextField *)curentView;
 			[currentTextField setDelegate:self];
-			[self addButtonInRightViewModeTo:currentTextField];
 			[self.textFields addObject:currentTextField];
+			if ([self dropDownButtonRequiredFor:currentTextField]) {
+				[self addButtonInRightViewModeTo:currentTextField];
+			}
 		}
 			
 	}
