@@ -14,9 +14,5 @@
 - (IBAction) doStuff;
 - (NSArray *)toolBarItemsByCount:(NSInteger) count;
 
-- (void)initDatabaseConnection;
-- (void)printDatabaseStructure;
-- (BOOL) copyDatabaseAndInitFixtures;
-- (NSString *)databaseFileNameWithPath;
 - (NSArray *)getExpenseReports;
 @end
