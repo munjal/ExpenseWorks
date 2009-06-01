@@ -11,7 +11,7 @@
 
 @implementation SQLitePersistentObject(X)
 
-+ (id)newWithParams:(XHash *)params {	
++ (id)newWithParams:(NSDictionary *)params {	
 	id instance = [[self alloc] init];
 	for (NSString *key in [params allKeys]) {
 		NSString *propertyName = (NSString *)[[NSString stringWithFormat:@"set_%@:", key] asCamelCase];
@@ -21,7 +21,7 @@
 	return instance;
 }
 
-+ (id)createWithParams:(XHash *)params {
++ (id)createWithParams:(NSDictionary *)params {
 	id instance = [self newWithParams:params];
 	if (instance) {
 		[instance save];

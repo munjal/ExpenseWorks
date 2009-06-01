@@ -317,6 +317,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>84AF32BE0FAEABD10074174A</string>
+								<string>846736F90FCC7AC200B25652</string>
 								<string>84AF32A90FAE940A0074174A</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
@@ -328,13 +330,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>27</integer>
-									<integer>25</integer>
+									<integer>33</integer>
+									<integer>15</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 149}, {294, 760}}</string>
+							<string>{{0, 0}, {294, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -371,7 +373,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ExpenseWorksAppDelegate.m</string>
+								<string>SQLitePersistentObject+X.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -379,11 +381,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ExpenseWorksAppDelegate.m</string>
+										<string>SQLitePersistentObject+X.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>84A540C80FD3653100A934D6</string>
+										<string>84A541010FD367AC00A934D6</string>
 										<key>history</key>
 										<array>
 											<string>84A53EB10FD1F44A00A934D6</string>
@@ -395,7 +397,6 @@
 											<string>84A53FCE0FD357FD00A934D6</string>
 											<string>84A53FE10FD3586000A934D6</string>
 											<string>84A53FE20FD3586000A934D6</string>
-											<string>84A53FF00FD3593200A934D6</string>
 											<string>84A5405C0FD3606300A934D6</string>
 											<string>84A540740FD360E000A934D6</string>
 											<string>84A540A20FD3652700A934D6</string>
@@ -403,7 +404,12 @@
 											<string>84A540A40FD3652700A934D6</string>
 											<string>84A540A50FD3652700A934D6</string>
 											<string>84A540A60FD3652700A934D6</string>
-											<string>84A5409E0FD3652600A934D6</string>
+											<string>84A540D10FD366CE00A934D6</string>
+											<string>84A540D20FD366CE00A934D6</string>
+											<string>84A540E50FD3670900A934D6</string>
+											<string>84A540F10FD3676900A934D6</string>
+											<string>84A540F20FD3676900A934D6</string>
+											<string>84A540F30FD3676900A934D6</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -455,6 +461,13 @@
 											<string>84A540C00FD3652700A934D6</string>
 											<string>84A540C10FD3652700A934D6</string>
 											<string>84A540C20FD3652700A934D6</string>
+											<string>84A540D40FD366CE00A934D6</string>
+											<string>84A540D50FD366CE00A934D6</string>
+											<string>84A540D60FD366CE00A934D6</string>
+											<string>84A540E70FD3670900A934D6</string>
+											<string>84A540F40FD3676900A934D6</string>
+											<string>84A540F50FD3676900A934D6</string>
+											<string>84A540F60FD3676900A934D6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -633,7 +646,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>265512241.14731899</real>
+	<real>265512876.60986701</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -675,8 +688,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -699,6 +710,8 @@
 							<string>232pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>

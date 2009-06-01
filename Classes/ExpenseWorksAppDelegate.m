@@ -125,6 +125,7 @@
 													@"currency",
 													@"project",
 													@"attendee",
+													@"payment_type",
 													nil];
 	
 	for(NSString *modelName in modelNames) {

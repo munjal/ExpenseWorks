@@ -12,7 +12,7 @@
 
 @interface SQLitePersistentObject (X) 
 
-+ (id)newWithParams:(XHash *)params;
-+ (id)createWithParams:(XHash *)params;
++ (id)newWithParams:(NSDictionary *)params;
++ (id)createWithParams:(NSDictionary *)params;
 
 @end
