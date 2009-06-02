@@ -1,5 +1,5 @@
 #import "RootViewController.h"
-
+#import "ToolbarController.h"
 #import "ExpenseReport.h"
 #import "ExpenseReportItem.h"
 #import "ExpenseType.h"
@@ -12,7 +12,7 @@
 
 @implementation RootViewController
 
-@synthesize toolbarItems = _toolbarItems;
+@synthesize toolbarItems;
 @synthesize expenseReports;
 
 - (NSArray *)getExpenseReports {
@@ -71,7 +71,7 @@
 }
 
 - (NSArray *)toolBarItemsByCount:(NSInteger) count {
-	NSArray* toolbarItems = [NSArray arrayWithObjects:
+	self.toolbarItems = [NSArray arrayWithObjects:
 							 [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:@selector(doStuff)],				 
 							 [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(doStuff)],
 							 nil];

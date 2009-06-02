@@ -192,11 +192,6 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 
 
 - (IBAction)showPicker:(UIButton *)sender {
-//	BOOL controlChanged = (activeField != sender.superview);
-	
-//	if ((controlChanged == FALSE) && (keyboardShown == FALSE))
-//		return;
-	
 	if (activeField != NULL)
 		[activeField resignFirstResponder];
 	

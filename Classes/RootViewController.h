@@ -1,10 +1,10 @@
 #import <UIKit/UIKit.h>
-#import "ToolbarController.h"
 
 @interface RootViewController : UITableViewController {
 	NSArray *expenseReports;
-@private
-	NSArray* _toolbarItems;
+	NSArray *toolbarItems;
+//@private
+//	NSArray* _toolbarItems;
 }
 
 @property(nonatomic, retain) NSArray* toolbarItems;
