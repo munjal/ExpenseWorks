@@ -149,11 +149,15 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
     scrollView.frame = viewFrame;
 }
 
-- (TextViewTypes)activeFieldTextViewType {
+- (TextViewTypes)textViewTypeFor:(UITextField *)textField {
 	TextViewTypes activeViewType = None;
-	if (activeField != nil)
-		activeViewType = [activeField tag];
+	if (textField != nil)
+		activeViewType = [textField tag];
 	return activeViewType;
+}
+
+- (TextViewTypes)activeFieldTextViewType {
+	return [self textViewTypeFor:activeField];
 }
 
 - (void)keyboardWasShown:(NSNotification*)aNotification
@@ -171,7 +175,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	
 	// Display the tab selector view
 	[scrollView.superview addSubview:self.navigationPopupView];
-	long y = scrollView.superview.bounds.size.height + 44 - keyboardSize.height - (navigationPopupView.bounds.size.height/2);
+	long y = scrollView.superview.bounds.size.height + 24 - keyboardSize.height - (navigationPopupView.bounds.size.height/2);
 	navigationPopupView.center = CGPointMake(navigationPopupView.center.x, y);
 	
 	
@@ -214,7 +218,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	activeField.text = 	[[[self pickerArrayForTextField:activeField] objectAtIndex:0] name];
 	
 	[scrollView.superview addSubview:pickerViewToDisplay];
-	long y = scrollView.superview.bounds.size.height + 44 - (pickerViewToDisplay.bounds.size.height/2);
+	long y = scrollView.superview.bounds.size.height + 24 - (pickerViewToDisplay.bounds.size.height/2);
 	
 	pickerViewToDisplay.center = CGPointMake(navigationPopupView.center.x, y);
 	
@@ -226,7 +230,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	
 	[scrollView.superview addSubview:self.navigationPopupView];
 	
-	y = scrollView.superview.bounds.size.height + 44 - pickerViewToDisplay.bounds.size.height - (navigationPopupView.bounds.size.height/2);
+	y = scrollView.superview.bounds.size.height + 24 - pickerViewToDisplay.bounds.size.height - (navigationPopupView.bounds.size.height/2);
 	navigationPopupView.center = CGPointMake(navigationPopupView.center.x, y);	
 }
 
@@ -263,8 +267,8 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	[self makeControlFirstResponder:FALSE];
 	if (!keyboardShown) {
 		[self resizeScrollViewForKeyboardOrPopupViewDisplay:datePickerView.bounds.size];
-		[self scrollActiveTextFieldIntoView];		
 	}
+	[self scrollActiveTextFieldIntoView];
 	activeField.backgroundColor = [UIColor blueColor];
 }
 
@@ -273,8 +277,8 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	[self makeControlFirstResponder:TRUE];	
 	if (!keyboardShown) {
 		[self resizeScrollViewForKeyboardOrPopupViewDisplay:datePickerView.bounds.size];
-		[self scrollActiveTextFieldIntoView];		
 	}
+	[self scrollActiveTextFieldIntoView];
 	activeField.backgroundColor = [UIColor blueColor];
 }
 
@@ -299,7 +303,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 		int previousIndexOfCurrentObject = indexOfCurrentObject == 0 ? ([self.textFields count] - 1) : indexOfCurrentObject - 1;
 		currentField = [self.textFields objectAtIndex:previousIndexOfCurrentObject];
 	}
-	if (keyboardShown)
+	if ((keyboardShown) || ([self textViewTypeFor:currentField] == TextView))
 		[currentField becomeFirstResponder];
 	else{
 		for (UIView *currentView in [currentField subviews]) {

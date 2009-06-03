@@ -91,6 +91,7 @@ typedef enum TextViewTypes {
 - (IBAction)tabToNextControl;
 - (IBAction)tabDoneControl;
 
+- (TextViewTypes)textViewTypeFor:(UITextField *)textField;
 - (TextViewTypes)activeFieldTextViewType;
 
 NSInteger sortByTop(id control1, id control2, void *reverse);
