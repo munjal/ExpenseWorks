@@ -1,11 +1,12 @@
 #import "NewExpenseReportItemController.h"
 @implementation NewExpenseReportItemController
 
-@synthesize expenseType, vendor;
-@synthesize vendors, currencies, activePickerArray, modelToTextFieldMapper;
+@synthesize expenseType;
+@synthesize vendors, currencies, paymentTypes, projects, attendes;
+@synthesize activePickerArray, modelToTextFieldMapper;
 
 @synthesize mainView, scrollView, contentView, navigationPopupView, datePickerView, genericPickerView;
-@synthesize vendorField, dateField, currencyField, amountField, projectField, attendesField, textFields;
+@synthesize vendorField, dateField, currencyField, amountField, paymentTypeField,projectField, attendesField, textFields;
 @synthesize genericPicker, datePicker;
 @synthesize previousButton, nextButton, doneButton;
 
@@ -48,14 +49,27 @@
 }
 
 - (void)populatePickerItems {
-	self.vendors =  [[NSArray alloc] initWithArray:[Vendor findByExpenseType:self.expenseType]];
-	self.currencies = [[NSArray alloc] initWithArray:[Currency findByCriteria:@" ORDER BY last_selected_on DESC"]];
+	self.vendors =  [NSArray arrayWithArray:[Vendor findByExpenseType:self.expenseType]];
+	self.currencies = [NSArray arrayWithArray:[Currency findByCriteria:@" ORDER BY last_selected_on DESC"]];
+	self.paymentTypes = [NSArray arrayWithArray:[PaymentType findByCriteria:@" ORDER BY last_selected_on DESC"]];
+	self.projects = [NSArray arrayWithArray:[Project findByCriteria:@" ORDER BY last_selected_on DESC"]];
+	self.attendes = [NSArray arrayWithArray:[Attendee findByCriteria:@" ORDER BY last_selected_on DESC"]];
 
 	self.modelToTextFieldMapper = [[NSDictionary alloc] 
-								   initWithObjects: [[NSArray alloc] initWithObjects:self.vendors, self.currencies, nil]
+								   initWithObjects: [[NSArray alloc] initWithObjects:
+													 self.vendors, 
+													 self.currencies, 
+													 self.paymentTypes,
+													 self.projects,
+													 self.attendes,
+													 nil]
 										   forKeys: [[NSArray alloc] initWithObjects:
 													 [NSNumber numberWithInt:self.vendorField.hash], 
-													 [NSNumber numberWithInt:self.currencyField.hash], nil
+													 [NSNumber numberWithInt:self.currencyField.hash], 
+													 [NSNumber numberWithInt:self.paymentTypeField.hash],
+													 [NSNumber numberWithInt:self.projectField.hash],
+													 [NSNumber numberWithInt:self.attendesField.hash],
+													 nil
 								   ]];
 }
 
@@ -145,7 +159,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 }
 - (void)resizeScrollViewForKeyboardOrPopupViewDisplay:(CGSize)keyboardSize {
 	CGRect viewFrame = [scrollView frame];
-	viewFrame.size.height = scrollView.superview.frame.size.height + 44 - (keyboardSize.height + navigationPopupView.bounds.size.height);
+	viewFrame.size.height = scrollView.superview.frame.size.height + 24 - (keyboardSize.height + navigationPopupView.bounds.size.height);
     scrollView.frame = viewFrame;
 }
 
@@ -329,9 +343,12 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 - (void)dealloc {
 	
 	[self.expenseType				dealloc];
-	[self.vendor					dealloc];
 	[self.vendors					dealloc];
 	[self.currencies				dealloc];
+	[self.paymentTypes				dealloc];
+	[self.projects					dealloc];
+	[self.attendes					dealloc];
+	
 	[self.activePickerArray			dealloc];
 	[self.modelToTextFieldMapper	dealloc];
 	
@@ -346,6 +363,7 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	[self.dateField					dealloc];
 	[self.currencyField				dealloc];
 	[self.amountField				dealloc];
+	[self.paymentTypeField			dealloc];
 	[self.projectField				dealloc];
 	[self.attendesField				dealloc];
 	[self.textFields				dealloc];

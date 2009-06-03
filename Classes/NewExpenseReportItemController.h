@@ -10,6 +10,9 @@
 #import "ExpenseType.h"
 #import "Vendor.h"
 #import "Currency.h"
+#import "PaymentType.h"
+#import "Project.h"
+#import "Attendee.h"
 
 typedef enum TextViewTypes {
 	None = 0,
@@ -21,9 +24,12 @@ typedef enum TextViewTypes {
 
 @interface NewExpenseReportItemController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate> {
 	ExpenseType							*expenseType;
-	Vendor								*vendor;
 	NSArray								*vendors;
 	NSArray								*currencies;
+	NSArray								*paymentTypes;
+	NSArray								*projects;
+	NSArray								*attendes;
+	
 	NSArray								*activePickerArray;
 	NSDictionary						*modelToTextFieldMapper;
 	
@@ -38,6 +44,7 @@ typedef enum TextViewTypes {
 	IBOutlet UITextField				*dateField;
 	IBOutlet UITextField				*currencyField;
 	IBOutlet UITextField				*amountField;
+	IBOutlet UITextField				*paymentTypeField;
 	IBOutlet UITextField				*projectField;
 	IBOutlet UITextField				*attendesField;
 	NSMutableArray						*textFields;
@@ -55,9 +62,12 @@ typedef enum TextViewTypes {
 }
 
 @property (nonatomic, retain) ExpenseType				*expenseType;
-@property (nonatomic, retain) Vendor					*vendor;
 @property (nonatomic, retain) NSArray					*vendors;
 @property (nonatomic, retain) NSArray					*currencies;
+@property (nonatomic, retain) NSArray					*paymentTypes;
+@property (nonatomic, retain) NSArray					*projects;
+@property (nonatomic, retain) NSArray					*attendes;
+
 @property (nonatomic, retain) NSArray					*activePickerArray;
 @property (nonatomic, retain) NSDictionary				*modelToTextFieldMapper;
 
@@ -72,6 +82,7 @@ typedef enum TextViewTypes {
 @property (nonatomic, retain) UITextField				*dateField;
 @property (nonatomic, retain) UITextField				*currencyField;
 @property (nonatomic, retain) UITextField				*amountField;
+@property (nonatomic, retain) UITextField				*paymentTypeField;
 @property (nonatomic, retain) UITextField				*projectField;
 @property (nonatomic, retain) UITextField				*attendesField;
 @property (nonatomic, retain) NSMutableArray			*textFields;

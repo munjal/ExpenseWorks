@@ -8,10 +8,10 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="60"/>
+			<integer value="10"/>
 			<integer value="97"/>
 			<integer value="53"/>
-			<integer value="10"/>
-			<integer value="60"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -678,6 +678,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 					</object>
 					<int key="connectionID">108</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">paymentTypeField</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="868404513"/>
+					</object>
+					<int key="connectionID">109</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -920,7 +928,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{637, 79}, {278, 460}}</string>
+					<string>{{822, 84}, {278, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -965,7 +973,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">108</int>
+			<int key="maxID">109</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1042,6 +1050,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 							<string>mainView</string>
 							<string>navigationPopupView</string>
 							<string>nextButton</string>
+							<string>paymentTypeField</string>
 							<string>previousButton</string>
 							<string>projectField</string>
 							<string>scrollView</string>
@@ -1062,6 +1071,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 							<string>UIView</string>
 							<string>UIView</string>
 							<string>UIButton</string>
+							<string>UITextField</string>
 							<string>UIButton</string>
 							<string>UITextField</string>
 							<string>UIScrollView</string>

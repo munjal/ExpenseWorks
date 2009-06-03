@@ -330,13 +330,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>46</integer>
-									<integer>36</integer>
+									<integer>17</integer>
+									<integer>15</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 227}, {294, 760}}</string>
+							<string>{{0, 282}, {294, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -385,12 +385,11 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>844117C70FD71F2B00EC804B</string>
+										<string>844118590FD7290F00EC804B</string>
 										<key>history</key>
 										<array>
 											<string>84A53EB10FD1F44A00A934D6</string>
 											<string>84A53FC80FD357FD00A934D6</string>
-											<string>84A53FC90FD357FD00A934D6</string>
 											<string>84A53FCA0FD357FD00A934D6</string>
 											<string>84A53FCE0FD357FD00A934D6</string>
 											<string>84A53FE10FD3586000A934D6</string>
@@ -412,12 +411,10 @@
 											<string>844116FA0FD7129000EC804B</string>
 											<string>8441171B0FD7170100EC804B</string>
 											<string>844117A30FD71D8800EC804B</string>
-											<string>844117A40FD71D8800EC804B</string>
-											<string>844117A50FD71D8800EC804B</string>
-										</array>
-										<key>nextStack</key>
-										<array>
-											<string>844117A70FD71D8800EC804B</string>
+											<string>8441184A0FD7290F00EC804B</string>
+											<string>8441184B0FD7290F00EC804B</string>
+											<string>8441184C0FD7290F00EC804B</string>
+											<string>8441184D0FD7290F00EC804B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -446,6 +443,22 @@
 											<string>844117030FD7129000EC804B</string>
 											<string>8441171E0FD7170100EC804B</string>
 											<string>844117A60FD71D8800EC804B</string>
+											<string>844117CF0FD7240300EC804B</string>
+											<string>844117FC0FD726AC00EC804B</string>
+											<string>844117FE0FD726AC00EC804B</string>
+											<string>844118000FD726AC00EC804B</string>
+											<string>844118020FD726AC00EC804B</string>
+											<string>8441184E0FD7290F00EC804B</string>
+											<string>8441184F0FD7290F00EC804B</string>
+											<string>844118500FD7290F00EC804B</string>
+											<string>844118510FD7290F00EC804B</string>
+											<string>844118520FD7290F00EC804B</string>
+											<string>844118530FD7290F00EC804B</string>
+											<string>844118540FD7290F00EC804B</string>
+											<string>844118550FD7290F00EC804B</string>
+											<string>844118560FD7290F00EC804B</string>
+											<string>844118570FD7290F00EC804B</string>
+											<string>844118580FD7290F00EC804B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -624,7 +637,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>265756459.32032999</real>
+	<real>265758991.15872699</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -639,6 +652,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>844192850FAD0C0700CDED9F</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>844116B50FD6D9D400EC804B</string>
 		<string>844116AF0FD6D75000EC804B</string>
@@ -669,7 +683,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SQLitePersistentObject+X.h</string>
+								<string>NewExpenseReportItemController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -1517,7 +1531,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>844192850FAD0C0700CDED9F</string>
-				<string>84A540320FD35DC200A934D6</string>
+				<string>844117D10FD7240300EC804B</string>
 				<string>844192840FAD0C0700CDED9F</string>
 			</array>
 			<key>WindowString</key>
