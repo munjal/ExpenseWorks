@@ -24,7 +24,7 @@
 	CGRect frame = contentView.frame;
 	UIView* view = [[UIView alloc] initWithFrame:frame];
 	
-	frame = CGRectMake(0, 0, frame.size.width, frame.size.height - 44.0f);
+	frame = CGRectMake(0, 20, frame.size.width, frame.size.height - 44.0f);
 	contentView.frame = frame;
 	[view addSubview:contentView];
 
