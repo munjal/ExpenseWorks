@@ -18,6 +18,12 @@
   return [formatter dateFromString:dateString];
 }
 
++ (id) fromMediumStyleLocaleString: (id)dateString {
+  id formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateStyle:NSDateFormatterMediumStyle];
+  return [formatter dateFromString:dateString];
+}
+
 + (id) now {
   return [self date];
 }
@@ -27,6 +33,11 @@
   return [formatter stringFromDate:self];
 }
 
+- (id) asMediumStyleLocaleString {
+	id formatter = [[NSDateFormatter alloc] init];
+	[formatter setDateStyle:NSDateFormatterMediumStyle];
+	return [formatter stringFromDate:self];
+}
 - (BOOL) isEarlierThan: (id)other {
   return [self compare:other] == NSOrderedAscending;
 }
@@ -34,5 +45,6 @@
 - (BOOL) isLaterThan: (id)other {
   return [self compare:other] == NSOrderedDescending;
 }
+
 
 @end

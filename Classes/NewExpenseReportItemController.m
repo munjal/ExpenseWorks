@@ -35,6 +35,13 @@
 	//vendor = [vendors objectAtIndex:row];
 }
 
+- (void)selectionChangedForDatePicker {
+	activeField.text = [[datePicker date] asMediumStyleLocaleString];
+}
+
+//[gameVolumeControl addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,10 +49,11 @@
 	
 	[self registerForKeyboardNotifications];
 	
+	[self.datePicker addTarget:self action:@selector(selectionChangedForDatePicker) forControlEvents:UIControlEventValueChanged];
+	
 	[scrollView setContentSize:CGSizeMake(self.contentView.bounds.size.width, self.contentView.bounds.size.height)];
 	[scrollView addSubview:self.contentView];
-	[self populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField];
-	
+	[self populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField];	
 }
 
 - (void)populatePickerItems {
@@ -77,7 +85,17 @@
 	return ([textField tag] > 1) ? TRUE : FALSE;
 }
 
+- (void) setDefaultTextFor: (UITextField *) textField  {
+	if ([self textViewTypeFor:textField] == DateView) {
+		textField.text = [[NSDate now] asMediumStyleLocaleString];
+	}
+	else {
+		id defaultValue = [[self.modelToTextFieldMapper objectForKey:[NSNumber numberWithInt:textField.hash]] first];
+		[textField setText:[defaultValue name]];
+	}
+}
 - (void)populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField {
+	
 	self.textFields = [[NSMutableArray alloc] init];
 
 	NSArray *sortedArray = [[contentView subviews] sortedArrayUsingFunction:sortByTop context:NULL];
@@ -88,6 +106,8 @@
 			[self.textFields addObject:currentTextField];
 			if ([self dropDownButtonRequiredFor:currentTextField]) {
 				[self addButtonInRightViewModeTo:currentTextField];
+				[self setDefaultTextFor: currentTextField];
+
 			}
 		}
 			
@@ -222,15 +242,16 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 	activeField.backgroundColor = [UIColor blueColor];
 	
 	UIView *pickerViewToDisplay;
-	if (activeField == self.dateField)
+	if (activeField == self.dateField) {
 		pickerViewToDisplay = self.datePickerView;
+		NSDate *date = [NSDate fromMediumStyleLocaleString:[activeField text]];
+		[self.datePicker setDate:date animated:TRUE];
+	}
 	else {
 		pickerViewToDisplay = self.genericPickerView;
 		[self.genericPicker reloadAllComponents];
 	}
 		
-	activeField.text = 	[[[self pickerArrayForTextField:activeField] objectAtIndex:0] name];
-	
 	[scrollView.superview addSubview:pickerViewToDisplay];
 	long y = scrollView.superview.bounds.size.height + 24 - (pickerViewToDisplay.bounds.size.height/2);
 	
@@ -331,6 +352,10 @@ NSInteger sortByTop(id control1, id control2, void *reverse) {
 }
 
 //TODO using this
+- (void)selectRowInPicker{
+	NSLog(@"Wow");
+}
+
 - (void)selectRowInPicker:(UIView *)pickerViewToDisplay {
 	if (pickerViewToDisplay == self.genericPickerView) {
 		[self.genericPicker selectRow:2 inComponent:0 animated:TRUE];

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FrameworkX.h"
 #import "ExpenseType.h"
 #import "Vendor.h"
 #import "Currency.h"
@@ -109,7 +110,10 @@ NSInteger sortByTop(id control1, id control2, void *reverse);
 
 - (BOOL)dropDownButtonRequiredFor:(UITextField *)textField;
 - (void)populatePickerItems;
+- (void) setDefaultTextFor: (UITextField *) currentTextField;
 - (void)populateTextFieldsArraySortedByPositionAndAddDropDownButtonToEachTextField;
+
+- (void)selectionChangedForDatePicker;
 
 - (void)addButtonInRightViewModeTo:(UITextField *)textField;
 - (UIButton *)createDropDownButton;

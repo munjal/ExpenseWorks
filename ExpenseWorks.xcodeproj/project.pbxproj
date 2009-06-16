@@ -993,6 +993,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Munjal Budhabhatti";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1004,6 +1005,7 @@
 				GCC_PREFIX_HEADER = ExpenseWorks_Prefix.pch;
 				INFOPLIST_FILE = "ExpenseWorks-Info.plist";
 				PRODUCT_NAME = ExpenseWorks;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "37B4EFC3-25AC-4151-8E3E-15CB1A91D67B";
 			};
 			name = Debugs;
 		};
@@ -1011,6 +1013,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Munjal Budhabhatti";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1020,6 +1023,7 @@
 				GCC_PREFIX_HEADER = ExpenseWorks_Prefix.pch;
 				INFOPLIST_FILE = "ExpenseWorks-Info.plist";
 				PRODUCT_NAME = ExpenseWorks;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "37B4EFC3-25AC-4151-8E3E-15CB1A91D67B";
 			};
 			name = Releases;
 		};
@@ -1085,9 +1089,11 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos2.2.1;
 			};
 			name = Debugs;
 		};
@@ -1099,8 +1105,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos2.2.1;
 			};
 			name = Releases;
 		};
